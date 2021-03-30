@@ -14,7 +14,10 @@ public class StartPageButton : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("Exit");
+        //Unity Play mode false.
+        UnityEditor.EditorApplication.isPlaying = false;
+
+        //application
         Application.Quit();
     }
 
