@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CareCreature.unity
     guid: adf2d8cc6558947f484b3891fb74c20a
-  m_configObjects: {}
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 55e6cd639c654f0489fd438a47df73c9, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 4e6ceeedcd4bc724d94fc19f5aad0c0b, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6f505f475b0b76f44ab2367cebd6bb5f, type: 2}
