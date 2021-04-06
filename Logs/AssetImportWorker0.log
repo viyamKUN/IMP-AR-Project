@@ -480,3 +480,315 @@ System memory in use after: 137.7 MB.
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2061.
 Total: 2.081055 ms (FindLiveObjects: 0.269342 ms CreateObjectMapping: 0.159948 ms MarkObjects: 1.639278 ms  DeleteObjects: 0.011575 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000677 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.002 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1555 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.7 MB.
+System memory in use after: 137.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2065.
+Total: 2.087885 ms (FindLiveObjects: 0.247264 ms CreateObjectMapping: 0.110378 ms MarkObjects: 1.717782 ms  DeleteObjects: 0.011574 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1229.173707 seconds.
+  path: Assets/Scenes/InGame.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/InGame.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f495b592f6730fc74cfe0d0b991f0609') in 0.014213 seconds
+  Import took 0.016375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.298668 seconds.
+  path: Assets/Prefabs/Creature
+  artifactKey: Guid(189a668d9894b4cf58fadb11a2e9f621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature using Guid(189a668d9894b4cf58fadb11a2e9f621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9769016b84a4a83fb25a9b843daefe9a') in 0.002738 seconds
+  Import took 0.005065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.160402 seconds.
+  path: Assets/Prefabs/Creature/SlimeRabbit_Prefab.prefab
+  artifactKey: Guid(57d78de69bcaf8a4e969c0c3350b859b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/SlimeRabbit_Prefab.prefab using Guid(57d78de69bcaf8a4e969c0c3350b859b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaffe009e863cfe4597766743c7c72ba') in 1.404845 seconds
+  Import took 1.407904 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000435 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.853 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1555 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 159.5 MB.
+System memory in use after: 159.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2079.
+Total: 1.572803 ms (FindLiveObjects: 0.165651 ms CreateObjectMapping: 0.040457 ms MarkObjects: 1.356325 ms  DeleteObjects: 0.009703 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.929977 seconds.
+  path: Assets/Prefabs/Item
+  artifactKey: Guid(0fe93b1278e074c108b5e9b2b631e10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item using Guid(0fe93b1278e074c108b5e9b2b631e10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d57e207b9bf2fc435a94899b0dfa41e') in 0.008609 seconds
+  Import took 0.010488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.842273 seconds.
+  path: Assets/AR_Assets/ARImages
+  artifactKey: Guid(b018aa7934b88024e864fa96cd71e5b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/ARImages using Guid(b018aa7934b88024e864fa96cd71e5b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5393fb2af220c686ac306c7df13678fa') in 0.002164 seconds
+  Import took 0.004541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.414922 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates
+  artifactKey: Guid(4b88266cb95a4a942919ca4a5f9757ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates using Guid(4b88266cb95a4a942919ca4a5f9757ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba89f12384554f398cec1906a50648ec') in 0.006732 seconds
+  Import took 0.009556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.328476 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes
+  artifactKey: Guid(65dc1f590252f0248ae5781ed0e5c4a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes using Guid(65dc1f590252f0248ae5781ed0e5c4a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6742f82a46f0414c537339f7e8eff1be') in 0.006378 seconds
+  Import took 0.009619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.060292 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_01.fbx
+  artifactKey: Guid(35b0539c06d90884da7fb5a3a09953a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_01.fbx using Guid(35b0539c06d90884da7fb5a3a09953a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00346b50d06b2ea0a494d85ff259b555') in 0.689758 seconds
+  Import took 0.692256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_15.fbx
+  artifactKey: Guid(33b904e8d80028b4fa75cff29015a59b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_15.fbx using Guid(33b904e8d80028b4fa75cff29015a59b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2b3a489daa465a2d43586fa78684fa4') in 0.015886 seconds
+  Import took 0.018465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_14.fbx
+  artifactKey: Guid(84d44352b3d109a45b705049de4e0ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_14.fbx using Guid(84d44352b3d109a45b705049de4e0ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de8a3ca85a6ed45a521bfbbe3d158919') in 0.020672 seconds
+  Import took 0.023612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_04.fbx
+  artifactKey: Guid(1fff77d5b015c8e43bbc771440109276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_04.fbx using Guid(1fff77d5b015c8e43bbc771440109276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61ae2bbabfaed14f2931a2a193b72c69') in 0.023406 seconds
+  Import took 0.026425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_06.fbx
+  artifactKey: Guid(44fc872fb462bbe48b2eaeaf05bf867b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_06.fbx using Guid(44fc872fb462bbe48b2eaeaf05bf867b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e6bddd2f804a147c86495c506517414') in 0.014528 seconds
+  Import took 0.016934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_07.fbx
+  artifactKey: Guid(428ff4211032ac247ada0b3350894e11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_07.fbx using Guid(428ff4211032ac247ada0b3350894e11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '913e26c5e0779fcfa4f412df668c8df7') in 0.022676 seconds
+  Import took 0.025856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_13.fbx
+  artifactKey: Guid(ebdf5029633472d4e99bd7632dbd81a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_13.fbx using Guid(ebdf5029633472d4e99bd7632dbd81a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fc92a3f5fbc84f5482b098ce7bd387e') in 0.021117 seconds
+  Import took 0.023793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_05.fbx
+  artifactKey: Guid(1a284dfdc3140604398b1d3654a951ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_05.fbx using Guid(1a284dfdc3140604398b1d3654a951ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f4b5667f1b1cdd8f58e7d8d809a7c09') in 0.015851 seconds
+  Import took 0.018090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_09.fbx
+  artifactKey: Guid(ccdd3d6ee3bf6cd4c83bec2b56f8be15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_09.fbx using Guid(ccdd3d6ee3bf6cd4c83bec2b56f8be15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '983686b3a64cc098e64cfcabc82e5296') in 0.022247 seconds
+  Import took 0.025010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_11.fbx
+  artifactKey: Guid(5df12011a80f85641b46a20883d36c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_11.fbx using Guid(5df12011a80f85641b46a20883d36c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '576ef2084431c0838696406145b1b955') in 0.014846 seconds
+  Import took 0.017589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_02.fbx
+  artifactKey: Guid(12551519c72530748bcfb060dfc2db09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_02.fbx using Guid(12551519c72530748bcfb060dfc2db09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc04de6ec3419d8853ed1b4f696c24fb') in 0.014488 seconds
+  Import took 0.017121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_10.fbx
+  artifactKey: Guid(3e20d22e84f92df4e96bf1c4e0b1a614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_10.fbx using Guid(3e20d22e84f92df4e96bf1c4e0b1a614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6768a450a392b0e5b5e48f2da5a65ead') in 0.024168 seconds
+  Import took 0.027303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_03.fbx
+  artifactKey: Guid(8179ab325ee364d4d985e9f20a36ba80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_03.fbx using Guid(8179ab325ee364d4d985e9f20a36ba80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a780eaa727a00eba4e35fa3b11963ccf') in 0.018613 seconds
+  Import took 0.021917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_08.fbx
+  artifactKey: Guid(5c99934c3c02ecd4590f102e26e68f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_08.fbx using Guid(5c99934c3c02ecd4590f102e26e68f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88ddce82b26f2410ecfa636a276d38a4') in 0.015143 seconds
+  Import took 0.017687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_12.fbx
+  artifactKey: Guid(cef2b61bb60e04743a3ffe30a9c6b853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Meshes/Crate_12.fbx using Guid(cef2b61bb60e04743a3ffe30a9c6b853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76ac2091c8686f2507f9f70dcf42178a') in 0.024407 seconds
+  Import took 0.027882 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.685181 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Materials/Wood_bright.mat
+  artifactKey: Guid(4e2f8a2454aca924b9d1a9b1bc34e4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Materials/Wood_bright.mat using Guid(4e2f8a2454aca924b9d1a9b1bc34e4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0fc9da51dc109a161d249dd4053c0db') in 0.160464 seconds
+  Import took 0.163246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/AR_Assets/Lowpoly_Crates/Materials/Wood_dark.mat
+  artifactKey: Guid(9dc3e727d6e4bb24cb8f70536d1f440c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/Lowpoly_Crates/Materials/Wood_dark.mat using Guid(9dc3e727d6e4bb24cb8f70536d1f440c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12654b8fcf5eb4cd70d21da633f2fe32') in 0.007904 seconds
+  Import took 0.010307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.066250 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c37cee75d7f723c8da3f38e7782a46c') in 0.138762 seconds
+  Import took 0.141496 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000383 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.897 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1555 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 173.3 MB.
+System memory in use after: 173.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2120.
+Total: 1.872310 ms (FindLiveObjects: 0.232632 ms CreateObjectMapping: 0.045512 ms MarkObjects: 1.581731 ms  DeleteObjects: 0.011663 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 85.760170 seconds.
+  path: Assets/Prefabs/Item/Item.prefab
+  artifactKey: Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/Item.prefab using Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff98865fa574ab1893a541b9b19fcf9f') in 0.066110 seconds
+  Import took 0.069074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.839454 seconds.
+  path: Assets/Prefabs/Item/Item.prefab
+  artifactKey: Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/Item.prefab using Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46661f80e4d73e1276f99b8847903945') in 0.011792 seconds
+  Import took 0.015585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003851 seconds.
+  path: Assets/Prefabs/Item/Item.prefab
+  artifactKey: Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/Item.prefab using Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46661f80e4d73e1276f99b8847903945') in 0.017598 seconds
+  Import took 0.020587 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.525020 seconds.
+  path: Assets/Prefabs/Item/Item.prefab
+  artifactKey: Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/Item.prefab using Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db36d2aa5eecb0fa0ec4b5a77e9df43e') in 0.009923 seconds
+  Import took 0.013531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007115 seconds.
+  path: Assets/Prefabs/Item/Item.prefab
+  artifactKey: Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/Item.prefab using Guid(837b8723e35c9421f861cee5b7cf506c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db36d2aa5eecb0fa0ec4b5a77e9df43e') in 0.009950 seconds
+  Import took 0.013235 seconds .
+
