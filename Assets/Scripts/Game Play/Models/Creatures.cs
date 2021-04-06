@@ -8,14 +8,14 @@ namespace Creatures
     {
         public int ID;
         public string Name;
-        public string Discription;
+        public string Description;
         public List<int> FavoriteItemIDs;
         public int DroppedItemID;
-        public Creature(int id, string name, string disc, List<int> favorite, int dropped)
+        public Creature(int id, string name, string desc, List<int> favorite, int dropped)
         {
             this.ID = id;
             this.Name = name;
-            this.Discription = disc;
+            this.Description = desc;
             this.FavoriteItemIDs = favorite;
             this.DroppedItemID = dropped;
         }
