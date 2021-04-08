@@ -129,8 +129,8 @@ PlayerSettings:
     Others: 1
   bundleVersion: 0.1
   preloadedAssets:
-  - {fileID: 4800000, guid: c9f956787b1d945e7b36e0516201fc76, type: 3}
-  - {fileID: 3075199876264626890, guid: 6f505f475b0b76f44ab2367cebd6bb5f, type: 2}
+  - {fileID: 4800000, guid: e7c77f6eaab324a819efdc13b8125a39, type: 3}
+  - {fileID: -531689616221979424, guid: 6f505f475b0b76f44ab2367cebd6bb5f, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -149,6 +149,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.IMPARProject
+    iPhone: com.DefaultCompany.IMP-AR-Project
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -345,7 +346,7 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: 
+  cameraUsageDescription: We need camera access.
   locationUsageDescription: 
   microphoneUsageDescription: 
   switchNMETAOverride: 
