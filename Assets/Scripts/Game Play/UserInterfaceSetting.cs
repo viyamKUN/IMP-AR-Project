@@ -118,7 +118,7 @@ public class UserInterfaceSetting : MonoBehaviour
         foreach (var item in wholeCollection)
         {
             int myCreatureIndex = _gameManager.GetPlayerSaveData.FindMyCreature(item.ID);
-            if (myCreatureIndex > 0)
+            if (myCreatureIndex > -1)
             {
                 _catched[catchPointer].gameObject.SetActive(true);
                 _catched[catchPointer].SetCollectionUnit(

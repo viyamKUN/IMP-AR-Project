@@ -176,6 +176,7 @@ public class GameManager : MonoBehaviour
         _userInterfaceSetting.SetMyCollection(_creatureList.Count, _creatureList, _myPlayerSaveData.GetPlayerCreatureList);
         _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
 
+        _uiUnderButton.CloseWhole();
         _uiUnderButton.ButtonProfile();
         _uiBuySellButton.ButtonBuy();
     }
