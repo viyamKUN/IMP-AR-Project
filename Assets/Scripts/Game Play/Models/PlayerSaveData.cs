@@ -37,9 +37,9 @@ public class PlayerSaveData : MonoBehaviour
         _myData.Money = 5000;
         _myData.MyItems.Add(0, 1);
 
-        SaveData();
+        SaveGame();
     }
-    public void SaveData()
+    public void SaveGame()
     {
         var filename = SaveFileName.PlayerDataFileName;
 
@@ -48,7 +48,7 @@ public class PlayerSaveData : MonoBehaviour
         binaryFormatter.Serialize(file, _myData);
         file.Close();
     }
-    public bool LoadGameData()
+    public bool LoadGame()
     {
         var filename = SaveFileName.PlayerDataFileName;
         if (!File.Exists(filename)) return false;
@@ -62,22 +62,9 @@ public class PlayerSaveData : MonoBehaviour
         }
         return false;
     }
-    public void DeleteGameData()
+    public void DeleteGame()
     {
         var filename = SaveFileName.PlayerDataFileName;
-
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
-        FileStream file = File.Create(filename);
-        Init();
-        binaryFormatter.Serialize(file, _myData);
-        file.Close();
-    }
-    public void AddItem(int id, int count)
-    {
-
-    }
-    public void AddCreature(int id, int count)
-    {
-
+        File.Delete(filename);
     }
 }
