@@ -122,6 +122,7 @@ public class UserInterfaceSetting : MonoBehaviour
             {
                 _catched[catchPointer].gameObject.SetActive(true);
                 _catched[catchPointer].SetCollectionUnit(
+                    item.ID,
                     _gameManager.GetCreatureImage(item.ID),
                     item.Name,
                     myCollections[myCreatureIndex].Count,
@@ -132,7 +133,7 @@ public class UserInterfaceSetting : MonoBehaviour
             else
             {
                 _nonCatch[nonCatchPointer].gameObject.SetActive(true);
-                _nonCatch[nonCatchPointer].SetCollectionUnit(_gameManager.GetCreatureImage(item.ID), item.Name, 0, 0);
+                _nonCatch[nonCatchPointer].SetCollectionUnit(item.ID, _gameManager.GetCreatureImage(item.ID), item.Name, 0, 0);
                 nonCatchPointer++;
             }
         }

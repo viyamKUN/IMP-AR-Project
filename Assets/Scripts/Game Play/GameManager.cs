@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     public Creature GetCreature(int ID) => this._creatureList[ID];
+    public MyCreature GetMyCreature(int ID) => this._myPlayerSaveData.GetPlayerCreatureList[ID];
     public Item GetItem(int ID) => this._itemList[ID];
     public Sprite GetItemImage(int ID) => _itemObjects[ID].Profile;
     public Sprite GetCreatureImage(int ID) => _creatureObjects[ID].Profile;
@@ -59,10 +60,6 @@ public class GameManager : MonoBehaviour
             {
                 CallCreature(1);
             }
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            _myPlayerSaveData.DeleteGame();
         }
 #endif
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -150,7 +147,8 @@ public class GameManager : MonoBehaviour
         else
             _myPlayerSaveData.GetPlayerCreatureList.Add(new MyCreature(creatureID, count, 0));
 
-        _currentCreatureObject.Catched();
+        if (_currentCreatureObject != null)
+            _currentCreatureObject.Catched();
     }
 
     /// <summary> 아이템을 얻었을 때. 기본적으로 1개로 취급 </summary>

@@ -1,4 +1,4 @@
-ID,Name,Discription,FavoriteItemIDs,DroppedItemID
-0,Rabbit,This is green slime rabbit!,1,3
-1,Langsat,This is yummy monster!,2,3
-2,Fox,This is not normal fox!,1&2,3
+ID,Name,Description,Type,Tall,Weight,FavoriteItemIDs,DroppedItemID
+0,Rabbit,This is green slime rabbit!,Grass,1.2,10,1,3
+1,Langsat,This is yummy monster!,Grass,1.6,5,2,3
+2,Fox,This is not normal fox!,Fire,1.0,30,1&2,3
