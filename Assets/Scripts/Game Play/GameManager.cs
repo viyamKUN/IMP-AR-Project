@@ -108,11 +108,12 @@ public class GameManager : MonoBehaviour
     public void SetBoxPosition(Transform value)
     {
         _itemBoxTransform = value;
+        Debug.Log("first" + _itemBoxTransform);
     }
     public bool PutItemInBox(int itemID)
     {
         Vector3 targetPosition = _itemBoxTransform.position;
-
+        Debug.Log(targetPosition);
         _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, targetPosition, Quaternion.identity);
         return true;
     }
