@@ -156,6 +156,7 @@ public class UserInterfaceSetting : MonoBehaviour
 
         foreach (var item in itemList)
         {
+            if (item.ID == 0) continue;
             if (item.MyType.Equals(ItemType.Food))
             {
                 _shopBuyFoods[foodPointer].gameObject.SetActive(true);
