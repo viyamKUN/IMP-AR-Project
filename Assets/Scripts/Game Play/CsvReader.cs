@@ -12,32 +12,23 @@ public class CsvReader : MonoBehaviour
     [SerializeField] private TextAsset _creatureCsvFile = null;
     [SerializeField] private TextAsset _itemCsvFile = null;
 
-    #region  Lists
-    private List<Creature> _creatureData = new List<Creature>();
-    private List<Item> _itemData = new List<Item>();
-    #endregion
-
     #region For CSV read
     static string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
     static string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";
     static char[] TRIM_CHARS = { '\"' };
     #endregion
 
-    public List<Creature> GetCreatureList => this._creatureData;
-    public List<Item> GetItemList => this._itemData;
-    public Creature GetCreature(int ID) => this._creatureData[ID];
-    public Item GetItem(int ID) => this._itemData[ID];
-
-    private void Start()
+    public void Read(out List<Creature> _creatureList, out List<Item> _itemData)
     {
-        readCreature();
-        readItem();
+        _creatureList = readCreature();
+        _itemData = readItem();
     }
-    private bool readCreature()
+    private List<Creature> readCreature()
     {
         var lines = Regex.Split(_creatureCsvFile.text, LINE_SPLIT_RE);
+        List<Creature> list = new List<Creature>();
 
-        if (lines.Length <= 1) return false;
+        if (lines.Length <= 1) return null;
 
         var header = Regex.Split(lines[0], SPLIT_RE);
         for (var i = 1; i < lines.Length; i++)
@@ -47,15 +38,16 @@ public class CsvReader : MonoBehaviour
 
             List<int> favoriteItemList = values[3].Split('&').ToList<string>().ConvertAll(int.Parse);
             Creature entry = new Creature(int.Parse(values[0]), values[1], values[2], favoriteItemList, int.Parse(values[4]));
-            _creatureData.Add(entry);
+            list.Add(entry);
         }
-        return true;
+        return list;
     }
-    private bool readItem()
+    private List<Item> readItem()
     {
         var lines = Regex.Split(_creatureCsvFile.text, LINE_SPLIT_RE);
+        List<Item> list = new List<Item>();
 
-        if (lines.Length <= 1) return false;
+        if (lines.Length <= 1) return null;
 
         var header = Regex.Split(lines[0], SPLIT_RE);
         for (var i = 1; i < lines.Length; i++)
@@ -64,8 +56,8 @@ public class CsvReader : MonoBehaviour
             if (values.Length == 0 || values[0] == "") continue;
 
             Item entry = new Item(int.Parse(values[0]), values[1], values[2]);
-            _itemData.Add(entry);
+            list.Add(entry);
         }
-        return true;
+        return list;
     }
 }

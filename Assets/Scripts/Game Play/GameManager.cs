@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Creatures;
+using Items;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CreatureObject[] _creatureObjects = null;
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
+    public Creature GetCreature(int ID) => this._creatureList[ID];
+    public Item GetItem(int ID) => this._itemList[ID];
+
     Transform _itemBoxTransform = null;
+    List<Creature> _creatureList = null;
+    List<Item> _itemList = new List<Item>();
+
 
     private void Awake()
     {
@@ -23,6 +30,8 @@ public class GameManager : MonoBehaviour
             // TODO 유저가 유저네임 입력하는 공간 띄워주고 그 데이터로 초기 데이터 생성하게 구현하기~
             _myPlayerSaveData.Init("UserSampleName");
         }
+
+        _csvReader.Read(out _creatureList, out _itemList);
     }
     private void Update()
     {
@@ -60,12 +69,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("해당 아이템을 선호하는 몬스터를 부르고 있습니다...");
 
-        List<Creature> creatureList = _csvReader.GetCreatureList;
         Dictionary<int, int> myCreatureList = _myPlayerSaveData.GetPlayerCreatureList;
         List<int> tempCreatureList = new List<int>();
         int callCreatureID = 0;
 
-        foreach (Creature c in creatureList)
+        foreach (Creature c in _creatureList)
         {
             if (myCreatureList.ContainsKey(c.ID)) continue;
             if (c.FavoriteItemIDs.Contains(itemID))
@@ -79,13 +87,18 @@ public class GameManager : MonoBehaviour
             tempCreatureList.Clear();
 
             foreach (var my in myCreatureList)
-                if (creatureList[my.Key].FavoriteItemIDs.Contains(itemID))
+                if (_creatureList[my.Key].FavoriteItemIDs.Contains(itemID))
                     tempCreatureList.Add(my.Key);
 
             callCreatureID = Random.Range(0, tempCreatureList.Count);
         }
 
-        Debug.Log(creatureList[callCreatureID].Name + "이 나타났다!");
+        Debug.Log(_creatureList[callCreatureID].Name + "이 나타났다!");
+        GenerateCreature(callCreatureID);
+    }
+    private void GenerateCreature(int creatureID)
+    {
+
     }
 
     /// <summary> 크리쳐를 잡았을 때. 기본적으로 1마리로 취급 </summary>
