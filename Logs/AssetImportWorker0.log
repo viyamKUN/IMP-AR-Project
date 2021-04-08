@@ -1352,3 +1352,661 @@ Received Import Request.
 Start importing Assets/Scripts/Game Play/Models/PlayerSaveData.cs using Guid(c4bec5dcef831464098a1db707744e61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa2fc6df0c7c9d690bf2b5a2d9ee0ac4') in 0.012362 seconds
   Import took 0.014829 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000588 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.681 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1566 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2093.
+Total: 2.097000 ms (FindLiveObjects: 0.243000 ms CreateObjectMapping: 0.042000 ms MarkObjects: 1.771500 ms  DeleteObjects: 0.039200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000540 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.703 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1566 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2097.
+Total: 1.754300 ms (FindLiveObjects: 0.269800 ms CreateObjectMapping: 0.039000 ms MarkObjects: 1.407900 ms  DeleteObjects: 0.036400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 701.795138 seconds.
+  path: Assets/Scripts/UI/StartPageUI/DontDestroy.cs
+  artifactKey: Guid(fc82fed4d330c8c46871039886d60894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/StartPageUI/DontDestroy.cs using Guid(fc82fed4d330c8c46871039886d60894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85e9f5d2ae99d3002c9113e643eef12a') in 0.008483 seconds
+  Import took 0.011093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002399 seconds.
+  path: Assets/Scripts/UI/StartPageUI/DontDestroy.cs
+  artifactKey: Guid(fc82fed4d330c8c46871039886d60894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/StartPageUI/DontDestroy.cs using Guid(fc82fed4d330c8c46871039886d60894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85e9f5d2ae99d3002c9113e643eef12a') in 0.002557 seconds
+  Import took 0.004993 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000519 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.694 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1567 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2102.
+Total: 2.006400 ms (FindLiveObjects: 0.242400 ms CreateObjectMapping: 0.035900 ms MarkObjects: 1.688100 ms  DeleteObjects: 0.038800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000652 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.690 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1567 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2106.
+Total: 1.995300 ms (FindLiveObjects: 0.256400 ms CreateObjectMapping: 0.043200 ms MarkObjects: 1.648000 ms  DeleteObjects: 0.045700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 17.957088 seconds.
+  path: Assets/Scripts/UI/StartPageUI/DontDestroy.cs
+  artifactKey: Guid(fc82fed4d330c8c46871039886d60894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/StartPageUI/DontDestroy.cs using Guid(fc82fed4d330c8c46871039886d60894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f765593fa451bf14e1c8017a890d041') in 0.004380 seconds
+  Import took 0.017113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.436128 seconds.
+  path: Assets/Scripts/UI/StartPageUI/DontDestroy.cs
+  artifactKey: Guid(fc82fed4d330c8c46871039886d60894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI/StartPageUI/DontDestroy.cs using Guid(fc82fed4d330c8c46871039886d60894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f765593fa451bf14e1c8017a890d041') in 0.001910 seconds
+  Import took 0.004426 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000767 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.697 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1567 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2110.
+Total: 1.735300 ms (FindLiveObjects: 0.231400 ms CreateObjectMapping: 0.047100 ms MarkObjects: 1.420600 ms  DeleteObjects: 0.035300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000541 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.703 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1567 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2114.
+Total: 1.920900 ms (FindLiveObjects: 0.214400 ms CreateObjectMapping: 0.041100 ms MarkObjects: 1.629900 ms  DeleteObjects: 0.033800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 51.716689 seconds.
+  path: Assets/Prefabs/GameSystem/GameManager.prefab
+  artifactKey: Guid(209c27abfd15840f2b010e81526d02ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameSystem/GameManager.prefab using Guid(209c27abfd15840f2b010e81526d02ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f785e1bd2464dcf1b64eda584b6e6b5') in 0.023282 seconds
+  Import took 0.026031 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000546 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.702 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1567 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2118.
+Total: 1.971700 ms (FindLiveObjects: 0.231200 ms CreateObjectMapping: 0.043700 ms MarkObjects: 1.661100 ms  DeleteObjects: 0.034100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000543 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.708 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1567 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2122.
+Total: 1.952900 ms (FindLiveObjects: 0.262200 ms CreateObjectMapping: 0.039500 ms MarkObjects: 1.607500 ms  DeleteObjects: 0.042300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 2883.580413 seconds.
+  path: Assets/Graphics/Food
+  artifactKey: Guid(2b8179c17018fc54b8ab19bc1d10d3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food using Guid(2b8179c17018fc54b8ab19bc1d10d3bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6665a38cdbdfb1cfbe8049e3db020b61') in 0.009515 seconds
+  Import took 0.027131 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.022069 seconds.
+  path: Assets/Graphics/Food/day10-candy
+  artifactKey: Guid(147a0852121c6de4196e7d8c96fe505a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy using Guid(147a0852121c6de4196e7d8c96fe505a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2abef875e01d537990fd025de4e65c41') in 0.006544 seconds
+  Import took 0.016955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.768320 seconds.
+  path: Assets/Graphics/Food/day10-candy/source
+  artifactKey: Guid(29e9c02e52b87b34fa3a360ea047a94d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source using Guid(29e9c02e52b87b34fa3a360ea047a94d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4e8b138b2de1f9449d72e36bba6e8d') in 0.005794 seconds
+  Import took 0.008294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.663515 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT
+  artifactKey: Guid(474d55a194de3d947a724bfd21e2083f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT using Guid(474d55a194de3d947a724bfd21e2083f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9ddb4225447d90f77f8eb59bda33363') in 0.005685 seconds
+  Import took 0.008225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.069310 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/CANDY.FBX
+  artifactKey: Guid(7a59bf355a34987458f5891a9851befb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/CANDY.FBX using Guid(7a59bf355a34987458f5891a9851befb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '726a0036dba8d76519e7d731e254559f') in 0.158985 seconds
+  Import took 0.173238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/candyGreenTexture.png
+  artifactKey: Guid(379ae3a55c364f241945bd6bc7d91aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/candyGreenTexture.png using Guid(379ae3a55c364f241945bd6bc7d91aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b9b3476fce5a2560ca11483c475ba4') in 0.019367 seconds
+  Import took 0.031032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/candyOrangeTexture.png
+  artifactKey: Guid(8f130e0bf41b8de46ac52f539cb651ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/candyOrangeTexture.png using Guid(8f130e0bf41b8de46ac52f539cb651ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbe86f37c5a4b8c0f6ee969ff4ebfcb6') in 0.014429 seconds
+  Import took 0.016817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/candyRedTexture.png
+  artifactKey: Guid(de3fc880b3e043041b7746993fe87a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/candyRedTexture.png using Guid(de3fc880b3e043041b7746993fe87a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bb745257c2ee6d69b01c31a689a70a7') in 0.014274 seconds
+  Import took 0.032602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/candyBlueTexture.png
+  artifactKey: Guid(88c100af5deae224bac7046b507b73ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/candyBlueTexture.png using Guid(88c100af5deae224bac7046b507b73ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7757f60c15618a6797bdf6fe7559b575') in 0.014865 seconds
+  Import took 0.018860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/candyYellowTexture.png
+  artifactKey: Guid(b24954a84f8634b4296f9d12cac585b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/candyYellowTexture.png using Guid(b24954a84f8634b4296f9d12cac585b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1ee10d6df6a0249673a554077d461b2') in 0.014845 seconds
+  Import took 0.016972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/candyBlueTexture.png
+  artifactKey: Guid(88c100af5deae224bac7046b507b73ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/candyBlueTexture.png using Guid(88c100af5deae224bac7046b507b73ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7757f60c15618a6797bdf6fe7559b575') in 0.007211 seconds
+  Import took 0.009450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/candyYellowTexture.png
+  artifactKey: Guid(b24954a84f8634b4296f9d12cac585b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/candyYellowTexture.png using Guid(b24954a84f8634b4296f9d12cac585b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1ee10d6df6a0249673a554077d461b2') in 0.007444 seconds
+  Import took 0.009836 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.213425 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials
+  artifactKey: Guid(f73eeb24db563b5408c302b773ca3369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials using Guid(f73eeb24db563b5408c302b773ca3369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dc7d55a6272994e56d699af4a67b455') in 0.006589 seconds
+  Import took 0.009137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.066954 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/blue.mat
+  artifactKey: Guid(e94957cf600a830468b3dbceea94ebf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/blue.mat using Guid(e94957cf600a830468b3dbceea94ebf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20bc35dba4850df2d0a8dc9a7e8ce358') in 0.021171 seconds
+  Import took 0.023734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyOrangeTexture.mat
+  artifactKey: Guid(9cd1c8c06e3237c439ece05384e439fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyOrangeTexture.mat using Guid(9cd1c8c06e3237c439ece05384e439fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '331158cfe559468d25bce70829687cdd') in 0.014687 seconds
+  Import took 0.017431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/white.mat
+  artifactKey: Guid(8d6c18063a6274e45b4b53e5c0987324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/white.mat using Guid(8d6c18063a6274e45b4b53e5c0987324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '680e471b5a990a4be4987ba37088935f') in 0.014180 seconds
+  Import took 0.019622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyBlueTexture.mat
+  artifactKey: Guid(57dafcde4b5ff7642b1d6365eb0a5de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyBlueTexture.mat using Guid(57dafcde4b5ff7642b1d6365eb0a5de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64438d6532fc344bbf44e4b7ba70472b') in 0.014280 seconds
+  Import took 0.016900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/yellow.mat
+  artifactKey: Guid(ff8cee84bc189294c9336132209da06b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/yellow.mat using Guid(ff8cee84bc189294c9336132209da06b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9784a24f109477e48bef9c6483e6ac4e') in 0.014011 seconds
+  Import took 0.016685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyGreenTexture.mat
+  artifactKey: Guid(6ba2fb313f11a3a45a42af4789dca892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyGreenTexture.mat using Guid(6ba2fb313f11a3a45a42af4789dca892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '346d49db8962f8ab1e3c34ad95ff8e06') in 0.013429 seconds
+  Import took 0.015761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/brown.mat
+  artifactKey: Guid(411caa7441e61ef4bb3b144dd3e397d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/brown.mat using Guid(411caa7441e61ef4bb3b144dd3e397d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25f89edee69490537dc38719c5c6367') in 0.016082 seconds
+  Import took 0.018517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/orange.mat
+  artifactKey: Guid(bbb31203111d50d43a3512f970e86d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/orange.mat using Guid(bbb31203111d50d43a3512f970e86d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '749e09e4edf0b5e3bc73b3d79f389ed6') in 0.016338 seconds
+  Import took 0.019036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/red.mat
+  artifactKey: Guid(db5292d15da86004fa5fa5ccbf489d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/red.mat using Guid(db5292d15da86004fa5fa5ccbf489d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28fce754ce250b4e907fd24bce2d1b7c') in 0.014331 seconds
+  Import took 0.016456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/purple.mat
+  artifactKey: Guid(b044d540f1280b644becff7a779fe39a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/purple.mat using Guid(b044d540f1280b644becff7a779fe39a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a876ed25d6b0eb45ac5caded38b9c8f') in 0.013771 seconds
+  Import took 0.016523 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyRedTexture.mat
+  artifactKey: Guid(27686604ae9fea34781c6cb39dd74e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyRedTexture.mat using Guid(27686604ae9fea34781c6cb39dd74e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da1a62b379566a74cec5fe06f095939a') in 0.013094 seconds
+  Import took 0.015672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyYellowTexture.mat
+  artifactKey: Guid(da05ee230cf927a438657c426e0c7d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/candyYellowTexture.mat using Guid(da05ee230cf927a438657c426e0c7d35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b189b31f971f52a5d80725224d368009') in 0.014275 seconds
+  Import took 0.016517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/green.mat
+  artifactKey: Guid(683144ef14a549946803c976816c7dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/source/EXPORT/Materials/green.mat using Guid(683144ef14a549946803c976816c7dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '505077fcf3aacc6d73cecd93c0ce7c97') in 0.014835 seconds
+  Import took 0.017404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 273.698750 seconds.
+  path: Assets/Graphics/Food/day10-candy/textures/candyBlueTexture.png
+  artifactKey: Guid(5257752f0b6218f4c8525a1a1a297a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/textures/candyBlueTexture.png using Guid(5257752f0b6218f4c8525a1a1a297a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d7a7f897b176ba5cde11ee3dc4fd707') in 0.008878 seconds
+  Import took 0.011729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Graphics/Food/day10-candy/textures/candyRedTexture.png
+  artifactKey: Guid(7b6c50579587e574e8d1f3f5c03dac5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/textures/candyRedTexture.png using Guid(7b6c50579587e574e8d1f3f5c03dac5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19b1cce0d4c423e4d2be6fdc40a5d17a') in 0.008197 seconds
+  Import took 0.010906 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Graphics/Food/day10-candy/textures/candyOrangeTexture.png
+  artifactKey: Guid(3780e77ee3b4f974f95cc9c4d648b181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/textures/candyOrangeTexture.png using Guid(3780e77ee3b4f974f95cc9c4d648b181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '744c4a8404383bde45e934c8229b60cb') in 0.009463 seconds
+  Import took 0.011739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Graphics/Food/day10-candy/textures/internal_ground_ao_texture.jpeg
+  artifactKey: Guid(af71fca957862ea4d9f167cee876d073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/textures/internal_ground_ao_texture.jpeg using Guid(af71fca957862ea4d9f167cee876d073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a3b20871224817f55f8c958df784589') in 0.018921 seconds
+  Import took 0.021855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Graphics/Food/day10-candy/textures/candyYellowTexture.png
+  artifactKey: Guid(cc310ca562329424093d4d7b85f5b2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/textures/candyYellowTexture.png using Guid(cc310ca562329424093d4d7b85f5b2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '924196783cc05f7a55eef59f012556c9') in 0.008648 seconds
+  Import took 0.032535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Graphics/Food/day10-candy/textures/candyGreenTexture.png
+  artifactKey: Guid(a5944284b0a6277468846bca696a5768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Food/day10-candy/textures/candyGreenTexture.png using Guid(a5944284b0a6277468846bca696a5768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8a8a7a49c43c03ba2f44850411a3216') in 0.008032 seconds
+  Import took 0.010598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.006230 seconds.
+  path: Assets/Prefabs/New Folder
+  artifactKey: Guid(0b587c742249d1e40a33f84d0c1fe83f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/New Folder using Guid(0b587c742249d1e40a33f84d0c1fe83f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed210d1db7e27a3411a9c05559d68e97') in 0.007068 seconds
+  Import took 0.009651 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.986649 seconds.
+  path: Assets/Prefabs/Item/CatchItem
+  artifactKey: Guid(0a14ad60cd30fc648a18c22409a88ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/CatchItem using Guid(0a14ad60cd30fc648a18c22409a88ab5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c016f8bd2a2964a3391e659329952109') in 0.005573 seconds
+  Import took 0.008098 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.063434 seconds.
+  path: Assets/Prefabs/Item/FoodItem
+  artifactKey: Guid(064c5fae1af54db44a92891a4396fdf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/FoodItem using Guid(064c5fae1af54db44a92891a4396fdf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60c5f2f708e2a42d6611dc2b2e0e5cd5') in 0.005876 seconds
+  Import took 0.008812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.060583 seconds.
+  path: Assets/Graphics/Items/CatchItem
+  artifactKey: Guid(a086b0aa8d70f564089cfcbb3208b1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Items/CatchItem using Guid(a086b0aa8d70f564089cfcbb3208b1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62edc400c901e8c031b9c2fc5be54943') in 0.002110 seconds
+  Import took 0.004438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.252638 seconds.
+  path: Assets/Graphics/Items/StylizedWoodenBarrelPack
+  artifactKey: Guid(b751675757fdd6f4fbf0b717ebb9b080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Items/StylizedWoodenBarrelPack using Guid(b751675757fdd6f4fbf0b717ebb9b080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '059ef78762affda7ed05951fad2af2f3') in 0.006032 seconds
+  Import took 0.008835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.893982 seconds.
+  path: Assets/Graphics/Items/FoodItem
+  artifactKey: Guid(88870de6e36a7cb41b726383c0c232c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Items/FoodItem using Guid(88870de6e36a7cb41b726383c0c232c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c900cdb07584f474022eb4e56bc26a4') in 0.002400 seconds
+  Import took 0.005082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.212001 seconds.
+  path: Assets/Prefabs/Item/FoodItem/CANDY.prefab
+  artifactKey: Guid(03a71876891baca449dc086b2a0027ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/FoodItem/CANDY.prefab using Guid(03a71876891baca449dc086b2a0027ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6185bedb51261d96b9d88cbd18c0c5d') in 0.029208 seconds
+  Import took 0.032290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001685 seconds.
+  path: Assets/Prefabs/Item/FoodItem/CANDY.prefab
+  artifactKey: Guid(03a71876891baca449dc086b2a0027ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Item/FoodItem/CANDY.prefab using Guid(03a71876891baca449dc086b2a0027ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6185bedb51261d96b9d88cbd18c0c5d') in 0.026730 seconds
+  Import took 0.029658 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000540 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.781 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(524288) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1567 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2127.
+Total: 2.183100 ms (FindLiveObjects: 0.267900 ms CreateObjectMapping: 0.039600 ms MarkObjects: 1.829900 ms  DeleteObjects: 0.044200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 1528.998112 seconds.
+  path: Assets/Image/Item/CatchItem
+  artifactKey: Guid(c93191595dfd14945bfae1f1c688ca7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/Item/CatchItem using Guid(c93191595dfd14945bfae1f1c688ca7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bef12f30b97e35db2d46a0db53f42a94') in 0.008479 seconds
+  Import took 0.023927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.459297 seconds.
+  path: Assets/Image/Item/FoodItem
+  artifactKey: Guid(560d60faa58b84b4886220d9dd5b105d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/Item/FoodItem using Guid(560d60faa58b84b4886220d9dd5b105d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a08495a2c79c62c98b311e9bc327f17') in 0.005229 seconds
+  Import took 0.007727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.197226 seconds.
+  path: Assets/Image/Item/Candy1.png
+  artifactKey: Guid(66dc6d8869bdded4f99048a27e870610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/Item/Candy1.png using Guid(66dc6d8869bdded4f99048a27e870610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33cdd9a7c24c7c41337d8328a0f399f4') in 0.035736 seconds
+  Import took 0.038701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Image/Item/Candy6.png
+  artifactKey: Guid(71a0f7d405e325343a1fd2ef2133fa66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/Item/Candy6.png using Guid(71a0f7d405e325343a1fd2ef2133fa66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4f04bd14fb6eec0a030c6967b944d13') in 0.011905 seconds
+  Import took 0.014536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Image/Item/Candy4.png
+  artifactKey: Guid(e06ab8c0af2a1254690459b90604d296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/Item/Candy4.png using Guid(e06ab8c0af2a1254690459b90604d296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a0ed9e068aabbb55683b0a2467b7fcb') in 0.013975 seconds
+  Import took 0.016808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Image/Item/Candy2.png
+  artifactKey: Guid(fd75f10d6584e9b428895c4f8d01b707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/Item/Candy2.png using Guid(fd75f10d6584e9b428895c4f8d01b707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bf0c9b3a9fd52d1d189fab7bfdb68d3') in 0.012516 seconds
+  Import took 0.014692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Image/Item/Candy3.png
+  artifactKey: Guid(41f4845b3500dee43ac56d81f8dd3441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/Item/Candy3.png using Guid(41f4845b3500dee43ac56d81f8dd3441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b4a9f2d21542d203466ceb65eb9a00f') in 0.011532 seconds
+  Import took 0.023845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Image/Item/Candy5.png
+  artifactKey: Guid(c1a872cac14bcae4bbe62ab1b13f4852) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/Item/Candy5.png using Guid(c1a872cac14bcae4bbe62ab1b13f4852) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '295a9cd60b9500493b5ee0b8a58599e6') in 0.013246 seconds
+  Import took 0.015878 seconds .
+
