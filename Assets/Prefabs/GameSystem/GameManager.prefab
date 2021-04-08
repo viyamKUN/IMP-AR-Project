@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _myPlayerSaveData: {fileID: 6056328736842231007}
   _csvReader: {fileID: 6056328736842231004}
+  _userInterfaceSetting: {fileID: 0}
   _itemObjects:
   - Name: WoodBox
     ItemModel: {fileID: 5238309191721144945, guid: 837b8723e35c9421f861cee5b7cf506c, type: 3}
@@ -79,4 +80,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _creatureCsvFile: {fileID: 4900000, guid: 71439569c62ec4eaf83e61940fde26eb, type: 3}
-  _itemCsvFile: {fileID: 4900000, guid: 8bd870d3c70dc4cb685434749bde01a5, type: 3}
+  _lureItemCsvFile: {fileID: 4900000, guid: 8bd870d3c70dc4cb685434749bde01a5, type: 3}
+  _foodItemCsvFile: {fileID: 0}

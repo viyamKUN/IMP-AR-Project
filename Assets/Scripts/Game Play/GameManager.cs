@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Other Scripts")]
     [SerializeField] private PlayerSaveData _myPlayerSaveData = null;
     [SerializeField] private CsvReader _csvReader = null;
+    [SerializeField] private UserInterfaceSetting _userInterfaceSetting = null;
     [Header("Objects")]
     [SerializeField] private ItemObject[] _itemObjects = null;
     [SerializeField] private CreatureObject[] _creatureObjects = null;
@@ -17,27 +18,30 @@ public class GameManager : MonoBehaviour
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     public Creature GetCreature(int ID) => this._creatureList[ID];
-    public Item GetItem(int ID) => this._itemList[ID];
+    public Item GetItem(int ID) => this._lureItemList[ID];
 
     Transform _itemBoxTransform = null;
     List<Creature> _creatureList = null;
-    List<Item> _itemList = new List<Item>();
+    List<Item> _lureItemList = new List<Item>();
 
 
     private void Awake()
     {
-        bool isGameDataExist = _myPlayerSaveData.LoadGame();
-        if (!isGameDataExist)
-        {
-            // TODO 유저가 유저네임 입력하는 공간 띄워주고 그 데이터로 초기 데이터 생성하게 구현하기~
-            _myPlayerSaveData.Init("UserSampleName");
-        }
+        _csvReader.Read(out _creatureList, out _lureItemList);
 
-        _csvReader.Read(out _creatureList, out _itemList);
+        bool isGameDataExist = _myPlayerSaveData.LoadGame();
+        if (_userInterfaceSetting == null)
+            return;
+
+        if (!isGameDataExist)
+            _userInterfaceSetting.OpenUserDataEnterPanel();
+        else
+            SetUI();
     }
+
+#if UNITY_EDITOR
     private void Update()
     {
-        // TODO 유저가 상자를 클릭하여 아이템을 선택한 후, 설치함. 지금은 키 입력으로 대체함
         if (Input.GetKeyDown(KeyCode.A))
         {
             _itemBoxTransform = this.transform;
@@ -47,11 +51,22 @@ public class GameManager : MonoBehaviour
                 CallCreature(0);
             }
         }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            _myPlayerSaveData.DeleteGame();
+        }
     }
+#endif
+
     /// <summary>게임 세이브</summary>
     public void CallGameSave()
     {
         _myPlayerSaveData.SaveGame();
+    }
+    public void CreateUserData(string name)
+    {
+        _myPlayerSaveData.Init(name);
+        SetUI();
     }
     public void SetBoxPosition(Transform value)
     {
@@ -130,6 +145,13 @@ public class GameManager : MonoBehaviour
             _myPlayerSaveData.GetPlayerItemList.Add(itemID, count);
         }
     }
+
+    private void SetUI()
+    {
+        _userInterfaceSetting.SetTopUI(_myPlayerSaveData.GetPlayerMoney);
+        _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName);
+    }
+
 }
 
 [System.Serializable]

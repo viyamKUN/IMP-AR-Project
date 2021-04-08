@@ -10,7 +10,8 @@ public class CsvReader : MonoBehaviour
 {
     [Header("CSV Files")]
     [SerializeField] private TextAsset _creatureCsvFile = null;
-    [SerializeField] private TextAsset _itemCsvFile = null;
+    [SerializeField] private TextAsset _lureItemCsvFile = null;
+    [SerializeField] private TextAsset _foodItemCsvFile = null;
 
     #region For CSV read
     static string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
@@ -44,7 +45,7 @@ public class CsvReader : MonoBehaviour
     }
     private List<Item> readItem()
     {
-        var lines = Regex.Split(_creatureCsvFile.text, LINE_SPLIT_RE);
+        var lines = Regex.Split(_lureItemCsvFile.text, LINE_SPLIT_RE);
         List<Item> list = new List<Item>();
 
         if (lines.Length <= 1) return null;
