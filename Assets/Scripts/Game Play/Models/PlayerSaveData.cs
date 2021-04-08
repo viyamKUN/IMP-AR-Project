@@ -4,29 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class SaveUnit
-{
-    public int ID;
-    public int Count;
-    public SaveUnit(int id, int count)
-    {
-        this.ID = id;
-        this.Count = count;
-    }
-}
-
-[System.Serializable]
 public class SaveData
 {
     public string UserName;
     public int Money;
-    public List<SaveUnit> MyItems;
-    public List<SaveUnit> MyCreatures;
+    public Dictionary<int, int> MyItems;
+    public Dictionary<int, int> MyCreatures;
     public SaveData(string name)
     {
         this.UserName = name.Equals("") ? "Guest" : name;
-        this.MyItems = new List<SaveUnit>();
-        this.MyCreatures = new List<SaveUnit>();
+        this.MyItems = new Dictionary<int, int>();
+        this.MyCreatures = new Dictionary<int, int>();
     }
 }
 
@@ -37,8 +25,8 @@ public class PlayerSaveData : MonoBehaviour
     #region 플레이어 데이터 Getter
     public string GetPlayerName => _myData.UserName;
     public int GetPlayerMoney => _myData.Money;
-    public List<SaveUnit> GetPlayerItemList => _myData.MyItems;
-    public List<SaveUnit> GetPlayerCreatureList => _myData.MyCreatures;
+    public Dictionary<int, int> GetPlayerItemList => _myData.MyItems;
+    public Dictionary<int, int> GetPlayerCreatureList => _myData.MyCreatures;
     #endregion
 
     public void Init(string name = "")
@@ -47,7 +35,7 @@ public class PlayerSaveData : MonoBehaviour
 
         // 기본 지급
         _myData.Money = 5000;
-        _myData.MyItems.Add(new SaveUnit(0, 1));
+        _myData.MyItems.Add(0, 1);
 
         SaveData();
     }
@@ -83,5 +71,13 @@ public class PlayerSaveData : MonoBehaviour
         Init();
         binaryFormatter.Serialize(file, _myData);
         file.Close();
+    }
+    public void AddItem(int id, int count)
+    {
+
+    }
+    public void AddCreature(int id, int count)
+    {
+
     }
 }

@@ -59,6 +59,32 @@ public class GameManager : MonoBehaviour
         // 2. 도감에 있는 크리쳐를 탐색 -> 조건에 맞으면 호출
         // 3. 조건에 실패하면 대기
     }
+
+    /// <summary> 크리쳐를 잡았을 때. 기본적으로 1마리로 취급 </summary>
+    public void CatchCreature(int creatureID, int count = 1)
+    {
+        if (_myPlayerSaveData.GetPlayerCreatureList.ContainsKey(creatureID))
+        {
+            _myPlayerSaveData.GetPlayerCreatureList[creatureID] += count;
+        }
+        else
+        {
+            _myPlayerSaveData.GetPlayerCreatureList.Add(creatureID, count);
+        }
+    }
+
+    /// <summary> 아이템을 얻었을 때. 기본적으로 1개로 취급 </summary>
+    public void GetItem(int itemID, int count = 1)
+    {
+        if (_myPlayerSaveData.GetPlayerItemList.ContainsKey(itemID))
+        {
+            _myPlayerSaveData.GetPlayerItemList[itemID] += count;
+        }
+        else
+        {
+            _myPlayerSaveData.GetPlayerItemList.Add(itemID, count);
+        }
+    }
 }
 
 [System.Serializable]
