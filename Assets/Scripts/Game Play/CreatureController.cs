@@ -9,6 +9,7 @@ public class CreatureController : MonoBehaviour
     public void Catched()
     {
         Debug.Log("크리쳐를 잡았습니다!");
+        Destroy(this.gameObject);
     }
     public void Runaway()
     {

@@ -10,6 +10,7 @@ public class BagContent : MonoBehaviour
     [SerializeField] private Text _itemCount = null;
     [SerializeField] private Button _itemSelectButton = null;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private InGameBagContentsSetting _inGameContentSetting = null;
     int _id = 0;
     public void SetBagContent(int id, Sprite sprite, string name, int count)
     {
@@ -21,6 +22,8 @@ public class BagContent : MonoBehaviour
     public void SelectButton()
     {
         Debug.Log("ID: " + _id + " 를 클릭함");
-        gameManager.PutItemInBox(_id);
+        if (gameManager.PutItemInBox(_id))
+            gameManager.CallCreature(_id);
+        _inGameContentSetting.CompleteSetting();
     }
 }

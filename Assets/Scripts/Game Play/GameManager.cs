@@ -81,7 +81,6 @@ public class GameManager : MonoBehaviour
 #endif
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            Vector3 touchPoint = new Vector3(Input.GetTouch(0).deltaPosition.x, Input.GetTouch(0).deltaPosition.y, 0);
             Ray touchRay = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit h;
             if (Physics.Raycast(touchRay, out h, _touchable))
@@ -108,13 +107,20 @@ public class GameManager : MonoBehaviour
     public void SetBoxPosition(Transform value)
     {
         _itemBoxTransform = value;
-        Debug.Log("first" + _itemBoxTransform);
+        if (_currentItemObject != null)
+            _currentItemObject.transform.position = value.position;
+    }
+    public void DeleteBox()
+    {
+        _itemBoxTransform = null;
     }
     public bool PutItemInBox(int itemID)
     {
-        Vector3 targetPosition = _itemBoxTransform.position;
-        Debug.Log(targetPosition);
-        _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, targetPosition, Quaternion.identity);
+        if (_itemBoxTransform == null)
+            return false;
+
+        AddItem(itemID, -1);
+        _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, _itemBoxTransform.position, Quaternion.identity);
         return true;
     }
 
@@ -168,6 +174,7 @@ public class GameManager : MonoBehaviour
         if (_currentCreatureObject != null)
             _currentCreatureObject.Catched();
 
+        Destroy(_currentItemObject);
         _myPlayerSaveData.SaveGame();
     }
 
@@ -191,6 +198,10 @@ public class GameManager : MonoBehaviour
         {
             _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
             _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
+        }
+        if (_inGameBagContentsSetting != null)
+        {
+            _inGameBagContentsSetting.SetBagContents();
         }
     }
 
@@ -243,7 +254,7 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator GenerateCreature(int creatureID)
     {
-        Vector3 targetPosition = _itemBoxTransform.position + _creatureSpawnRange;
+        Vector3 targetPosition = _currentItemObject.transform.position + _creatureSpawnRange;
         GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
         _currentCreatureObject = gameObject.GetComponent<CreatureController>();
         gameObject.transform.LookAt(_itemBoxTransform.position);

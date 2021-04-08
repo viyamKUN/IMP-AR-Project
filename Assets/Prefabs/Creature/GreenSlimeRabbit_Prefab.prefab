@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 95131097399638280}
   - component: {fileID: -4954561154879999693}
   - component: {fileID: 3157545950818806867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GreenSlimeRabbit_Prefab
   m_TagString: Creature
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ Transform:
   m_GameObject: {fileID: 1773656247975474}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029802318}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4888571300212914}
   - {fileID: 4014940002278310}

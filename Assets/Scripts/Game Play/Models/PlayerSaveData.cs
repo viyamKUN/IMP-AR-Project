@@ -38,7 +38,6 @@ public class PlayerSaveData : MonoBehaviour
         // 기본 지급
         _myData.Money = 300;
         _myData.MyItems.Add(1, 1);
-        _myData.MyCreatures.Add(new MyCreature(0, 1, 0));
 
         SaveGame();
     }

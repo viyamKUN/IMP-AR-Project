@@ -50,6 +50,7 @@ MonoBehaviour:
   _userInterfaceSetting: {fileID: 0}
   _uiUnderButton: {fileID: 0}
   _uiBuySellButton: {fileID: 0}
+  _inGameBagContentsSetting: {fileID: 0}
   _itemObjects:
   - Name: Golden Egg
     Profile: {fileID: 21300000, guid: 70c4c8a4c8591d5458be9c63634f22f6, type: 3}
@@ -94,11 +95,11 @@ MonoBehaviour:
   - Name: Fox
     Profile: {fileID: 21300000, guid: cae23e5333c483842955b43b6a4682d2, type: 3}
     CreatureModel: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
-  _creatureSpawnRange: {x: 0, y: 0, z: 1}
+  _creatureSpawnRange: {x: 0.1, y: 0, z: 0}
   _delayTimeForRunAway: 10
   _touchable:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   _saveTimeDelay: 2
 --- !u!114 &6056328736842231007
 MonoBehaviour:
