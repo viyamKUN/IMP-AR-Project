@@ -7,6 +7,7 @@ public class CollectionUnit : MonoBehaviour
     [SerializeField] private Text _nameText = null;
     [SerializeField] private Text _countText = null;
     [SerializeField] private Slider _friendshipSlider = null;
+    [SerializeField] private Text _friendshipText = null;
 
     public void SetCollectionUnit(Sprite sprite, string name, int count, float friendship)
     {
@@ -14,5 +15,6 @@ public class CollectionUnit : MonoBehaviour
         _nameText.text = name;
         _countText.text = count.ToString();
         _friendshipSlider.value = friendship;
+        _friendshipText.text = friendship.ToString() + "%";
     }
 }

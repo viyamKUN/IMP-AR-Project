@@ -95,7 +95,7 @@ public class UserInterfaceSetting : MonoBehaviour
         }
     }
 
-    public void SetMyCollection(int countAll, List<Creature> wholeCollection, Dictionary<int, int> myCollections)
+    public void SetMyCollection(int countAll, List<Creature> wholeCollection, List<MyCreature> myCollections)
     {
         float percent = (float)myCollections.Count / (float)countAll;
         _collectionPercent.value = percent;
@@ -117,10 +117,16 @@ public class UserInterfaceSetting : MonoBehaviour
 
         foreach (var item in wholeCollection)
         {
-            if (myCollections.ContainsKey(item.ID))
+            int myCreatureIndex = _gameManager.GetPlayerSaveData.FindMyCreature(item.ID);
+            if (myCreatureIndex > 0)
             {
                 _catched[catchPointer].gameObject.SetActive(true);
-                _catched[catchPointer].SetCollectionUnit(_gameManager.GetCreatureImage(item.ID), item.Name, myCollections[item.ID], 0);
+                _catched[catchPointer].SetCollectionUnit(
+                    _gameManager.GetCreatureImage(item.ID),
+                    item.Name,
+                    myCollections[myCreatureIndex].Count,
+                    myCollections[myCreatureIndex].Friendship
+                );
                 catchPointer++;
             }
             else

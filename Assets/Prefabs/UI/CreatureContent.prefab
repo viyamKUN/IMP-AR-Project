@@ -839,6 +839,7 @@ MonoBehaviour:
   _nameText: {fileID: 6802033682556404082}
   _countText: {fileID: 1520883588334332635}
   _friendshipSlider: {fileID: 7872228051062822924}
+  _friendshipText: {fileID: 412018233156568599}
 --- !u!1 &6802033680763105184
 GameObject:
   m_ObjectHideFlags: 0

@@ -88,13 +88,13 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("해당 아이템을 선호하는 몬스터를 부르고 있습니다...");
 
-        Dictionary<int, int> myCreatureList = _myPlayerSaveData.GetPlayerCreatureList;
+        List<MyCreature> myCreatureList = _myPlayerSaveData.GetPlayerCreatureList;
         List<int> tempCreatureList = new List<int>();
         int callCreatureID = 0;
 
         foreach (Creature c in _creatureList)
         {
-            if (myCreatureList.ContainsKey(c.ID)) continue;
+            if (_myPlayerSaveData.FindMyCreature(c.ID) > 0) continue;
             if (c.FavoriteItemIDs.Contains(itemID))
                 tempCreatureList.Add(c.ID);
         }
@@ -106,8 +106,8 @@ public class GameManager : MonoBehaviour
             tempCreatureList.Clear();
 
             foreach (var my in myCreatureList)
-                if (_creatureList[my.Key].FavoriteItemIDs.Contains(itemID))
-                    tempCreatureList.Add(my.Key);
+                if (_creatureList[my.ID].FavoriteItemIDs.Contains(itemID))
+                    tempCreatureList.Add(my.ID);
 
             callCreatureID = Random.Range(0, tempCreatureList.Count);
         }
@@ -126,13 +126,14 @@ public class GameManager : MonoBehaviour
     /// <summary> 크리쳐를 잡았을 때. 기본적으로 1마리로 취급 </summary>
     public void CatchCreature(int creatureID, int count = 1)
     {
-        if (_myPlayerSaveData.GetPlayerCreatureList.ContainsKey(creatureID))
+        int myCreatureIndex = _myPlayerSaveData.FindMyCreature(creatureID);
+        if (myCreatureIndex > 0)
         {
-            _myPlayerSaveData.GetPlayerCreatureList[creatureID] += count;
+            _myPlayerSaveData.GetPlayerCreatureList[myCreatureIndex].Count += count;
         }
         else
         {
-            _myPlayerSaveData.GetPlayerCreatureList.Add(creatureID, count);
+            _myPlayerSaveData.GetPlayerCreatureList.Add(new MyCreature(creatureID, count, 0));
         }
     }
 
