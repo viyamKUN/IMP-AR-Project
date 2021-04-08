@@ -6,7 +6,10 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private PlayerSaveData _myPlayerSaveData = null;
     [SerializeField] private ItemObject[] _itemObjects = null;
+
+    public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     Transform _itemBoxTransform = null;
+
     private void Awake()
     {
         bool isGameDataExist = _myPlayerSaveData.LoadGameData();
@@ -27,6 +30,11 @@ public class GameManager : MonoBehaviour
                 CallCreature(0);
             }
         }
+    }
+    /// <summary>게임 세이브</summary>
+    public void CallGameSave()
+    {
+        _myPlayerSaveData.SaveData();
     }
     public void SetBoxPosition(Transform value)
     {

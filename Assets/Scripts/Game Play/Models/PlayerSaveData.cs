@@ -8,28 +8,47 @@ public class SaveUnit
 {
     public int ID;
     public int Count;
+    public SaveUnit(int id, int count)
+    {
+        this.ID = id;
+        this.Count = count;
+    }
 }
 
 [System.Serializable]
 public class SaveData
 {
     public string UserName;
+    public int Money;
     public List<SaveUnit> MyItems;
     public List<SaveUnit> MyCreatures;
     public SaveData(string name)
     {
-        UserName = name.Equals("") ? "Guest" : name;
-        MyItems = new List<SaveUnit>();
-        MyCreatures = new List<SaveUnit>();
+        this.UserName = name.Equals("") ? "Guest" : name;
+        this.MyItems = new List<SaveUnit>();
+        this.MyCreatures = new List<SaveUnit>();
     }
 }
 
 public class PlayerSaveData : MonoBehaviour
 {
     private SaveData _myData = null;
+
+    #region 플레이어 데이터 Getter
+    public string GetPlayerName => _myData.UserName;
+    public int GetPlayerMoney => _myData.Money;
+    public List<SaveUnit> GetPlayerItemList => _myData.MyItems;
+    public List<SaveUnit> GetPlayerCreatureList => _myData.MyCreatures;
+    #endregion
+
     public void Init(string name = "")
     {
         _myData = new SaveData(name);
+
+        // 기본 지급
+        _myData.Money = 5000;
+        _myData.MyItems.Add(new SaveUnit(0, 1));
+
         SaveData();
     }
     public void SaveData()
