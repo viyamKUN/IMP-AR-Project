@@ -11,7 +11,6 @@ public class CsvReader : MonoBehaviour
     [Header("CSV Files")]
     [SerializeField] private TextAsset _creatureCsvFile = null;
     [SerializeField] private TextAsset _lureItemCsvFile = null;
-    [SerializeField] private TextAsset _foodItemCsvFile = null;
 
     #region For CSV read
     static string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";

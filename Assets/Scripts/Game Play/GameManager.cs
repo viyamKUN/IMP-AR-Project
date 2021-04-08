@@ -18,16 +18,16 @@ public class GameManager : MonoBehaviour
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     public Creature GetCreature(int ID) => this._creatureList[ID];
-    public Item GetItem(int ID) => this._lureItemList[ID];
+    public Item GetItem(int ID) => this._itemList[ID];
 
     Transform _itemBoxTransform = null;
     List<Creature> _creatureList = null;
-    List<Item> _lureItemList = new List<Item>();
+    List<Item> _itemList = new List<Item>();
 
 
     private void Awake()
     {
-        _csvReader.Read(out _creatureList, out _lureItemList);
+        _csvReader.Read(out _creatureList, out _itemList);
 
         bool isGameDataExist = _myPlayerSaveData.LoadGame();
         if (_userInterfaceSetting == null)
@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
     private void SetUI()
     {
         _userInterfaceSetting.SetTopUI(_myPlayerSaveData.GetPlayerMoney);
-        _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName);
+        _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
     }
 
 }
