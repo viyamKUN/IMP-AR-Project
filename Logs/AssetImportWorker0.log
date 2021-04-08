@@ -118,3 +118,199 @@ System memory in use after: 108.0 MB.
 Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2032.
 Total: 1.969641 ms (FindLiveObjects: 0.209829 ms CreateObjectMapping: 0.066058 ms MarkObjects: 1.634343 ms  DeleteObjects: 0.057778 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000401 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.961 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1572 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.7 MB.
+System memory in use after: 138.8 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2036.
+Total: 1.826354 ms (FindLiveObjects: 0.190714 ms CreateObjectMapping: 0.057703 ms MarkObjects: 1.521307 ms  DeleteObjects: 0.055311 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 468.994693 seconds.
+  path: Assets/AR_Assets/ARRefLib
+  artifactKey: Guid(33d67371d1d43d34c98de5155e5949d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/ARRefLib using Guid(33d67371d1d43d34c98de5155e5949d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2c29a45c5fa52c4239faf94306d00c') in 0.003782 seconds
+  Import took 0.006547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008897 seconds.
+  path: Assets/AR_Assets/ARRefLib
+  artifactKey: Guid(33d67371d1d43d34c98de5155e5949d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/ARRefLib using Guid(33d67371d1d43d34c98de5155e5949d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2c29a45c5fa52c4239faf94306d00c') in 0.000700 seconds
+  Import took 0.003053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047599 seconds.
+  path: Assets/AR_Assets/ARRefLib/ReferenceImageLibrary.asset
+  artifactKey: Guid(d16a0ef67caee87419f840a8e7d8138a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AR_Assets/ARRefLib/ReferenceImageLibrary.asset using Guid(d16a0ef67caee87419f840a8e7d8138a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd422b4bbd85e35233d6cef79a4c645d3') in 0.345397 seconds
+  Import took 0.348559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.118453 seconds.
+  path: Assets/Image/UI Icon/handbag.png
+  artifactKey: Guid(e341198fdc35e1b4abc3725f513f4781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Image/UI Icon/handbag.png using Guid(e341198fdc35e1b4abc3725f513f4781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e9f1dd9ac36a24abd25c578ee1cd290') in 1.033322 seconds
+  Import took 1.036560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Graphics/Creatures/Langsat/02_Langsat_Attack.fbm/Langsat_diffuse_new.jpg
+  artifactKey: Guid(f701521145555460f9a9ffdf5254826a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Creatures/Langsat/02_Langsat_Attack.fbm/Langsat_diffuse_new.jpg using Guid(f701521145555460f9a9ffdf5254826a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7a6a1f17c409b554fc3afa8332b94b') in 0.970025 seconds
+  Import took 0.973669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Graphics/Creatures/Langsat/05_Langsat_Death .fbm/Langsat_diffuse_new.jpg
+  artifactKey: Guid(e8dfc79dbb7d14de19bc5a2d6751fff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Creatures/Langsat/05_Langsat_Death .fbm/Langsat_diffuse_new.jpg using Guid(e8dfc79dbb7d14de19bc5a2d6751fff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae80ff7727d5c0be1c4437bff1dd81eb') in 0.010909 seconds
+  Import took 0.014127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Graphics/Creatures/Langsat/03_Langsat_Damaged .fbm/Langsat_diffuse_new.jpg
+  artifactKey: Guid(e7989cdff1f834c0382c3482fc563167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Creatures/Langsat/03_Langsat_Damaged .fbm/Langsat_diffuse_new.jpg using Guid(e7989cdff1f834c0382c3482fc563167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfdabea30bc7ef02a62e3845c38ad589') in 0.015061 seconds
+  Import took 0.017912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Graphics/Items/FoodItem/day10-candy/textures/internal_ground_ao_texture.jpeg
+  artifactKey: Guid(af71fca957862ea4d9f167cee876d073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Items/FoodItem/day10-candy/textures/internal_ground_ao_texture.jpeg using Guid(af71fca957862ea4d9f167cee876d073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30aee07eee0ca102e4a3deaf60a3a199') in 1.163409 seconds
+  Import took 1.166104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Graphics/Creatures/Langsat/Langsat_diffuse_new.jpg
+  artifactKey: Guid(9057bfa5e59b04170a13915cc855aa93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Creatures/Langsat/Langsat_diffuse_new.jpg using Guid(9057bfa5e59b04170a13915cc855aa93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc36f7c0ff7a33e7f28560736d6ed53d') in 0.009816 seconds
+  Import took 0.012501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Graphics/Creatures/Langsat/01_Langsat_Walk .fbm/Langsat_diffuse_new.jpg
+  artifactKey: Guid(2a3c681df42424be290bbc9afa2ae2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Creatures/Langsat/01_Langsat_Walk .fbm/Langsat_diffuse_new.jpg using Guid(2a3c681df42424be290bbc9afa2ae2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf7b9925722235485f0b476ddb32aa1b') in 0.020236 seconds
+  Import took 0.023167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Graphics/Creatures/Langsat/04_Langsat_Idle.fbm/Langsat_diffuse_new.jpg
+  artifactKey: Guid(186e0a0b5c8894063859bfdba849c5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Creatures/Langsat/04_Langsat_Idle.fbm/Langsat_diffuse_new.jpg using Guid(186e0a0b5c8894063859bfdba849c5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edb599d5e299a757f93e20e052e7d0c2') in 0.021259 seconds
+  Import took 0.024020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.244849 seconds.
+  path: Assets/Prefabs/Creature/Langsat_Idle.prefab
+  artifactKey: Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Langsat_Idle.prefab using Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71a44e2b65bad2223c68e0e74c3af8a3') in 0.108765 seconds
+  Import took 0.112532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.296398 seconds.
+  path: Assets/Prefabs/Creature/Langsat_Idle.prefab
+  artifactKey: Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Langsat_Idle.prefab using Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac36d0ee50f9e1e8252d9e90b299819d') in 0.029160 seconds
+  Import took 0.033026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.579326 seconds.
+  path: Assets/Prefabs/Creature/Langsat_Idle.prefab
+  artifactKey: Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Langsat_Idle.prefab using Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b776d533aa0d6167e0057b9894f1840c') in 0.043380 seconds
+  Import took 0.047007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 94.550051 seconds.
+  path: Assets/Prefabs/Creature/Langsat_Idle.prefab
+  artifactKey: Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Langsat_Idle.prefab using Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ce3a39fdabbd62398a3ee55e9609a4d') in 0.028367 seconds
+  Import took 0.031875 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 144.8 MB.
+System memory in use after: 144.9 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2046.
+Total: 2.251656 ms (FindLiveObjects: 0.155764 ms CreateObjectMapping: 0.050770 ms MarkObjects: 1.989354 ms  DeleteObjects: 0.054813 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000458 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.928 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1572 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 173.1 MB.
+System memory in use after: 173.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2050.
+Total: 1.911931 ms (FindLiveObjects: 0.206459 ms CreateObjectMapping: 0.043742 ms MarkObjects: 1.605175 ms  DeleteObjects: 0.055705 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 142.6 MB.
+System memory in use after: 142.6 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 2050.
+Total: 1.788292 ms (FindLiveObjects: 0.182736 ms CreateObjectMapping: 0.054049 ms MarkObjects: 1.502293 ms  DeleteObjects: 0.048276 ms)
+

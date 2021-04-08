@@ -23,7 +23,13 @@ public class BagContent : MonoBehaviour
     {
         Debug.Log("ID: " + _id + " 를 클릭함");
         if (gameManager.PutItemInBox(_id))
+        {
             gameManager.CallCreature(_id);
-        _inGameContentSetting.CompleteSetting();
+            _inGameContentSetting.CompleteSetting();
+        }
+        else
+        {
+            Debug.Log("상자가 없거나 사라졌습니다.");
+        }
     }
 }

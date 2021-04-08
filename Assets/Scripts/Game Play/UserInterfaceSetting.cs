@@ -50,8 +50,8 @@ public class UserInterfaceSetting : MonoBehaviour
     }
     public void UpdateUserDataEnterField()
     {
-        _userDataEnterButton.enabled = _userNameInputField.text.Length > 1;
-        _supportText.gameObject.SetActive(_userNameInputField.text.Length <= 2);
+        _userDataEnterButton.interactable = _userNameInputField.text.Length > 1;
+        _supportText.gameObject.SetActive(_userNameInputField.text.Length < 2);
     }
     public void EnterUserData()
     {
