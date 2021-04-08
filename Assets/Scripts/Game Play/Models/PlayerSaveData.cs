@@ -25,7 +25,7 @@ public class PlayerSaveData : MonoBehaviour
 
     #region 플레이어 데이터 Getter
     public string GetPlayerName => _myData.UserName;
-    public int GetPlayerMoney => _myData.Money;
+    public int PlayerMoney { get => _myData.Money; set => _myData.Money = value; }
     public Dictionary<int, int> GetPlayerItemList => _myData.MyItems;
     public List<MyCreature> GetPlayerCreatureList => _myData.MyCreatures;
     #endregion
@@ -35,7 +35,7 @@ public class PlayerSaveData : MonoBehaviour
         _myData = new SaveData(name);
 
         // 기본 지급
-        _myData.Money = 5000;
+        _myData.Money = 300;
         _myData.MyItems.Add(1, 1);
         _myData.MyCreatures.Add(new MyCreature(0, 1, 0));
 

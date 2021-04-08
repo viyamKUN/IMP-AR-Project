@@ -1,71 +1,91 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Items;
 
 public class UIBuyView : MonoBehaviour
 {
-    public GameObject BuyMessage;
+    [SerializeField] private GameManager _gameManager = null;
+    [SerializeField] private GameObject _buyMessage;
 
-    public Text CountText;
-    public Text MyCountText;
-    public Text TotalGoldText;
+    [Header("Original Informations")]
+    [SerializeField] private Image _itemImage = null;
+    [SerializeField] private Text _itemText = null;
+    [SerializeField] private Text _itemPriceText = null;
+    [SerializeField] private Text _myCountText = null;
 
-    public int Gold = 100;
-    public int MyCount = 12;
+    [Header("Change Informations")]
+    [SerializeField] private Text _countText = null;
+    [SerializeField] private Text _totalGoldText = null;
+    [SerializeField] private Button _buyButton = null;
 
-    private int Count = 0;
-    private int TotalGold = 0;
+    private int _itemID = 0;
+    private int _gold = 0;
+    private int _myCount = 0;
+    private int _count = 1;
 
     private void Awake()
     {
-        BuyMessage.SetActive(false);
+        _buyMessage.SetActive(false);
     }
 
     //buy window open
-    public void ButtonContent()
+    public void ButtonContent(int id)
     {
-        BuyMessage.SetActive(true);
-        CountText.text = "0";
-        TotalGoldText.text = "0";
-        MyCountText.text = MyCount.ToString();
-        Count = 0;
+        _buyMessage.SetActive(true);
+        _myCount = _gameManager.GetItemCount(id);
+        _itemID = id;
+        _count = 1;
+        _gold = _gameManager.GetItem(id).Price;
+        _itemPriceText.text = _gold.ToString();
+
+        _itemImage.sprite = _gameManager.GetItemImage(id);
+        _itemText.text = _gameManager.GetItem(id).Name;
+        _myCountText.text = _myCount.ToString();
+
+        _countText.text = _count.ToString();
+        _totalGoldText.text = (_gold * _count).ToString();
+        setBuyButtonActive();
     }
 
     //select amount
     public void PlusButton()
     {
-        if (Count+MyCount < 99)
-        {
-            Count++;
-            TotalGold = Gold * Count;
-            CountText.text = Count.ToString();
-            TotalGoldText.text = TotalGold.ToString();
-        }
+        if (_count + _myCount >= 99) return;
+
+        _count++;
+        _countText.text = _count.ToString();
+        _totalGoldText.text = (_gold * _count).ToString();
+        setBuyButtonActive();
     }
     public void MinusButton()
     {
-        if (Count > 0)
-        {
-            Count--;
-            TotalGold = Gold * Count;
-            CountText.text = Count.ToString();
-            TotalGoldText.text = TotalGold.ToString();
-        }
+        if (_count <= 0) return;
+
+        _count--;
+        _countText.text = _count.ToString();
+        _totalGoldText.text = (_gold * _count).ToString();
+        setBuyButtonActive();
     }
 
     //yes or no
     public void ButtonYes()
     {
-        BuyMessage.SetActive(false);
-        Debug.Log("Yes");
-        MyCount += Count;
-        Debug.Log("Now My Item Number is: " + MyCount);
+        _buyMessage.SetActive(false);
+        int pay = _gold * _count;
+        if (_gameManager.CanUseMoney(pay))
+        {
+            _gameManager.AddItem(_itemID, _count);
+            _gameManager.UseMoney(pay);
+        }
     }
     public void ButtonNo()
     {
-        BuyMessage.SetActive(false);
-        Debug.Log("No");
-        Debug.Log("Now My Item Number is: " + MyCount);
+        _buyMessage.SetActive(false);
+    }
+
+    private void setBuyButtonActive()
+    {
+        int pay = _gold * _count;
+        _buyButton.interactable = _gameManager.CanUseMoney(pay);
     }
 }

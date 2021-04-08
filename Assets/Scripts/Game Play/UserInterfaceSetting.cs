@@ -159,13 +159,13 @@ public class UserInterfaceSetting : MonoBehaviour
             if (item.MyType.Equals(ItemType.Food))
             {
                 _shopBuyFoods[foodPointer].gameObject.SetActive(true);
-                _shopBuyFoods[foodPointer].SetShopUnit(_gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
+                _shopBuyFoods[foodPointer].SetShopUnit(item.ID, _gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
                 foodPointer++;
             }
             else if (item.MyType.Equals(ItemType.Catch))
             {
                 _shopBuyCatchs[catchPointer].gameObject.SetActive(true);
-                _shopBuyCatchs[catchPointer].SetShopUnit(_gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
+                _shopBuyCatchs[catchPointer].SetShopUnit(item.ID, _gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
                 catchPointer++;
             }
         }
@@ -186,13 +186,13 @@ public class UserInterfaceSetting : MonoBehaviour
                 if (item.MyType.Equals(ItemType.Food))
                 {
                     _shopSellFoods[foodPointer].gameObject.SetActive(true);
-                    _shopSellFoods[foodPointer].SetShopUnit(_gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
+                    _shopSellFoods[foodPointer].SetShopUnit(item.ID, _gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
                     foodPointer++;
                 }
                 else if (item.MyType.Equals(ItemType.Catch))
                 {
                     _shopSellCatchs[catchPointer].gameObject.SetActive(true);
-                    _shopSellCatchs[catchPointer].SetShopUnit(_gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
+                    _shopSellCatchs[catchPointer].SetShopUnit(item.ID, _gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
                     catchPointer++;
                 }
             }

@@ -1526,12 +1526,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d705595bd6b60449b32f4228ea48e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuyMessage: {fileID: 564574659}
-  CountText: {fileID: 1131835853}
-  MyCountText: {fileID: 1628562815}
-  TotalGoldText: {fileID: 182158140}
-  Gold: 100
-  MyCount: 15
+  _gameManager: {fileID: 6056328736154388203}
+  _buyMessage: {fileID: 564574659}
+  _itemImage: {fileID: 1254532376}
+  _itemText: {fileID: 240947056}
+  _itemPriceText: {fileID: 1800873286}
+  _myCountText: {fileID: 1628562815}
+  _countText: {fileID: 1131835853}
+  _totalGoldText: {fileID: 182158140}
+  _buyButton: {fileID: 1735521722}
 --- !u!1001 &179199659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1739,6 +1742,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!1 &182158138
@@ -4706,6 +4713,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &390284289 stripped
@@ -6153,6 +6164,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!1 &512223414
@@ -6810,6 +6825,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &524407017 stripped
@@ -7325,6 +7344,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &569176773 stripped
@@ -11309,6 +11332,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &889535276 stripped
@@ -11761,6 +11788,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &901294910 stripped
@@ -12843,6 +12874,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &959341837 stripped
@@ -14411,6 +14446,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1063146415 stripped
@@ -14625,6 +14664,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1077998249 stripped
@@ -15038,6 +15081,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!1001 &1111649848
@@ -15759,6 +15806,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1150515614 stripped
@@ -16321,6 +16372,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1178757361 stripped
@@ -16798,7 +16853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7075472, g: 0.33708617, b: 0.33708617, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17203,6 +17258,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1303340883 stripped
@@ -17830,6 +17889,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1375126531 stripped
@@ -18868,6 +18931,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1456536347 stripped
@@ -19803,6 +19870,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1510516469 stripped
@@ -20525,6 +20596,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1553245330 stripped
@@ -21534,6 +21609,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1633584709 stripped
@@ -21748,6 +21827,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1645716708 stripped
@@ -22198,6 +22281,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1661985284 stripped
@@ -23873,6 +23960,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1733127276 stripped
@@ -25947,6 +26038,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1966305038 stripped
@@ -26459,6 +26554,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &1997593154 stripped
@@ -27531,6 +27630,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!224 &2053038012 stripped
@@ -30003,6 +30106,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8798853449473856110, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
+      propertyPath: _uiBuyView
+      value: 
+      objectReference: {fileID: 157926947}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a7d883dedc5e44abfe1f71e9c5c0cc, type: 3}
 --- !u!1 &7572943274538378502
