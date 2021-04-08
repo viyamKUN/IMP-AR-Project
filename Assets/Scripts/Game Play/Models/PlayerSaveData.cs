@@ -28,6 +28,7 @@ public class PlayerSaveData : MonoBehaviour
     public int PlayerMoney { get => _myData.Money; set => _myData.Money = value; }
     public Dictionary<int, int> GetPlayerItemList => _myData.MyItems;
     public List<MyCreature> GetPlayerCreatureList => _myData.MyCreatures;
+    public int GetItemCount(int ID) => _myData.MyItems[ID];
     #endregion
 
     public void Init(string name = "")

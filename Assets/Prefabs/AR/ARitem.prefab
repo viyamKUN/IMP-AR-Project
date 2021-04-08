@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 9003780424864357787}
   - component: {fileID: 9003780424864357764}
   - component: {fileID: 9003780424864357786}
+  - component: {fileID: 7415428926552309581}
   m_Layer: 5
   m_Name: ARitem
   m_TagString: Untagged
@@ -318,6 +319,22 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7415428926552309581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003780424864357766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830f9eabe48ad4b22b5d5739b339ea63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _profileImage: {fileID: 9003780424893006293}
+  _itemName: {fileID: 9003780425851203333}
+  _itemCount: {fileID: 9003780424979915015}
+  _itemSelectButton: {fileID: 4689053990841513319}
 --- !u!1 &9003780424893006295
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7075472, g: 0.33708617, b: 0.33708617, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

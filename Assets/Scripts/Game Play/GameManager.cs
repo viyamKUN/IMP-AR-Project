@@ -9,12 +9,19 @@ public class GameManager : MonoBehaviour
     [Header("Other Scripts")]
     [SerializeField] private PlayerSaveData _myPlayerSaveData = null;
     [SerializeField] private CsvReader _csvReader = null;
+
+    [Header("Lobby Only")]
     [SerializeField] private UserInterfaceSetting _userInterfaceSetting = null;
     [SerializeField] private UIUnderButton _uiUnderButton = null;
     [SerializeField] private UIBuySellButton _uiBuySellButton = null;
+
+    [Header("In Game Only")]
+    [SerializeField] private InGameBagContentsSetting _inGameBagContentsSetting = null;
+
     [Header("Objects")]
     [SerializeField] private ItemObject[] _itemObjects = null;
     [SerializeField] private CreatureObject[] _creatureObjects = null;
+
     [Header("Values")]
     [SerializeField] private Vector3 _creatureSpawnRange = Vector3.zero;
     [SerializeField] private float _delayTimeForRunAway = 10;
@@ -43,7 +50,14 @@ public class GameManager : MonoBehaviour
 
         bool isGameDataExist = _myPlayerSaveData.LoadGame();
         if (_userInterfaceSetting == null)
+        {
+            if (_inGameBagContentsSetting != null)
+            {
+                _inGameBagContentsSetting.SetBagContents();
+                _inGameBagContentsSetting.CompleteSetting();
+            }
             return;
+        }
 
         if (!isGameDataExist)
             _userInterfaceSetting.OpenUserDataEnterPanel();
@@ -166,7 +180,7 @@ public class GameManager : MonoBehaviour
 
         if (count < 0)
         {
-            if (_myPlayerSaveData.GetPlayerItemList[itemID] == 0)
+            if (_myPlayerSaveData.GetItemCount(itemID) == 0)
                 _myPlayerSaveData.GetPlayerItemList.Remove(itemID);
         }
 
@@ -208,7 +222,7 @@ public class GameManager : MonoBehaviour
     public int GetItemCount(int itemID)
     {
         if (_myPlayerSaveData.GetPlayerItemList.ContainsKey(itemID))
-            return _myPlayerSaveData.GetPlayerItemList[itemID];
+            return _myPlayerSaveData.GetItemCount(itemID);
 
         return 0;
     }
