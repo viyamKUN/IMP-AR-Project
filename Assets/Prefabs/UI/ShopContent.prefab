@@ -413,6 +413,7 @@ MonoBehaviour:
   _nameText: {fileID: 3684554178725747539}
   _priceText: {fileID: 7561631181859203280}
   _countText: {fileID: 3684554180666840401}
+  _thisShopType: 0
 --- !u!1 &7561631181859203282
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,14 +617,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9058824, g: 0.882353, b: 0.7803922, a: 1}
+  m_Color: {r: 0.83921576, g: 0.7058824, b: 0.18431373, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 207be7a48fc17ca4c913e43f5987a2d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -691,14 +692,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78039217, g: 0.8194722, b: 0.90588236, a: 1}
+  m_Color: {r: 0.26931292, g: 0.38562432, b: 0.6415094, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e341198fdc35e1b4abc3725f513f4781, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

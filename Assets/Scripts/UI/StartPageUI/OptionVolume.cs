@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class OptionVolume : MonoBehaviour
 {
+    public static OptionVolume instance;
     public AudioMixer mixer;
     public Slider BgmSlider;
     public Text BgmText;
@@ -15,26 +16,41 @@ public class OptionVolume : MonoBehaviour
     private float BgmSliderValue;
     private float SfxSliderValue;
 
-    void Start()
+    void Awake()
     {
-        BgmSlider.value = PlayerPrefs.GetFloat("BGM", 0.75f);
-        SfxSlider.value = PlayerPrefs.GetFloat("SFX", 0.75f);
+        GameObject go = GameObject.Find("SoundManager");
+
+        if (instance != null && instance != this)
+            Destroy(this.gameObject);
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(go);
+        }
+    }
+    private void Start()
+    {
+        BgmSlider.value = PlayerPrefs.GetFloat(SavePrefName.BGM, 0.4f);
+        SfxSlider.value = PlayerPrefs.GetFloat(SavePrefName.SUI, 0.4f);
+
+        BGMAudioControl();
+        SFXAudioControl();
     }
 
     public void BGMAudioControl()
     {
         BgmSliderValue = BgmSlider.value;
         mixer.SetFloat("BGM", Mathf.Log10(BgmSliderValue) * 20);
-        PlayerPrefs.SetFloat("BGM", BgmSliderValue);
+        PlayerPrefs.SetFloat(SavePrefName.BGM, BgmSliderValue);
     }
     public void SFXAudioControl()
     {
         SfxSliderValue = SfxSlider.value;
         mixer.SetFloat("SFX", Mathf.Log10(SfxSliderValue) * 20);
-        PlayerPrefs.SetFloat("SFX", SfxSliderValue);
+        PlayerPrefs.SetFloat(SavePrefName.SUI, SfxSliderValue);
     }
 
-    public void BGMUpdateTextObject ()
+    public void BGMUpdateTextObject()
     {
         BgmText.text = Mathf.Round(BgmSliderValue * 100).ToString();
     }
