@@ -12763,6 +12763,9 @@ MonoBehaviour:
   _userName: {fileID: 1498612647}
   _foodItemsParent: {fileID: 294605255}
   _catchItemsParent: {fileID: 462475079}
+  _collectionPercent: {fileID: 474948512}
+  _catchedParent: {fileID: 34168848}
+  _nonCatchParent: {fileID: 1649811560}
 --- !u!1 &911440560
 GameObject:
   m_ObjectHideFlags: 0

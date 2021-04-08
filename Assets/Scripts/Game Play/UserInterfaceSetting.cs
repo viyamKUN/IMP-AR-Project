@@ -24,6 +24,11 @@ public class UserInterfaceSetting : MonoBehaviour
     InventoryUnit[] _foodItems = null;
     InventoryUnit[] _catchItems = null;
 
+    [Header("Collection Page")]
+    [SerializeField] private Slider _collectionPercent = null;
+    [SerializeField] private GameObject _catchedParent = null;
+    [SerializeField] private GameObject _nonCatchParent = null;
+
 
     #region User Data Enter
     public void OpenUserDataEnterPanel()
@@ -82,7 +87,7 @@ public class UserInterfaceSetting : MonoBehaviour
             }
             else
             {
-                // NONE 타입일때 필요함
+                // TODO: NONE 타입 필요.
             }
         }
     }
