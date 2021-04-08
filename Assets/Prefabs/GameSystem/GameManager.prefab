@@ -98,4 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _creatureCsvFile: {fileID: 4900000, guid: 71439569c62ec4eaf83e61940fde26eb, type: 3}
-  _lureItemCsvFile: {fileID: 4900000, guid: 8bd870d3c70dc4cb685434749bde01a5, type: 3}
+  _itemCsvFile: {fileID: 4900000, guid: 8bd870d3c70dc4cb685434749bde01a5, type: 3}

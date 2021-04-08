@@ -1,5 +1,5 @@
-ID,Name,Description,Type Letter
-0,WoodBox,The box.,C
-1,Carrot,This is orange,C
-2,Apple,This is apple,C
-3,Barrel,This is wooden barrel,C
+ID,Name,Description,Price,Type Letter
+0,WoodBox,The box.,100,C
+1,Carrot,This is orange,110,C
+2,Apple,This is apple,120,C
+3,Barrel,This is wooden barrel,130,C

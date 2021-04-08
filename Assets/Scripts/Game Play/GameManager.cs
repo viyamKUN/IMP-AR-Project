@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CsvReader _csvReader = null;
     [SerializeField] private UserInterfaceSetting _userInterfaceSetting = null;
     [SerializeField] private UIUnderButton _uiUnderButton = null;
+    [SerializeField] private UIBuySellButton _uiBuySellButton = null;
     [Header("Objects")]
     [SerializeField] private ItemObject[] _itemObjects = null;
     [SerializeField] private CreatureObject[] _creatureObjects = null;
@@ -138,16 +139,19 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary> 아이템을 얻었을 때. 기본적으로 1개로 취급 </summary>
-    public void GetItem(int itemID, int count = 1)
+    public void AddItem(int itemID, int count = 1)
     {
         if (_myPlayerSaveData.GetPlayerItemList.ContainsKey(itemID))
-        {
             _myPlayerSaveData.GetPlayerItemList[itemID] += count;
-        }
         else
-        {
             _myPlayerSaveData.GetPlayerItemList.Add(itemID, count);
-        }
+    }
+    public int GetItemCount(int itemID)
+    {
+        if (_myPlayerSaveData.GetPlayerItemList.ContainsKey(itemID))
+            return _myPlayerSaveData.GetPlayerItemList[itemID];
+
+        return 0;
     }
 
     private void SetUI()
@@ -157,7 +161,10 @@ public class GameManager : MonoBehaviour
         _userInterfaceSetting.SetTopUI(_myPlayerSaveData.GetPlayerMoney);
         _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
         _userInterfaceSetting.SetMyCollection(_creatureList.Count, _creatureList, _myPlayerSaveData.GetPlayerCreatureList);
+        _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
+
         _uiUnderButton.ButtonProfile();
+        _uiBuySellButton.ButtonBuy();
     }
 
 }
