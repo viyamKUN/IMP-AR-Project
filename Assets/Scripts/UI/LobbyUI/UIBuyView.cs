@@ -8,6 +8,7 @@ public class UIBuyView : MonoBehaviour
     [SerializeField] private GameObject _buyMessage;
 
     [Header("Original Informations")]
+    [SerializeField] private Text _titleText = null;
     [SerializeField] private Image _itemImage = null;
     [SerializeField] private Text _itemText = null;
     [SerializeField] private Text _itemPriceText = null;
@@ -18,7 +19,12 @@ public class UIBuyView : MonoBehaviour
     [SerializeField] private Text _totalGoldText = null;
     [SerializeField] private Button _buyButton = null;
 
+    [Header("Messages")]
+    [SerializeField] private string _buyTitle = "";
+    [SerializeField] private string _sellTitle = "";
+
     private int _itemID = 0;
+    private ShopType _currentShopType;
     private int _gold = 0;
     private int _myCount = 0;
     private int _count = 1;
@@ -29,15 +35,17 @@ public class UIBuyView : MonoBehaviour
     }
 
     //buy window open
-    public void ButtonContent(int id)
+    public void ButtonContent(int id, ShopType shoptype)
     {
         _buyMessage.SetActive(true);
         _myCount = _gameManager.GetItemCount(id);
         _itemID = id;
+        _currentShopType = shoptype;
         _count = 1;
         _gold = _gameManager.GetItem(id).Price;
         _itemPriceText.text = _gold.ToString();
 
+        _titleText.text = shoptype.Equals(ShopType.Buy) ? _buyTitle : _sellTitle;
         _itemImage.sprite = _gameManager.GetItemImage(id);
         _itemText.text = _gameManager.GetItem(id).Name;
         _myCountText.text = _myCount.ToString();
@@ -70,13 +78,22 @@ public class UIBuyView : MonoBehaviour
     //yes or no
     public void ButtonYes()
     {
-        _buyMessage.SetActive(false);
-        int pay = _gold * _count;
-        if (_gameManager.CanUseMoney(pay))
+        if (_currentShopType.Equals(ShopType.Buy))
         {
-            _gameManager.AddItem(_itemID, _count);
-            _gameManager.UseMoney(pay);
+            int pay = _gold * _count;
+            if (_gameManager.CanUseMoney(pay))
+            {
+                _gameManager.AddItem(_itemID, _count);
+                _gameManager.UseMoney(pay);
+            }
         }
+        else
+        {
+            int pay = _gold * _count;
+            _gameManager.AddItem(_itemID, -_count);
+            _gameManager.AddMoney(pay);
+        }
+        _buyMessage.SetActive(false);
     }
     public void ButtonNo()
     {
@@ -85,7 +102,14 @@ public class UIBuyView : MonoBehaviour
 
     private void setBuyButtonActive()
     {
-        int pay = _gold * _count;
-        _buyButton.interactable = _gameManager.CanUseMoney(pay);
+        if (_currentShopType.Equals(ShopType.Buy))
+        {
+            int pay = _gold * _count;
+            _buyButton.interactable = _gameManager.CanUseMoney(pay);
+        }
+        else
+        {
+            _buyButton.interactable = (_count <= _myCount);
+        }
     }
 }

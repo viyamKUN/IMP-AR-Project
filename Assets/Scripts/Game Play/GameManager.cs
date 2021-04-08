@@ -164,10 +164,19 @@ public class GameManager : MonoBehaviour
         else
             _myPlayerSaveData.GetPlayerItemList.Add(itemID, count);
 
+        if (count < 0)
+        {
+            if (_myPlayerSaveData.GetPlayerItemList[itemID] == 0)
+                _myPlayerSaveData.GetPlayerItemList.Remove(itemID);
+        }
+
         _myPlayerSaveData.SaveGame();
 
         if (_userInterfaceSetting != null)
+        {
             _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
+            _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
+        }
     }
 
     public bool CanUseMoney(int payment)
@@ -175,6 +184,15 @@ public class GameManager : MonoBehaviour
         if (_myPlayerSaveData.PlayerMoney < payment)
             return false;
         return true;
+    }
+
+    public void AddMoney(int amount)
+    {
+        _myPlayerSaveData.PlayerMoney += amount;
+        _myPlayerSaveData.SaveGame();
+
+        if (_userInterfaceSetting != null)
+            _userInterfaceSetting.SetTopUI(_myPlayerSaveData.PlayerMoney);
     }
 
     public void UseMoney(int payment)
