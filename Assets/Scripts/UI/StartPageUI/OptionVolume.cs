@@ -27,9 +27,14 @@ public class OptionVolume : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(go);
         }
-
+    }
+    private void Start()
+    {
         BgmSlider.value = PlayerPrefs.GetFloat(SavePrefName.BGM, 0.4f);
         SfxSlider.value = PlayerPrefs.GetFloat(SavePrefName.SUI, 0.4f);
+
+        BGMAudioControl();
+        SFXAudioControl();
     }
 
     public void BGMAudioControl()
