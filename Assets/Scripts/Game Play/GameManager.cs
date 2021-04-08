@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (tempCreatureList.Count > 0)
-            callCreatureID = Random.Range(0, tempCreatureList.Count);
+            callCreatureID = tempCreatureList[Random.Range(0, tempCreatureList.Count)];
         else
         {
             tempCreatureList.Clear();
