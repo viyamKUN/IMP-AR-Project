@@ -11,11 +11,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CsvReader _csvReader = null;
     [SerializeField] private UserInterfaceSetting _userInterfaceSetting = null;
     [SerializeField] private UIUnderButton _uiUnderButton = null;
+    [SerializeField] private UIBuySellButton _uiBuySellButton = null;
     [Header("Objects")]
     [SerializeField] private ItemObject[] _itemObjects = null;
     [SerializeField] private CreatureObject[] _creatureObjects = null;
     [Header("Values")]
     [SerializeField] private Vector3 _creatureSpawnRange = Vector3.zero;
+    [SerializeField] private float _delayTimeForRunAway = 10;
+    [SerializeField] private LayerMask _touchable;
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     public Creature GetCreature(int ID) => this._creatureList[ID];
@@ -26,6 +29,9 @@ public class GameManager : MonoBehaviour
     Transform _itemBoxTransform = null;
     List<Creature> _creatureList = null;
     List<Item> _itemList = null;
+    GameObject _currentItemObject = null;
+    CreatureController _currentCreatureObject = null;
+    Coroutine _creatureCoroutine = null;
 
 
     private void Awake()
@@ -42,24 +48,38 @@ public class GameManager : MonoBehaviour
             SetUI();
     }
 
-#if UNITY_EDITOR
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             _itemBoxTransform = this.transform;
             // Item 넘버도 임의로 지정
-            if (PutItemInBox(0))
+            if (PutItemInBox(1))
             {
-                CallCreature(0);
+                CallCreature(1);
             }
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             _myPlayerSaveData.DeleteGame();
         }
-    }
 #endif
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            Vector3 touchPoint = new Vector3(Input.GetTouch(0).deltaPosition.x, Input.GetTouch(0).deltaPosition.y, 0);
+            Ray touchRay = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            RaycastHit h;
+            if (Physics.Raycast(touchRay, out h, _touchable))
+            {
+                if (h.transform.gameObject.CompareTag("Creature"))
+                {
+                    CatchCreature(_currentCreatureObject.ID);
+                    return;
+                }
+            }
+        }
+    }
 
     /// <summary>게임 세이브</summary>
     public void CallGameSave()
@@ -79,7 +99,7 @@ public class GameManager : MonoBehaviour
     {
         Vector3 targetPosition = _itemBoxTransform.position;
 
-        GameObject lureitem = Instantiate(_itemObjects[itemID].ItemModel, targetPosition, Quaternion.identity);
+        _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, targetPosition, Quaternion.identity);
         return true;
     }
 
@@ -88,65 +108,65 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("해당 아이템을 선호하는 몬스터를 부르고 있습니다...");
 
-        Dictionary<int, int> myCreatureList = _myPlayerSaveData.GetPlayerCreatureList;
+        List<MyCreature> myCreatureList = _myPlayerSaveData.GetPlayerCreatureList;
         List<int> tempCreatureList = new List<int>();
         int callCreatureID = 0;
 
         foreach (Creature c in _creatureList)
         {
-            if (myCreatureList.ContainsKey(c.ID)) continue;
+            if (_myPlayerSaveData.FindMyCreature(c.ID) > 0) continue;
             if (c.FavoriteItemIDs.Contains(itemID))
                 tempCreatureList.Add(c.ID);
         }
 
         if (tempCreatureList.Count > 0)
-            callCreatureID = Random.Range(0, tempCreatureList.Count);
+            callCreatureID = tempCreatureList[Random.Range(0, tempCreatureList.Count)];
         else
         {
             tempCreatureList.Clear();
 
             foreach (var my in myCreatureList)
-                if (_creatureList[my.Key].FavoriteItemIDs.Contains(itemID))
-                    tempCreatureList.Add(my.Key);
+                if (_creatureList[my.ID].FavoriteItemIDs.Contains(itemID))
+                    tempCreatureList.Add(my.ID);
 
             callCreatureID = Random.Range(0, tempCreatureList.Count);
         }
 
         Debug.Log(_creatureList[callCreatureID].Name + "이 나타났다!");
-        GenerateCreature(callCreatureID);
-    }
-    private void GenerateCreature(int creatureID)
-    {
-        Vector3 targetPosition = _itemBoxTransform.position + _creatureSpawnRange;
 
-        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
-        gameObject.transform.LookAt(_itemBoxTransform.position);
+        _creatureCoroutine = StartCoroutine(GenerateCreature(callCreatureID));
     }
 
     /// <summary> 크리쳐를 잡았을 때. 기본적으로 1마리로 취급 </summary>
     public void CatchCreature(int creatureID, int count = 1)
     {
-        if (_myPlayerSaveData.GetPlayerCreatureList.ContainsKey(creatureID))
-        {
-            _myPlayerSaveData.GetPlayerCreatureList[creatureID] += count;
-        }
+        if (_creatureCoroutine != null)
+            StopCoroutine(_creatureCoroutine);
+
+        int myCreatureIndex = _myPlayerSaveData.FindMyCreature(creatureID);
+
+        if (myCreatureIndex > 0)
+            _myPlayerSaveData.GetPlayerCreatureList[myCreatureIndex].Count += count;
         else
-        {
-            _myPlayerSaveData.GetPlayerCreatureList.Add(creatureID, count);
-        }
+            _myPlayerSaveData.GetPlayerCreatureList.Add(new MyCreature(creatureID, count, 0));
+
+        _currentCreatureObject.Catched();
     }
 
     /// <summary> 아이템을 얻었을 때. 기본적으로 1개로 취급 </summary>
-    public void GetItem(int itemID, int count = 1)
+    public void AddItem(int itemID, int count = 1)
     {
         if (_myPlayerSaveData.GetPlayerItemList.ContainsKey(itemID))
-        {
             _myPlayerSaveData.GetPlayerItemList[itemID] += count;
-        }
         else
-        {
             _myPlayerSaveData.GetPlayerItemList.Add(itemID, count);
-        }
+    }
+    public int GetItemCount(int itemID)
+    {
+        if (_myPlayerSaveData.GetPlayerItemList.ContainsKey(itemID))
+            return _myPlayerSaveData.GetPlayerItemList[itemID];
+
+        return 0;
     }
 
     private void SetUI()
@@ -156,9 +176,23 @@ public class GameManager : MonoBehaviour
         _userInterfaceSetting.SetTopUI(_myPlayerSaveData.GetPlayerMoney);
         _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
         _userInterfaceSetting.SetMyCollection(_creatureList.Count, _creatureList, _myPlayerSaveData.GetPlayerCreatureList);
-        _uiUnderButton.ButtonProfile();
-    }
+        _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
 
+        _uiUnderButton.ButtonProfile();
+        _uiBuySellButton.ButtonBuy();
+    }
+    private IEnumerator GenerateCreature(int creatureID)
+    {
+        Vector3 targetPosition = _itemBoxTransform.position + _creatureSpawnRange;
+        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
+        _currentCreatureObject = gameObject.GetComponent<CreatureController>();
+        gameObject.transform.LookAt(_itemBoxTransform.position);
+
+        yield return new WaitForSeconds(_delayTimeForRunAway);
+
+        _currentCreatureObject.Runaway();
+        Destroy(_currentItemObject);
+    }
 }
 
 [System.Serializable]

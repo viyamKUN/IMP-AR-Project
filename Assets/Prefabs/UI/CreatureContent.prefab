@@ -839,6 +839,7 @@ MonoBehaviour:
   _nameText: {fileID: 6802033682556404082}
   _countText: {fileID: 1520883588334332635}
   _friendshipSlider: {fileID: 7872228051062822924}
+  _friendshipText: {fileID: 412018233156568599}
 --- !u!1 &6802033680763105184
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,7 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7075472, g: 0.33708617, b: 0.33708617, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

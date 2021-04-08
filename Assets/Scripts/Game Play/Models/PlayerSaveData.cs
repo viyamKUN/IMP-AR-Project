@@ -2,6 +2,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections.Generic;
 using UnityEngine;
+using Creatures;
 
 [System.Serializable]
 public class SaveData
@@ -9,12 +10,12 @@ public class SaveData
     public string UserName;
     public int Money;
     public Dictionary<int, int> MyItems;
-    public Dictionary<int, int> MyCreatures;
+    public List<MyCreature> MyCreatures;
     public SaveData(string name)
     {
         this.UserName = name.Equals("") ? "Guest" : name;
         this.MyItems = new Dictionary<int, int>();
-        this.MyCreatures = new Dictionary<int, int>();
+        this.MyCreatures = new List<MyCreature>();
     }
 }
 
@@ -26,7 +27,7 @@ public class PlayerSaveData : MonoBehaviour
     public string GetPlayerName => _myData.UserName;
     public int GetPlayerMoney => _myData.Money;
     public Dictionary<int, int> GetPlayerItemList => _myData.MyItems;
-    public Dictionary<int, int> GetPlayerCreatureList => _myData.MyCreatures;
+    public List<MyCreature> GetPlayerCreatureList => _myData.MyCreatures;
     #endregion
 
     public void Init(string name = "")
@@ -35,7 +36,7 @@ public class PlayerSaveData : MonoBehaviour
 
         // 기본 지급
         _myData.Money = 5000;
-        _myData.MyItems.Add(0, 1);
+        _myData.MyItems.Add(1, 1);
 
         SaveGame();
     }
@@ -66,5 +67,16 @@ public class PlayerSaveData : MonoBehaviour
     {
         var filename = SaveFileName.PlayerDataFileName;
         File.Delete(filename);
+    }
+    public int FindMyCreature(int ID)
+    {
+        int i = 0;
+        foreach (MyCreature m in _myData.MyCreatures)
+        {
+            if (m.ID == ID)
+                return i;
+            i++;
+        }
+        return -1;
     }
 }

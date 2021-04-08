@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7075472, g: 0.33708617, b: 0.33708617, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 3684554180820675026}
   - component: {fileID: 3684554180820675020}
   - component: {fileID: 3684554180820675023}
+  - component: {fileID: 8798853449473856110}
   m_Layer: 5
   m_Name: ShopContent
   m_TagString: Untagged
@@ -395,6 +396,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8798853449473856110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684554180820675024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa28d3b741374b69a4bed3c70fc53a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _profileImage: {fileID: 3684554180720457091}
+  _nameText: {fileID: 3684554178725747539}
+  _priceText: {fileID: 7561631181859203280}
+  _countText: {fileID: 3684554180666840401}
 --- !u!1 &7561631181859203282
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,12 +9,14 @@ namespace Items
         public int ID;
         public string Name;
         public string Description;
+        public int Price;
         public ItemType MyType;
-        public Item(int id, string name, string desc, string typeLetter)
+        public Item(int id, string name, string desc, int price, string typeLetter)
         {
             this.ID = id;
             this.Name = name;
             this.Description = desc;
+            this.Price = price;
             switch (typeLetter)
             {
                 case "C":

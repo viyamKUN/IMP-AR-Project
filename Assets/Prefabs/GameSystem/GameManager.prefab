@@ -49,18 +49,32 @@ MonoBehaviour:
   _csvReader: {fileID: 6056328736842231004}
   _userInterfaceSetting: {fileID: 0}
   _uiUnderButton: {fileID: 0}
+  _uiBuySellButton: {fileID: 0}
   _itemObjects:
   - Name: WoodBox
     Profile: {fileID: 21300000, guid: 42da2db40431f944a8ff9708300488a6, type: 3}
     ItemModel: {fileID: 5238309191721144945, guid: 837b8723e35c9421f861cee5b7cf506c, type: 3}
+  - Name: Carrot
+    Profile: {fileID: 21300000, guid: 217de84d2f4f079439da6029ddd6bbe9, type: 3}
+    ItemModel: {fileID: 6248742674186023592, guid: 559fa38796848f34e8811f85b01a57e8, type: 3}
+  - Name: Apple
+    Profile: {fileID: 21300000, guid: ade2a5ebc4ed9244497fc059116eea09, type: 3}
+    ItemModel: {fileID: 1105760525757012, guid: bfec01bc3e4d0444dbe595b4f55c6730, type: 3}
+  - Name: Barrel
+    Profile: {fileID: 21300000, guid: cfa84c4f2c006954aa1d4e6858b0c104, type: 3}
+    ItemModel: {fileID: 1899476608532710, guid: a8adbdb8fbe0b404398d9e3a672e2e42, type: 3}
   _creatureObjects:
-  - Name: GreenSlimeRabbit
-    Profile: {fileID: 21300000, guid: 42da2db40431f944a8ff9708300488a6, type: 3}
+  - Name: Rabbit
+    Profile: {fileID: 21300000, guid: 9bd5093cc7fbb124588221c5a14ff8ee, type: 3}
     CreatureModel: {fileID: 1773656247975474, guid: 57d78de69bcaf8a4e969c0c3350b859b, type: 3}
-  - Name: GreenSlimeRabbit
-    Profile: {fileID: 21300000, guid: 42da2db40431f944a8ff9708300488a6, type: 3}
-    CreatureModel: {fileID: 1773656247975474, guid: 57d78de69bcaf8a4e969c0c3350b859b, type: 3}
+  - Name: Langsat
+    Profile: {fileID: 21300000, guid: 12190ee194e130b46ba3d7c8657f77c0, type: 3}
+    CreatureModel: {fileID: 5703506908043305319, guid: 7b92bf9bd6ece1e49bd355c08ca502d4, type: 3}
+  - Name: Fox
+    Profile: {fileID: 21300000, guid: cae23e5333c483842955b43b6a4682d2, type: 3}
+    CreatureModel: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
   _creatureSpawnRange: {x: 0, y: 0, z: 1}
+  _delayTimeForRunAway: 10
 --- !u!114 &6056328736842231007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,4 +100,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _creatureCsvFile: {fileID: 4900000, guid: 71439569c62ec4eaf83e61940fde26eb, type: 3}
-  _lureItemCsvFile: {fileID: 4900000, guid: 8bd870d3c70dc4cb685434749bde01a5, type: 3}
+  _itemCsvFile: {fileID: 4900000, guid: 8bd870d3c70dc4cb685434749bde01a5, type: 3}
