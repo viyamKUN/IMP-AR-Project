@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerSaveData _myPlayerSaveData = null;
     [SerializeField] private CsvReader _csvReader = null;
     [SerializeField] private UserInterfaceSetting _userInterfaceSetting = null;
+    [SerializeField] private UIUnderButton _uiUnderButton = null;
     [Header("Objects")]
     [SerializeField] private ItemObject[] _itemObjects = null;
     [SerializeField] private CreatureObject[] _creatureObjects = null;
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     Transform _itemBoxTransform = null;
     List<Creature> _creatureList = null;
-    List<Item> _itemList = new List<Item>();
+    List<Item> _itemList = null;
 
 
     private void Awake()
@@ -150,8 +151,12 @@ public class GameManager : MonoBehaviour
 
     private void SetUI()
     {
+        if (_userInterfaceSetting == null)
+            return;
         _userInterfaceSetting.SetTopUI(_myPlayerSaveData.GetPlayerMoney);
         _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
+        _userInterfaceSetting.SetMyCollection(_creatureList.Count, _creatureList, _myPlayerSaveData.GetPlayerCreatureList);
+        _uiUnderButton.ButtonProfile();
     }
 
 }

@@ -48,11 +48,17 @@ MonoBehaviour:
   _myPlayerSaveData: {fileID: 6056328736842231007}
   _csvReader: {fileID: 6056328736842231004}
   _userInterfaceSetting: {fileID: 0}
+  _uiUnderButton: {fileID: 0}
   _itemObjects:
   - Name: WoodBox
+    Profile: {fileID: 21300000, guid: 42da2db40431f944a8ff9708300488a6, type: 3}
     ItemModel: {fileID: 5238309191721144945, guid: 837b8723e35c9421f861cee5b7cf506c, type: 3}
   _creatureObjects:
   - Name: GreenSlimeRabbit
+    Profile: {fileID: 21300000, guid: 42da2db40431f944a8ff9708300488a6, type: 3}
+    CreatureModel: {fileID: 1773656247975474, guid: 57d78de69bcaf8a4e969c0c3350b859b, type: 3}
+  - Name: GreenSlimeRabbit
+    Profile: {fileID: 21300000, guid: 42da2db40431f944a8ff9708300488a6, type: 3}
     CreatureModel: {fileID: 1773656247975474, guid: 57d78de69bcaf8a4e969c0c3350b859b, type: 3}
   _creatureSpawnRange: {x: 0, y: 0, z: 1}
 --- !u!114 &6056328736842231007
@@ -81,4 +87,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _creatureCsvFile: {fileID: 4900000, guid: 71439569c62ec4eaf83e61940fde26eb, type: 3}
   _lureItemCsvFile: {fileID: 4900000, guid: 8bd870d3c70dc4cb685434749bde01a5, type: 3}
-  _foodItemCsvFile: {fileID: 0}

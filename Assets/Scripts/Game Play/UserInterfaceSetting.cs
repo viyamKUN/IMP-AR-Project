@@ -26,8 +26,11 @@ public class UserInterfaceSetting : MonoBehaviour
 
     [Header("Collection Page")]
     [SerializeField] private Slider _collectionPercent = null;
+    [SerializeField] private Text _collectionPercentText = null;
     [SerializeField] private GameObject _catchedParent = null;
     [SerializeField] private GameObject _nonCatchParent = null;
+    CollectionUnit[] _catched = null;
+    CollectionUnit[] _nonCatch = null;
 
 
     #region User Data Enter
@@ -92,11 +95,41 @@ public class UserInterfaceSetting : MonoBehaviour
         }
     }
 
-    public void SetMyCollection()
+    public void SetMyCollection(int countAll, List<Creature> wholeCollection, Dictionary<int, int> myCollections)
     {
-        // Percent
-        // Got
-        // NOT get
+        float percent = (float)myCollections.Count / (float)countAll;
+        _collectionPercent.value = percent;
+        _collectionPercentText.text = (percent * 100).ToString() + "%";
+
+        if (_catched == null)
+            _catched = _catchedParent.GetComponentsInChildren<CollectionUnit>();
+
+        if (_nonCatch == null)
+            _nonCatch = _nonCatchParent.GetComponentsInChildren<CollectionUnit>();
+
+        int catchPointer = 0;
+        int nonCatchPointer = 0;
+
+        foreach (CollectionUnit g in _catched)
+            g.gameObject.SetActive(false);
+        foreach (CollectionUnit g in _nonCatch)
+            g.gameObject.SetActive(false);
+
+        foreach (var item in wholeCollection)
+        {
+            if (myCollections.ContainsKey(item.ID))
+            {
+                _catched[catchPointer].gameObject.SetActive(true);
+                _catched[catchPointer].SetCollectionUnit(_gameManager.GetCreatureImage(item.ID), item.Name, myCollections[item.ID], 0);
+                catchPointer++;
+            }
+            else
+            {
+                _nonCatch[nonCatchPointer].gameObject.SetActive(true);
+                _nonCatch[nonCatchPointer].SetCollectionUnit(_gameManager.GetCreatureImage(item.ID), item.Name, 0, 0);
+                nonCatchPointer++;
+            }
+        }
     }
 
     public void SetShop()
