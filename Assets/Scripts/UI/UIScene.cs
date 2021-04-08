@@ -10,7 +10,7 @@ public class UIScene : MonoBehaviour
 
     public void ButtonGoNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ButtonGoJoinScene()
@@ -25,9 +25,9 @@ public class UIScene : MonoBehaviour
 
     public void ButtonExit()
     {
-        //in Unity Editor
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-        
+#endif
         Application.Quit();
     }
 }
