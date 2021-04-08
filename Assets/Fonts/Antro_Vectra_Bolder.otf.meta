@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 2ce99b484e5934cf8b85684f5ab039d6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Antro Vectra
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 593e980f204424d69b08444c8d8a42c7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
