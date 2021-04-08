@@ -98,9 +98,9 @@ public class UserInterfaceSetting : MonoBehaviour
         }
     }
 
-    public void SetMyCollection(int countAll, List<Creature> wholeCollection, List<MyCreature> myCollections)
+    public void SetMyCollection(List<Creature> wholeCollection, List<MyCreature> myCollections)
     {
-        float percent = (float)myCollections.Count / (float)countAll;
+        float percent = (float)myCollections.Count / (float)wholeCollection.Count;
         _collectionPercent.value = percent;
         _collectionPercentText.text = (percent * 100).ToString() + "%";
 

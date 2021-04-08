@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public Sprite GetItemImage(int ID) => _itemObjects[ID].Profile;
     public Sprite GetCreatureImage(int ID) => _creatureObjects[ID].Profile;
 
-    GameObject _itemBoxTransform = null;
+    Vector3 _itemBoxTransform = Vector3.zero;
     List<Creature> _creatureList = null;
     List<Item> _itemList = null;
     GameObject _currentItemObject = null;
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            _itemBoxTransform = this.gameObject;
+            _itemBoxTransform = Vector3.zero;
             // Item 넘버도 임의로 지정
             if (PutItemInBox(1))
             {
@@ -104,15 +104,15 @@ public class GameManager : MonoBehaviour
         _myPlayerSaveData.Init(name);
         SetUI();
     }
-    public void SetBoxPosition(GameObject value)
+    public void SetBoxPosition(Vector3 pos)
     {
-        _itemBoxTransform = value;
+        _itemBoxTransform = pos;
         if (_currentItemObject != null)
-            _currentItemObject.transform.position = value.transform.position;
+            _currentItemObject.transform.position = pos;
     }
     public void DeleteBox()
     {
-        _itemBoxTransform = null;
+        _itemBoxTransform = Vector3.zero;
     }
     public bool PutItemInBox(int itemID)
     {
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
             return false;
 
         AddItem(itemID, -1);
-        _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, _itemBoxTransform.transform.position, Quaternion.identity);
+        _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, _itemBoxTransform, Quaternion.identity);
         return true;
     }
 
@@ -245,7 +245,7 @@ public class GameManager : MonoBehaviour
             return;
         _userInterfaceSetting.SetTopUI(_myPlayerSaveData.PlayerMoney);
         _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
-        _userInterfaceSetting.SetMyCollection(_creatureList.Count, _creatureList, _myPlayerSaveData.GetPlayerCreatureList);
+        _userInterfaceSetting.SetMyCollection(_creatureList, _myPlayerSaveData.GetPlayerCreatureList);
         _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
 
         _uiUnderButton.CloseWhole();
@@ -257,7 +257,7 @@ public class GameManager : MonoBehaviour
         Vector3 targetPosition = _currentItemObject.transform.position + _creatureSpawnRange;
         GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
         _currentCreatureObject = gameObject.GetComponent<CreatureController>();
-        gameObject.transform.LookAt(_itemBoxTransform.transform.position);
+        gameObject.transform.LookAt(_itemBoxTransform);
 
         yield return new WaitForSeconds(_delayTimeForRunAway);
 

@@ -35,19 +35,19 @@ public class TrackedImage : MonoBehaviour
             if (spawned == null)
             {
                 spawned = Instantiate(gameObjectInstantiate, img.transform.position, img.transform.rotation);
-                gameManager.SetBoxPosition(gameObjectInstantiate);
+                gameManager.SetBoxPosition(img.transform.position);
             }
         }
         foreach (ARTrackedImage img in args.updated)
         {
             spawned.transform.position = img.transform.position;
             //spawned.transform.rotation = img.transform.rotation;
-            gameManager.SetBoxPosition(gameObjectInstantiate);
+            gameManager.SetBoxPosition(img.transform.position);
             spawned.SetActive(true);
         }
         foreach (ARTrackedImage img in args.removed)
         {
-            gameManager.SetBoxPosition(gameObjectInstantiate);
+            gameManager.SetBoxPosition(img.transform.position);
             spawned.SetActive(false);
         }
     }
