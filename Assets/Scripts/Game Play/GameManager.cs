@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Creatures;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Other Scripts")]
     [SerializeField] private PlayerSaveData _myPlayerSaveData = null;
+    [SerializeField] private CsvReader _csvReader = null;
+    [Header("Objects")]
     [SerializeField] private ItemObject[] _itemObjects = null;
+    [SerializeField] private CreatureObject[] _creatureObjects = null;
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     Transform _itemBoxTransform = null;
 
     private void Awake()
     {
-        bool isGameDataExist = _myPlayerSaveData.LoadGameData();
+        bool isGameDataExist = _myPlayerSaveData.LoadGame();
         if (!isGameDataExist)
         {
             // TODO 유저가 유저네임 입력하는 공간 띄워주고 그 데이터로 초기 데이터 생성하게 구현하기~
@@ -34,7 +39,7 @@ public class GameManager : MonoBehaviour
     /// <summary>게임 세이브</summary>
     public void CallGameSave()
     {
-        _myPlayerSaveData.SaveData();
+        _myPlayerSaveData.SaveGame();
     }
     public void SetBoxPosition(Transform value)
     {
@@ -53,11 +58,34 @@ public class GameManager : MonoBehaviour
     /// <summary>지금 설치한 아이템을 좋아하는 크리쳐를 부름</summary>
     public void CallCreature(int itemID)
     {
-        Debug.Log("해당 아이템을 선호하는 몬스터를 부르고 있습니다.");
-        // TODO
-        // 1. 도감에 없는 크리쳐를 우선적으로 탐색 -> 조건에 맞으면 호출
-        // 2. 도감에 있는 크리쳐를 탐색 -> 조건에 맞으면 호출
-        // 3. 조건에 실패하면 대기
+        Debug.Log("해당 아이템을 선호하는 몬스터를 부르고 있습니다...");
+
+        List<Creature> creatureList = _csvReader.GetCreatureList;
+        Dictionary<int, int> myCreatureList = _myPlayerSaveData.GetPlayerCreatureList;
+        List<int> tempCreatureList = new List<int>();
+        int callCreatureID = 0;
+
+        foreach (Creature c in creatureList)
+        {
+            if (myCreatureList.ContainsKey(c.ID)) continue;
+            if (c.FavoriteItemIDs.Contains(itemID))
+                tempCreatureList.Add(c.ID);
+        }
+
+        if (tempCreatureList.Count > 0)
+            callCreatureID = Random.Range(0, tempCreatureList.Count);
+        else
+        {
+            tempCreatureList.Clear();
+
+            foreach (var my in myCreatureList)
+                if (creatureList[my.Key].FavoriteItemIDs.Contains(itemID))
+                    tempCreatureList.Add(my.Key);
+
+            callCreatureID = Random.Range(0, tempCreatureList.Count);
+        }
+
+        Debug.Log(creatureList[callCreatureID].Name + "이 나타났다!");
     }
 
     /// <summary> 크리쳐를 잡았을 때. 기본적으로 1마리로 취급 </summary>
@@ -92,4 +120,10 @@ public struct ItemObject
 {
     public string Name;
     public GameObject ItemModel;
+}
+[System.Serializable]
+public struct CreatureObject
+{
+    public string Name;
+    public GameObject CreatureModel;
 }

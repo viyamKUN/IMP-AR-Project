@@ -13,8 +13,8 @@ public class CsvReader : MonoBehaviour
     [SerializeField] private TextAsset _itemCsvFile = null;
 
     #region  Lists
-    List<Creature> _creatureData = new List<Creature>();
-    List<Item> _itemData = new List<Item>();
+    private List<Creature> _creatureData = new List<Creature>();
+    private List<Item> _itemData = new List<Item>();
     #endregion
 
     #region For CSV read
@@ -22,6 +22,11 @@ public class CsvReader : MonoBehaviour
     static string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";
     static char[] TRIM_CHARS = { '\"' };
     #endregion
+
+    public List<Creature> GetCreatureList => this._creatureData;
+    public List<Item> GetItemList => this._itemData;
+    public Creature GetCreature(int ID) => this._creatureData[ID];
+    public Item GetItem(int ID) => this._itemData[ID];
 
     private void Start()
     {
