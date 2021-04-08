@@ -51,9 +51,9 @@ MonoBehaviour:
   _uiUnderButton: {fileID: 0}
   _uiBuySellButton: {fileID: 0}
   _itemObjects:
-  - Name: WoodBox
-    Profile: {fileID: 21300000, guid: 42da2db40431f944a8ff9708300488a6, type: 3}
-    ItemModel: {fileID: 5238309191721144945, guid: 837b8723e35c9421f861cee5b7cf506c, type: 3}
+  - Name: Golden Egg
+    Profile: {fileID: 21300000, guid: 70c4c8a4c8591d5458be9c63634f22f6, type: 3}
+    ItemModel: {fileID: 2894148314575251452, guid: 9fd66268605cf77408eba01e89e7ba34, type: 3}
   - Name: Carrot
     Profile: {fileID: 21300000, guid: 217de84d2f4f079439da6029ddd6bbe9, type: 3}
     ItemModel: {fileID: 6248742674186023592, guid: 559fa38796848f34e8811f85b01a57e8, type: 3}
@@ -63,6 +63,27 @@ MonoBehaviour:
   - Name: Barrel
     Profile: {fileID: 21300000, guid: cfa84c4f2c006954aa1d4e6858b0c104, type: 3}
     ItemModel: {fileID: 1899476608532710, guid: a8adbdb8fbe0b404398d9e3a672e2e42, type: 3}
+  - Name: WoodBox
+    Profile: {fileID: 21300000, guid: ff357a5a0665c9c41b2a08974100aaf6, type: 3}
+    ItemModel: {fileID: 5238309191721144945, guid: 837b8723e35c9421f861cee5b7cf506c, type: 3}
+  - Name: Rebean
+    Profile: {fileID: 21300000, guid: 66dc6d8869bdded4f99048a27e870610, type: 3}
+    ItemModel: {fileID: 5345726144121743214, guid: 5cf855148184e8a49aa243a2630584f3, type: 3}
+  - Name: Blubean
+    Profile: {fileID: 21300000, guid: fd75f10d6584e9b428895c4f8d01b707, type: 3}
+    ItemModel: {fileID: 6535534020110624961, guid: 55be52dcc6eb12d4d8cc995bbb5ceb22, type: 3}
+  - Name: Orangean
+    Profile: {fileID: 21300000, guid: 41f4845b3500dee43ac56d81f8dd3441, type: 3}
+    ItemModel: {fileID: 4192711996667259635, guid: 21cb7115458e2414e8043325f587443c, type: 3}
+  - Name: Blackean
+    Profile: {fileID: 21300000, guid: e06ab8c0af2a1254690459b90604d296, type: 3}
+    ItemModel: {fileID: 2299864344034747187, guid: 5db59886a866aa34ea7f9171c9a733ba, type: 3}
+  - Name: Greenbean
+    Profile: {fileID: 21300000, guid: c1a872cac14bcae4bbe62ab1b13f4852, type: 3}
+    ItemModel: {fileID: 3922776860325075487, guid: 3eeb6506492a4444698ae441cfc94cff, type: 3}
+  - Name: Yelloean
+    Profile: {fileID: 21300000, guid: 71a0f7d405e325343a1fd2ef2133fa66, type: 3}
+    ItemModel: {fileID: 3307672246799062946, guid: 1815f81793cf8a841a693762b2ecd098, type: 3}
   _creatureObjects:
   - Name: Rabbit
     Profile: {fileID: 21300000, guid: 9bd5093cc7fbb124588221c5a14ff8ee, type: 3}
@@ -75,6 +96,10 @@ MonoBehaviour:
     CreatureModel: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
   _creatureSpawnRange: {x: 0, y: 0, z: 1}
   _delayTimeForRunAway: 10
+  _touchable:
+    serializedVersion: 2
+    m_Bits: 0
+  _saveTimeDelay: 2
 --- !u!114 &6056328736842231007
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,12 @@
 ID,Name,Description,Price,Type Letter
-0,WoodBox,The box.,100,C
+0,Golden Egg,The egg from creature.,500,C
 1,Carrot,This is orange,110,C
 2,Apple,This is apple,120,C
 3,Barrel,This is wooden barrel,130,C
+4,Wooden Box,The box.,100,C
+5,Rebean,The yummy red jelly bean,50,F
+6,Blubean,The yummy blue jelly bean,50,F
+7,Orangean,The yummy orange jelly bean,50,F
+8,Blackean,The yummy black jelly bean,50,F
+9,Greenbean,The yummy green jelly bean,50,F
+10,Yelloean,The yummy yellow jelly bean,50,F

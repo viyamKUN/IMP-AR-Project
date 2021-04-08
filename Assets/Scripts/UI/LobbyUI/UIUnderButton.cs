@@ -7,6 +7,12 @@ public class UIUnderButton : MonoBehaviour
     public GameObject profile;
     public GameObject book;
     public GameObject shop;
+    public void CloseWhole()
+    {
+        profile.SetActive(false);
+        book.SetActive(false);
+        shop.SetActive(false);
+    }
     public void ButtonProfile()
     {
         profile.SetActive(true);

@@ -19,9 +19,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Vector3 _creatureSpawnRange = Vector3.zero;
     [SerializeField] private float _delayTimeForRunAway = 10;
     [SerializeField] private LayerMask _touchable;
+    [SerializeField] private float _saveTimeDelay = 2;
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     public Creature GetCreature(int ID) => this._creatureList[ID];
+    public MyCreature GetMyCreature(int ID) => this._myPlayerSaveData.GetPlayerCreatureList[ID];
     public Item GetItem(int ID) => this._itemList[ID];
     public Sprite GetItemImage(int ID) => _itemObjects[ID].Profile;
     public Sprite GetCreatureImage(int ID) => _creatureObjects[ID].Profile;
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
     GameObject _currentItemObject = null;
     CreatureController _currentCreatureObject = null;
     Coroutine _creatureCoroutine = null;
+    float _timeBucket = 0;
 
 
     private void Awake()
@@ -46,6 +49,7 @@ public class GameManager : MonoBehaviour
             _userInterfaceSetting.OpenUserDataEnterPanel();
         else
             SetUI();
+        _timeBucket = Time.time;
     }
 
     private void Update()
@@ -59,10 +63,6 @@ public class GameManager : MonoBehaviour
             {
                 CallCreature(1);
             }
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            _myPlayerSaveData.DeleteGame();
         }
 #endif
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -150,7 +150,10 @@ public class GameManager : MonoBehaviour
         else
             _myPlayerSaveData.GetPlayerCreatureList.Add(new MyCreature(creatureID, count, 0));
 
-        _currentCreatureObject.Catched();
+        if (_currentCreatureObject != null)
+            _currentCreatureObject.Catched();
+
+        _myPlayerSaveData.SaveGame();
     }
 
     /// <summary> 아이템을 얻었을 때. 기본적으로 1개로 취급 </summary>
@@ -160,7 +163,48 @@ public class GameManager : MonoBehaviour
             _myPlayerSaveData.GetPlayerItemList[itemID] += count;
         else
             _myPlayerSaveData.GetPlayerItemList.Add(itemID, count);
+
+        if (count < 0)
+        {
+            if (_myPlayerSaveData.GetPlayerItemList[itemID] == 0)
+                _myPlayerSaveData.GetPlayerItemList.Remove(itemID);
+        }
+
+        _myPlayerSaveData.SaveGame();
+
+        if (_userInterfaceSetting != null)
+        {
+            _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
+            _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
+        }
     }
+
+    public bool CanUseMoney(int payment)
+    {
+        if (_myPlayerSaveData.PlayerMoney < payment)
+            return false;
+        return true;
+    }
+
+    public void AddMoney(int amount)
+    {
+        _myPlayerSaveData.PlayerMoney += amount;
+        _myPlayerSaveData.SaveGame();
+
+        if (_userInterfaceSetting != null)
+            _userInterfaceSetting.SetTopUI(_myPlayerSaveData.PlayerMoney);
+    }
+
+    public void UseMoney(int payment)
+    {
+        if (!CanUseMoney(payment)) return;
+        _myPlayerSaveData.PlayerMoney -= payment;
+        _myPlayerSaveData.SaveGame();
+
+        if (_userInterfaceSetting != null)
+            _userInterfaceSetting.SetTopUI(_myPlayerSaveData.PlayerMoney);
+    }
+
     public int GetItemCount(int itemID)
     {
         if (_myPlayerSaveData.GetPlayerItemList.ContainsKey(itemID))
@@ -173,11 +217,12 @@ public class GameManager : MonoBehaviour
     {
         if (_userInterfaceSetting == null)
             return;
-        _userInterfaceSetting.SetTopUI(_myPlayerSaveData.GetPlayerMoney);
+        _userInterfaceSetting.SetTopUI(_myPlayerSaveData.PlayerMoney);
         _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
         _userInterfaceSetting.SetMyCollection(_creatureList.Count, _creatureList, _myPlayerSaveData.GetPlayerCreatureList);
         _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
 
+        _uiUnderButton.CloseWhole();
         _uiUnderButton.ButtonProfile();
         _uiBuySellButton.ButtonBuy();
     }

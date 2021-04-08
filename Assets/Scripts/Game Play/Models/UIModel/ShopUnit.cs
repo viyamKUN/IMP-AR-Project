@@ -1,18 +1,29 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum ShopType
+{
+    Buy, Sell
+}
 public class ShopUnit : MonoBehaviour
 {
+    [SerializeField] private UIBuyView _uiBuyView = null;
     [SerializeField] private Image _profileImage = null;
     [SerializeField] private Text _nameText = null;
     [SerializeField] private Text _priceText = null;
     [SerializeField] private Text _countText = null;
-
-    public void SetShopUnit(Sprite sprite, string name, int price, int count)
+    [SerializeField] private ShopType _thisShopType = ShopType.Buy;
+    private int _id;
+    public void SetShopUnit(int id, Sprite sprite, string name, int price, int count)
     {
+        _id = id;
         _profileImage.sprite = sprite;
         _nameText.text = name;
         _priceText.text = price.ToString();
         _countText.text = count.ToString();
+    }
+    public void ClickMe()
+    {
+        _uiBuyView.ButtonContent(_id, _thisShopType);
     }
 }

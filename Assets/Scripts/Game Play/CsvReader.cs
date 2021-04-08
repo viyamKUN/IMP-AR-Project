@@ -36,8 +36,8 @@ public class CsvReader : MonoBehaviour
             var values = Regex.Split(lines[i], SPLIT_RE);
             if (values.Length == 0 || values[0] == "") continue;
 
-            List<int> favoriteItemList = values[3].Split('&').ToList<string>().ConvertAll(int.Parse);
-            Creature entry = new Creature(int.Parse(values[0]), values[1], values[2], favoriteItemList, int.Parse(values[4]));
+            List<int> favoriteItemList = values[6].Split('&').ToList<string>().ConvertAll(int.Parse);
+            Creature entry = new Creature(int.Parse(values[0]), values[1], values[2], values[3], values[4], values[5], favoriteItemList, int.Parse(values[7]));
             list.Add(entry);
         }
         return list;
