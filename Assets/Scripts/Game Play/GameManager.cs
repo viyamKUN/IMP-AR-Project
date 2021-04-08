@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CreatureObject[] _creatureObjects = null;
     [Header("Values")]
     [SerializeField] private Vector3 _creatureSpawnRange = Vector3.zero;
+    [SerializeField] private float _delayTimeForRunAway = 10;
+    [SerializeField] private LayerMask _touchable;
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     public Creature GetCreature(int ID) => this._creatureList[ID];
@@ -27,6 +29,9 @@ public class GameManager : MonoBehaviour
     Transform _itemBoxTransform = null;
     List<Creature> _creatureList = null;
     List<Item> _itemList = null;
+    GameObject _currentItemObject = null;
+    CreatureController _currentCreatureObject = null;
+    Coroutine _creatureCoroutine = null;
 
 
     private void Awake()
@@ -43,24 +48,38 @@ public class GameManager : MonoBehaviour
             SetUI();
     }
 
-#if UNITY_EDITOR
     private void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Q))
         {
             _itemBoxTransform = this.transform;
             // Item 넘버도 임의로 지정
-            if (PutItemInBox(0))
+            if (PutItemInBox(1))
             {
-                CallCreature(0);
+                CallCreature(1);
             }
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
             _myPlayerSaveData.DeleteGame();
         }
-    }
 #endif
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            Vector3 touchPoint = new Vector3(Input.GetTouch(0).deltaPosition.x, Input.GetTouch(0).deltaPosition.y, 0);
+            Ray touchRay = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            RaycastHit h;
+            if (Physics.Raycast(touchRay, out h, _touchable))
+            {
+                if (h.transform.gameObject.CompareTag("Creature"))
+                {
+                    CatchCreature(_currentCreatureObject.ID);
+                    return;
+                }
+            }
+        }
+    }
 
     /// <summary>게임 세이브</summary>
     public void CallGameSave()
@@ -80,7 +99,7 @@ public class GameManager : MonoBehaviour
     {
         Vector3 targetPosition = _itemBoxTransform.position;
 
-        GameObject lureitem = Instantiate(_itemObjects[itemID].ItemModel, targetPosition, Quaternion.identity);
+        _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, targetPosition, Quaternion.identity);
         return true;
     }
 
@@ -114,28 +133,24 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log(_creatureList[callCreatureID].Name + "이 나타났다!");
-        GenerateCreature(callCreatureID);
-    }
-    private void GenerateCreature(int creatureID)
-    {
-        Vector3 targetPosition = _itemBoxTransform.position + _creatureSpawnRange;
 
-        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
-        gameObject.transform.LookAt(_itemBoxTransform.position);
+        _creatureCoroutine = StartCoroutine(GenerateCreature(callCreatureID));
     }
 
     /// <summary> 크리쳐를 잡았을 때. 기본적으로 1마리로 취급 </summary>
     public void CatchCreature(int creatureID, int count = 1)
     {
+        if (_creatureCoroutine != null)
+            StopCoroutine(_creatureCoroutine);
+
         int myCreatureIndex = _myPlayerSaveData.FindMyCreature(creatureID);
+
         if (myCreatureIndex > 0)
-        {
             _myPlayerSaveData.GetPlayerCreatureList[myCreatureIndex].Count += count;
-        }
         else
-        {
             _myPlayerSaveData.GetPlayerCreatureList.Add(new MyCreature(creatureID, count, 0));
-        }
+
+        _currentCreatureObject.Catched();
     }
 
     /// <summary> 아이템을 얻었을 때. 기본적으로 1개로 취급 </summary>
@@ -166,7 +181,18 @@ public class GameManager : MonoBehaviour
         _uiUnderButton.ButtonProfile();
         _uiBuySellButton.ButtonBuy();
     }
+    private IEnumerator GenerateCreature(int creatureID)
+    {
+        Vector3 targetPosition = _itemBoxTransform.position + _creatureSpawnRange;
+        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
+        _currentCreatureObject = gameObject.GetComponent<CreatureController>();
+        gameObject.transform.LookAt(_itemBoxTransform.position);
 
+        yield return new WaitForSeconds(_delayTimeForRunAway);
+
+        _currentCreatureObject.Runaway();
+        Destroy(_currentItemObject);
+    }
 }
 
 [System.Serializable]
