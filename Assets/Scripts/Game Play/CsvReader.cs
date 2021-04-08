@@ -55,7 +55,7 @@ public class CsvReader : MonoBehaviour
             var values = Regex.Split(lines[i], SPLIT_RE);
             if (values.Length == 0 || values[0] == "") continue;
 
-            Item entry = new Item(int.Parse(values[0]), values[1], values[2]);
+            Item entry = new Item(int.Parse(values[0]), values[1], values[2], values[3]);
             list.Add(entry);
         }
         return list;

@@ -28,6 +28,7 @@ public class UserInterfaceSetting : MonoBehaviour
     public void UpdateUserDataEnterField()
     {
         _userDataEnterButton.enabled = _userNameInputField.text.Length > 1;
+        _supportText.gameObject.SetActive(_userNameInputField.text.Length <= 2);
     }
     public void EnterUserData()
     {
@@ -41,9 +42,8 @@ public class UserInterfaceSetting : MonoBehaviour
         _myMoneyText.text = money.ToString();
     }
 
-    public void SetMyProfile(string name)
+    public void SetMyProfile(string name, Dictionary<int, int> myItems)
     {
-        // My Name
         _userName.text = name;
         // Food Item
         // Catch Item

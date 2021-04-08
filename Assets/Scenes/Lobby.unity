@@ -12758,7 +12758,7 @@ MonoBehaviour:
   _myMoneyText: {fileID: 1677806171}
   _userDataEnterPanel: {fileID: 104316933}
   _userNameInputField: {fileID: 512223416}
-  _supportText: {fileID: 0}
+  _supportText: {fileID: 1028844829}
   _userDataEnterButton: {fileID: 322769353}
   _userName: {fileID: 1498612647}
 --- !u!1 &911440560
