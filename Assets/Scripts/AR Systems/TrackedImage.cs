@@ -12,10 +12,9 @@ public class TrackedImage : MonoBehaviour
     private GameObject spawned;
     public GameManager gameManager;
 
-    private void Awake() 
+    private void Awake()
     {
         trackedManager = FindObjectOfType<ARTrackedImageManager>();
-
     }
 
     public void OnEnable()
@@ -31,24 +30,24 @@ public class TrackedImage : MonoBehaviour
 
     private void OnImageChanged(ARTrackedImagesChangedEventArgs args)
     {
-        foreach(ARTrackedImage img in args.added)
+        foreach (ARTrackedImage img in args.added)
         {
-            if(spawned == null)
+            if (spawned == null)
             {
                 spawned = Instantiate(gameObjectInstantiate, img.transform.position, img.transform.rotation);
-                gameManager.SetBoxPosition(gameObjectInstantiate.transform);
+                gameManager.SetBoxPosition(gameObjectInstantiate);
             }
         }
-        foreach(ARTrackedImage img in args.updated)
+        foreach (ARTrackedImage img in args.updated)
         {
             spawned.transform.position = img.transform.position;
             //spawned.transform.rotation = img.transform.rotation;
-            gameManager.SetBoxPosition(gameObjectInstantiate.transform);
+            gameManager.SetBoxPosition(gameObjectInstantiate);
             spawned.SetActive(true);
         }
-        foreach(ARTrackedImage img in args.removed)
+        foreach (ARTrackedImage img in args.removed)
         {
-            gameManager.SetBoxPosition(gameObjectInstantiate.transform);
+            gameManager.SetBoxPosition(gameObjectInstantiate);
             spawned.SetActive(false);
         }
     }

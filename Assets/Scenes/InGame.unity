@@ -4334,6 +4334,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6056328736842231006, guid: 209c27abfd15840f2b010e81526d02ca, type: 3}
+      propertyPath: _itemBoxTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056328736842231006, guid: 209c27abfd15840f2b010e81526d02ca, type: 3}
       propertyPath: _inGameBagContentsSetting
       value: 
       objectReference: {fileID: 1544328779}

@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public Sprite GetItemImage(int ID) => _itemObjects[ID].Profile;
     public Sprite GetCreatureImage(int ID) => _creatureObjects[ID].Profile;
 
-    Transform _itemBoxTransform = null;
+    GameObject _itemBoxTransform = null;
     List<Creature> _creatureList = null;
     List<Item> _itemList = null;
     GameObject _currentItemObject = null;
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            _itemBoxTransform = this.transform;
+            _itemBoxTransform = this.gameObject;
             // Item 넘버도 임의로 지정
             if (PutItemInBox(1))
             {
@@ -104,11 +104,11 @@ public class GameManager : MonoBehaviour
         _myPlayerSaveData.Init(name);
         SetUI();
     }
-    public void SetBoxPosition(Transform value)
+    public void SetBoxPosition(GameObject value)
     {
         _itemBoxTransform = value;
         if (_currentItemObject != null)
-            _currentItemObject.transform.position = value.position;
+            _currentItemObject.transform.position = value.transform.position;
     }
     public void DeleteBox()
     {
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
             return false;
 
         AddItem(itemID, -1);
-        _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, _itemBoxTransform.position, Quaternion.identity);
+        _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, _itemBoxTransform.transform.position, Quaternion.identity);
         return true;
     }
 
@@ -257,7 +257,7 @@ public class GameManager : MonoBehaviour
         Vector3 targetPosition = _currentItemObject.transform.position + _creatureSpawnRange;
         GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
         _currentCreatureObject = gameObject.GetComponent<CreatureController>();
-        gameObject.transform.LookAt(_itemBoxTransform.position);
+        gameObject.transform.LookAt(_itemBoxTransform.transform.position);
 
         yield return new WaitForSeconds(_delayTimeForRunAway);
 
