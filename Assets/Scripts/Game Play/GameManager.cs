@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [Header("Objects")]
     [SerializeField] private ItemObject[] _itemObjects = null;
     [SerializeField] private CreatureObject[] _creatureObjects = null;
+    [Header("Values")]
+    [SerializeField] private Vector3 _creatureSpawnRange = Vector3.zero;
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     public Creature GetCreature(int ID) => this._creatureList[ID];
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
         // TODO 유저가 상자를 클릭하여 아이템을 선택한 후, 설치함. 지금은 키 입력으로 대체함
         if (Input.GetKeyDown(KeyCode.A))
         {
+            _itemBoxTransform = this.transform;
             // Item 넘버도 임의로 지정
             if (PutItemInBox(0))
             {
@@ -56,9 +59,7 @@ public class GameManager : MonoBehaviour
     }
     public bool PutItemInBox(int itemID)
     {
-        Vector3 targetPosition = Vector3.zero;
-        if (_itemBoxTransform != null)
-            targetPosition = _itemBoxTransform.position;
+        Vector3 targetPosition = _itemBoxTransform.position;
 
         GameObject lureitem = Instantiate(_itemObjects[itemID].ItemModel, targetPosition, Quaternion.identity);
         return true;
@@ -98,7 +99,10 @@ public class GameManager : MonoBehaviour
     }
     private void GenerateCreature(int creatureID)
     {
+        Vector3 targetPosition = _itemBoxTransform.position + _creatureSpawnRange;
 
+        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
+        gameObject.transform.LookAt(_itemBoxTransform.position);
     }
 
     /// <summary> 크리쳐를 잡았을 때. 기본적으로 1마리로 취급 </summary>
