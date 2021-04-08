@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 #if UNITY_EDITOR
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             _itemBoxTransform = this.transform;
             // Item 넘버도 임의로 지정
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
                 CallCreature(0);
             }
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             _myPlayerSaveData.DeleteGame();
         }

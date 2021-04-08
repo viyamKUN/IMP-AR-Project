@@ -1,2 +1,5 @@
 ID,Name,Description,Type Letter
 0,WoodBox,The box.,C
+1,Carrot,This is orange,C
+2,Apple,This is apple,C
+3,Barrel,This is wooden barrel,C
