@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class TestForCube : MonoBehaviour
 {
-    public GameObject FollowTarget;
     void Start()
     {
-        
+        //gameObject.transform.Rotate(new Vector3(90, 0, 0), Space.World);
+        //Debug.Log("rotate");
     }
 
     void Update()
     {
-        transform.RotateAround(FollowTarget.transform.position, Vector3.up, 20 * Time.deltaTime);
-        transform.Rotate(45 * Time.deltaTime, 30 * Time.deltaTime, 65 *Time.deltaTime, Space.World);
+        
     }
 }
