@@ -12761,6 +12761,8 @@ MonoBehaviour:
   _supportText: {fileID: 1028844829}
   _userDataEnterButton: {fileID: 322769353}
   _userName: {fileID: 1498612647}
+  _foodItemsParent: {fileID: 294605255}
+  _catchItemsParent: {fileID: 462475079}
 --- !u!1 &911440560
 GameObject:
   m_ObjectHideFlags: 0

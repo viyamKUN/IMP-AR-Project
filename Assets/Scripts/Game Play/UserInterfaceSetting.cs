@@ -19,6 +19,11 @@ public class UserInterfaceSetting : MonoBehaviour
 
     [Header("MyPages")]
     [SerializeField] private Text _userName = null;
+    [SerializeField] private GameObject _foodItemsParent = null;
+    [SerializeField] private GameObject _catchItemsParent = null;
+    InventoryUnit[] _foodItems = null;
+    InventoryUnit[] _catchItems = null;
+
 
     #region User Data Enter
     public void OpenUserDataEnterPanel()
@@ -45,8 +50,41 @@ public class UserInterfaceSetting : MonoBehaviour
     public void SetMyProfile(string name, Dictionary<int, int> myItems)
     {
         _userName.text = name;
-        // Food Item
-        // Catch Item
+        if (_foodItems == null)
+            _foodItems = _foodItemsParent.GetComponentsInChildren<InventoryUnit>();
+
+        if (_catchItems == null)
+            _catchItems = _catchItemsParent.GetComponentsInChildren<InventoryUnit>();
+
+        int foodPointer = 0;
+        int catchPointer = 0;
+        Item current;
+
+        foreach (InventoryUnit g in _foodItems)
+            g.gameObject.SetActive(false);
+        foreach (InventoryUnit g in _catchItems)
+            g.gameObject.SetActive(false);
+
+        foreach (var item in myItems)
+        {
+            current = _gameManager.GetItem(item.Key);
+            if (current.MyType.Equals(ItemType.Food))
+            {
+                _foodItems[foodPointer].gameObject.SetActive(true);
+                _foodItems[foodPointer].SetInventoryUnit(_gameManager.GetItemImage(item.Key), current.Name, item.Value);
+                foodPointer++;
+            }
+            else if (current.MyType.Equals(ItemType.Catch))
+            {
+                _catchItems[catchPointer].gameObject.SetActive(true);
+                _catchItems[catchPointer].SetInventoryUnit(_gameManager.GetItemImage(item.Key), current.Name, item.Value);
+                catchPointer++;
+            }
+            else
+            {
+                // NONE 타입일때 필요함
+            }
+        }
     }
 
     public void SetMyCollection()

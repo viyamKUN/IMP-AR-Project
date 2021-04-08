@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
     public Creature GetCreature(int ID) => this._creatureList[ID];
     public Item GetItem(int ID) => this._itemList[ID];
+    public Sprite GetItemImage(int ID) => _itemObjects[ID].Profile;
+    public Sprite GetCreatureImage(int ID) => _creatureObjects[ID].Profile;
 
     Transform _itemBoxTransform = null;
     List<Creature> _creatureList = null;
@@ -158,11 +160,13 @@ public class GameManager : MonoBehaviour
 public struct ItemObject
 {
     public string Name;
+    public Sprite Profile;
     public GameObject ItemModel;
 }
 [System.Serializable]
 public struct CreatureObject
 {
     public string Name;
+    public Sprite Profile;
     public GameObject CreatureModel;
 }
