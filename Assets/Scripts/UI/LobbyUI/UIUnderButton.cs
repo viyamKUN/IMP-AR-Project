@@ -7,13 +7,6 @@ public class UIUnderButton : MonoBehaviour
     public GameObject profile;
     public GameObject book;
     public GameObject shop;
-
-    private void Start()
-    {
-        profile.SetActive(true);
-        book.SetActive(false);
-        shop.SetActive(false);
-    }
     public void ButtonProfile()
     {
         profile.SetActive(true);

@@ -8,7 +8,7 @@ public class CollectionUnit : MonoBehaviour
     [SerializeField] private Text _countText = null;
     [SerializeField] private Slider _friendshipSlider = null;
 
-    public void SetInventoryUnit(Sprite sprite, string name, int count, float friendship)
+    public void SetCollectionUnit(Sprite sprite, string name, int count, float friendship)
     {
         _profileImage.sprite = sprite;
         _nameText.text = name;
