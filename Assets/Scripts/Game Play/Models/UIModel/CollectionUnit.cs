@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class CollectionUnit : MonoBehaviour
 {
     [SerializeField] private CollectionDetail _collectionDetail = null;
@@ -12,6 +12,7 @@ public class CollectionUnit : MonoBehaviour
     [SerializeField] private Slider _friendshipSlider = null;
     [SerializeField] private Text _friendshipText = null;
     private int _id = 0;
+    public string SceneName;
 
     public void SetCollectionUnit(int id, Sprite sprite, string name, int count, float friendship)
     {
@@ -26,5 +27,10 @@ public class CollectionUnit : MonoBehaviour
     {
         _collectionDetail.gameObject.SetActive(true);
         _collectionDetail.SetDetailPage(_id);
+    }
+
+    public void InteractScene()
+    {
+        SceneManager.LoadScene(SceneName);
     }
 }
