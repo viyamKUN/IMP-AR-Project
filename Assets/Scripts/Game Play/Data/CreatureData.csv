@@ -1,4 +1,4 @@
 ID,Name,Description,Type,Tall,Weight,FavoriteItemIDs,DroppedItemID
-0,Rabbit,This is green slime rabbit!,Grass,1.2,10,1,3
-1,Langsat,This is yummy monster!,Grass,1.6,5,3,3
-2,Fox,This is not normal fox!,Fire,1.0,30,1&2,3
+0,Rabbit,Green slime rabbit lives in forest. People often pick this rabbit because they misunderstand them as radish. You have to be careful because they gets very angry. They like hay and carrots and water. It is important to move quietly when catching this rabbit.,Grass,1.2,10,1,0
+1,Langsat,Langsat usually enjoys taking a bath wherever there is water. They likes water very much. Sometimes they are in people's pot. Langsat is often a target of other creatures because it is easily misunderstood as a fruit. Protection group to protect Langsat has been created and active.,Grass,1.6,5,3,0
+2,Fox,Foxes eat everything well. They sometimes steal the food that people eat. They are good at acting cute and talented. Many people like them because of this. But some people didn't like them because they are so playful that they mess things up. If they live nearby¡Ù be careful not to lose your stuff!,Fire,1,30,1&2,0
