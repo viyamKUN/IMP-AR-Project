@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
         {
             Ray touchRay = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit h;
-            if (Physics.Raycast(touchRay, out h, _touchable))
+            if (Physics.Raycast(touchRay, out h, Mathf.Infinity, _touchable))
             {
                 if (h.transform.gameObject.CompareTag("Creature"))
                 {
