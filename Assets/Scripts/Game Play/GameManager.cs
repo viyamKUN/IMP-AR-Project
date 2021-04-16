@@ -255,7 +255,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator GenerateCreature(int creatureID)
     {
         Vector3 targetPosition = _currentItemObject.transform.position + _creatureSpawnRange;
-        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
+        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, _currentItemObject.transform.rotation);
         _currentCreatureObject = gameObject.GetComponent<CreatureController>();
         gameObject.transform.LookAt(_itemBoxTransform);
 
