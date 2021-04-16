@@ -95,8 +95,10 @@ MonoBehaviour:
   - Name: Fox
     Profile: {fileID: 21300000, guid: cae23e5333c483842955b43b6a4682d2, type: 3}
     CreatureModel: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
-  _creatureSpawnRange: {x: 0.12, y: 0, z: 0}
+  _creatureSpawnRange: {x: 0, y: 0.4, z: 0}
+  _walkSpeed: 1
   _delayTimeForRunAway: 10
+  _delaySpawnTime: 3
   _touchable:
     serializedVersion: 2
     m_Bits: 64
