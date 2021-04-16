@@ -24,7 +24,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Values")]
     [SerializeField] private Vector3 _creatureSpawnRange = Vector3.zero;
+    [SerializeField] private float _walkSpeed = 1;
     [SerializeField] private float _delayTimeForRunAway = 10;
+    [SerializeField] private float _delaySpawnTime = 10;
     [SerializeField] private LayerMask _touchable;
     [SerializeField] private float _saveTimeDelay = 2;
 
@@ -83,7 +85,7 @@ public class GameManager : MonoBehaviour
         {
             Ray touchRay = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit h;
-            if (Physics.Raycast(touchRay, out h, _touchable))
+            if (Physics.Raycast(touchRay, out h, Mathf.Infinity, _touchable))
             {
                 if (h.transform.gameObject.CompareTag("Creature"))
                 {
@@ -254,10 +256,25 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator GenerateCreature(int creatureID)
     {
+        yield return new WaitForSeconds(_delaySpawnTime);
+
         Vector3 targetPosition = _currentItemObject.transform.position + _creatureSpawnRange;
-        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, Quaternion.identity);
+        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, _currentItemObject.transform.rotation);
         _currentCreatureObject = gameObject.GetComponent<CreatureController>();
         gameObject.transform.LookAt(_itemBoxTransform);
+        Vector3 distance = _currentItemObject.transform.position - gameObject.transform.position;
+
+        // 걸어오기
+        while (true)
+        {
+            gameObject.transform.position += distance * 0.01f * _walkSpeed;
+            yield return new WaitForSeconds(0.001f);
+
+            if (distance.magnitude < 0.005f)
+                break;
+
+            distance = _currentItemObject.transform.position - gameObject.transform.position;
+        }
 
         yield return new WaitForSeconds(_delayTimeForRunAway);
 
