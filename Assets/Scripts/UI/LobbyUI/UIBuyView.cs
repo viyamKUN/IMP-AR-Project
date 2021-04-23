@@ -5,6 +5,7 @@ using Items;
 public class UIBuyView : MonoBehaviour
 {
     [SerializeField] private GameManager _gameManager = null;
+    [SerializeField] private DataManager _dataManager = null;
     [SerializeField] private GameObject _buyMessage;
 
     [Header("Original Informations")]
@@ -42,12 +43,12 @@ public class UIBuyView : MonoBehaviour
         _itemID = id;
         _currentShopType = shoptype;
         _count = 1;
-        _gold = _gameManager.GetItem(id).Price;
+        _gold = _dataManager.GetItem(id).Price;
         _itemPriceText.text = _gold.ToString();
 
         _titleText.text = shoptype.Equals(ShopType.Buy) ? _buyTitle : _sellTitle;
-        _itemImage.sprite = _gameManager.GetItemImage(id);
-        _itemText.text = _gameManager.GetItem(id).Name;
+        _itemImage.sprite = _dataManager.GetItemImage(id);
+        _itemText.text = _dataManager.GetItem(id).Name;
         _myCountText.text = _myCount.ToString();
 
         _countText.text = _count.ToString();

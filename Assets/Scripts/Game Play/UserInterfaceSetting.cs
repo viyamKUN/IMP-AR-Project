@@ -7,6 +7,7 @@ using Items;
 
 public class UserInterfaceSetting : MonoBehaviour
 {
+    [SerializeField] private DataManager _dataManager = null;
     [SerializeField] private GameManager _gameManager = null;
     [Header("Top")]
     [SerializeField] private Text _myMoneyText = null;
@@ -82,17 +83,17 @@ public class UserInterfaceSetting : MonoBehaviour
 
         foreach (var item in myItems)
         {
-            current = _gameManager.GetItem(item.Key);
+            current = _dataManager.GetItem(item.Key);
             if (current.MyType.Equals(ItemType.Food))
             {
                 _foodItems[foodPointer].gameObject.SetActive(true);
-                _foodItems[foodPointer].SetInventoryUnit(_gameManager.GetItemImage(item.Key), current.Name, item.Value);
+                _foodItems[foodPointer].SetInventoryUnit(_dataManager.GetItemImage(item.Key), current.Name, item.Value);
                 foodPointer++;
             }
             else if (current.MyType.Equals(ItemType.Catch))
             {
                 _catchItems[catchPointer].gameObject.SetActive(true);
-                _catchItems[catchPointer].SetInventoryUnit(_gameManager.GetItemImage(item.Key), current.Name, item.Value);
+                _catchItems[catchPointer].SetInventoryUnit(_dataManager.GetItemImage(item.Key), current.Name, item.Value);
                 catchPointer++;
             }
         }
@@ -117,13 +118,13 @@ public class UserInterfaceSetting : MonoBehaviour
 
         foreach (var item in wholeCollection)
         {
-            int myCreatureIndex = _gameManager.GetPlayerSaveData.FindMyCreature(item.ID);
+            int myCreatureIndex = _dataManager.GetMyCreatureIndex(item.ID);
             if (myCreatureIndex > -1)
             {
                 _catched[catchPointer].gameObject.SetActive(true);
                 _catched[catchPointer].SetCollectionUnit(
                     item.ID,
-                    _gameManager.GetCreatureImage(item.ID),
+                    _dataManager.GetCreatureImage(item.ID),
                     item.Name,
                     myCollections[myCreatureIndex].Count,
                     myCollections[myCreatureIndex].Friendship
@@ -133,7 +134,7 @@ public class UserInterfaceSetting : MonoBehaviour
             else
             {
                 _nonCatch[nonCatchPointer].gameObject.SetActive(true);
-                _nonCatch[nonCatchPointer].SetCollectionUnit(item.ID, _gameManager.GetCreatureImage(item.ID), item.Name, 0, 0);
+                _nonCatch[nonCatchPointer].SetCollectionUnit(item.ID, _dataManager.GetCreatureImage(item.ID), item.Name, 0, 0);
                 nonCatchPointer++;
             }
         }
@@ -160,13 +161,13 @@ public class UserInterfaceSetting : MonoBehaviour
             if (item.MyType.Equals(ItemType.Food))
             {
                 _shopBuyFoods[foodPointer].gameObject.SetActive(true);
-                _shopBuyFoods[foodPointer].SetShopUnit(item.ID, _gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
+                _shopBuyFoods[foodPointer].SetShopUnit(item.ID, _dataManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
                 foodPointer++;
             }
             else if (item.MyType.Equals(ItemType.Catch))
             {
                 _shopBuyCatchs[catchPointer].gameObject.SetActive(true);
-                _shopBuyCatchs[catchPointer].SetShopUnit(item.ID, _gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
+                _shopBuyCatchs[catchPointer].SetShopUnit(item.ID, _dataManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
                 catchPointer++;
             }
         }
@@ -187,13 +188,13 @@ public class UserInterfaceSetting : MonoBehaviour
                 if (item.MyType.Equals(ItemType.Food))
                 {
                     _shopSellFoods[foodPointer].gameObject.SetActive(true);
-                    _shopSellFoods[foodPointer].SetShopUnit(item.ID, _gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
+                    _shopSellFoods[foodPointer].SetShopUnit(item.ID, _dataManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
                     foodPointer++;
                 }
                 else if (item.MyType.Equals(ItemType.Catch))
                 {
                     _shopSellCatchs[catchPointer].gameObject.SetActive(true);
-                    _shopSellCatchs[catchPointer].SetShopUnit(item.ID, _gameManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
+                    _shopSellCatchs[catchPointer].SetShopUnit(item.ID, _dataManager.GetItemImage(item.ID), item.Name, item.Price, _gameManager.GetItemCount(item.ID));
                     catchPointer++;
                 }
             }

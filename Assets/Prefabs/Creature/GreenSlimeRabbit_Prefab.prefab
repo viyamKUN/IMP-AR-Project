@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 4892504893775866}
   - component: {fileID: 95131097399638280}
   - component: {fileID: -4954561154879999693}
+  - component: {fileID: 4308508850136268057}
   - component: {fileID: 3157545950818806867}
   m_Layer: 6
   m_Name: GreenSlimeRabbit_Prefab
@@ -443,6 +444,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 0
+--- !u!114 &4308508850136268057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773656247975474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc25333a0cca8410798583545423e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &3157545950818806867
 BoxCollider:
   m_ObjectHideFlags: 0
