@@ -4,7 +4,7 @@ using Creatures;
 
 public class CollectionDetail : MonoBehaviour
 {
-    [SerializeField] private GameManager _gameManager = null;
+    [SerializeField] private DataManager _dataManager = null;
     [Header("UI Components")]
     [SerializeField] private Text _name = null;
     [SerializeField] private Image _profile = null;
@@ -19,10 +19,10 @@ public class CollectionDetail : MonoBehaviour
 
     public void SetDetailPage(int creatureID)
     {
-        Creature creature = _gameManager.GetCreature(creatureID);
+        Creature creature = _dataManager.GetCreature(creatureID);
 
         _name.text = creature.Name;
-        _profile.sprite = _gameManager.GetCreatureImage(creatureID);
+        _profile.sprite = _dataManager.GetCreatureImage(creatureID);
         _description.text = creature.Description;
         _typeText.text = creature.Type;
         _tallText.text = creature.Tall;
@@ -30,16 +30,16 @@ public class CollectionDetail : MonoBehaviour
         string favorites = "";
         foreach (int i in creature.FavoriteItemIDs)
         {
-            favorites += ", " + _gameManager.GetItem(i).Name;
+            favorites += ", " + _dataManager.GetItem(i).Name;
         }
         _likesText.text = favorites.Remove(0, 2);
 
-        if (_gameManager.GetPlayerSaveData.FindMyCreature(creatureID) < 0)
+        if (_dataManager.GetMyCreatureIndex(creatureID) < 0)
             return;
 
-        float friendship = _gameManager.GetMyCreature(creatureID).Friendship;
+        float friendship = _dataManager.GetMyCreature(creatureID).Friendship;
         _friendshipSlider.value = friendship;
         _friendshipText.text = (friendship * 100).ToString() + "%";
-        _countText.text = _gameManager.GetMyCreature(creatureID).Count.ToString();
+        _countText.text = _dataManager.GetMyCreature(creatureID).Count.ToString();
     }
 }

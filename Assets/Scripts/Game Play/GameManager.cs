@@ -6,10 +6,7 @@ using Items;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Other Scripts")]
-    [SerializeField] private PlayerSaveData _myPlayerSaveData = null;
-    [SerializeField] private CsvReader _csvReader = null;
-
+    [SerializeField] private DataManager _dataManager = null;
     [Header("Lobby Only")]
     [SerializeField] private UserInterfaceSetting _userInterfaceSetting = null;
     [SerializeField] private UIUnderButton _uiUnderButton = null;
@@ -18,9 +15,7 @@ public class GameManager : MonoBehaviour
     [Header("In Game Only")]
     [SerializeField] private InGameBagContentsSetting _inGameBagContentsSetting = null;
 
-    [Header("Objects")]
-    [SerializeField] private ItemObject[] _itemObjects = null;
-    [SerializeField] private CreatureObject[] _creatureObjects = null;
+
 
     [Header("Values")]
     [SerializeField] private Vector3 _creatureSpawnRange = Vector3.zero;
@@ -28,29 +23,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _delayTimeForRunAway = 10;
     [SerializeField] private float _delaySpawnTime = 10;
     [SerializeField] private LayerMask _touchable;
-    [SerializeField] private float _saveTimeDelay = 2;
 
-    public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
-    public Creature GetCreature(int ID) => this._creatureList[ID];
-    public MyCreature GetMyCreature(int ID) => this._myPlayerSaveData.GetPlayerCreatureList[ID];
-    public Item GetItem(int ID) => this._itemList[ID];
-    public Sprite GetItemImage(int ID) => _itemObjects[ID].Profile;
-    public Sprite GetCreatureImage(int ID) => _creatureObjects[ID].Profile;
 
     Vector3 _itemBoxTransform = Vector3.zero;
-    List<Creature> _creatureList = null;
-    List<Item> _itemList = null;
     GameObject _currentItemObject = null;
     CreatureController _currentCreatureObject = null;
     Coroutine _creatureCoroutine = null;
-    float _timeBucket = 0;
 
 
     private void Awake()
     {
-        _csvReader.Read(out _creatureList, out _itemList);
+        _dataManager.SetData(out bool isGameDataExist);
 
-        bool isGameDataExist = _myPlayerSaveData.LoadGame();
         if (_userInterfaceSetting == null)
         {
             if (_inGameBagContentsSetting != null)
@@ -64,8 +48,7 @@ public class GameManager : MonoBehaviour
         if (!isGameDataExist)
             _userInterfaceSetting.OpenUserDataEnterPanel();
         else
-            SetUI();
-        _timeBucket = Time.time;
+            SetLobbyWholeUI();
     }
 
     private void Update()
@@ -96,15 +79,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /// <summary>게임 세이브</summary>
-    public void CallGameSave()
-    {
-        _myPlayerSaveData.SaveGame();
-    }
+
     public void CreateUserData(string name)
     {
-        _myPlayerSaveData.Init(name);
-        SetUI();
+        _dataManager.CreateNewData(name);
+        SetLobbyWholeUI();
     }
     public void SetBoxPosition(Vector3 pos)
     {
@@ -122,7 +101,7 @@ public class GameManager : MonoBehaviour
             return false;
 
         AddItem(itemID, -1);
-        _currentItemObject = Instantiate(_itemObjects[itemID].ItemModel, _itemBoxTransform, Quaternion.identity);
+        _currentItemObject = Instantiate(_dataManager.GetItemModel(itemID), _itemBoxTransform, Quaternion.identity);
         return true;
     }
 
@@ -131,13 +110,13 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("해당 아이템을 선호하는 몬스터를 부르고 있습니다...");
 
-        List<MyCreature> myCreatureList = _myPlayerSaveData.GetPlayerCreatureList;
+        List<MyCreature> myCreatureList = _dataManager.GetMyCreatureList;
         List<int> tempCreatureList = new List<int>();
         int callCreatureID = 0;
 
-        foreach (Creature c in _creatureList)
+        foreach (Creature c in _dataManager.GetCreatureList)
         {
-            if (_myPlayerSaveData.FindMyCreature(c.ID) > 0) continue;
+            if (_dataManager.GetMyCreatureIndex(c.ID) > 0) continue;
             if (c.FavoriteItemIDs.Contains(itemID))
                 tempCreatureList.Add(c.ID);
         }
@@ -149,13 +128,13 @@ public class GameManager : MonoBehaviour
             tempCreatureList.Clear();
 
             foreach (var my in myCreatureList)
-                if (_creatureList[my.ID].FavoriteItemIDs.Contains(itemID))
+                if (_dataManager.GetCreature(my.ID).FavoriteItemIDs.Contains(itemID))
                     tempCreatureList.Add(my.ID);
 
             callCreatureID = Random.Range(0, tempCreatureList.Count);
         }
 
-        Debug.Log(_creatureList[callCreatureID].Name + "이 나타났다!");
+        Debug.Log(_dataManager.GetCreature(callCreatureID).Name + "이 나타났다!");
 
         _creatureCoroutine = StartCoroutine(GenerateCreature(callCreatureID));
     }
@@ -163,43 +142,26 @@ public class GameManager : MonoBehaviour
     /// <summary> 크리쳐를 잡았을 때. 기본적으로 1마리로 취급 </summary>
     public void CatchCreature(int creatureID, int count = 1)
     {
+        _dataManager.AddCreature(creatureID, count);
+
         if (_creatureCoroutine != null)
             StopCoroutine(_creatureCoroutine);
-
-        int myCreatureIndex = _myPlayerSaveData.FindMyCreature(creatureID);
-
-        if (myCreatureIndex > 0)
-            _myPlayerSaveData.GetPlayerCreatureList[myCreatureIndex].Count += count;
-        else
-            _myPlayerSaveData.GetPlayerCreatureList.Add(new MyCreature(creatureID, count, 0));
 
         if (_currentCreatureObject != null)
             _currentCreatureObject.Catched();
 
         Destroy(_currentItemObject);
-        _myPlayerSaveData.SaveGame();
     }
 
     /// <summary> 아이템을 얻었을 때. 기본적으로 1개로 취급 </summary>
     public void AddItem(int itemID, int count = 1)
     {
-        if (_myPlayerSaveData.GetPlayerItemList.ContainsKey(itemID))
-            _myPlayerSaveData.GetPlayerItemList[itemID] += count;
-        else
-            _myPlayerSaveData.GetPlayerItemList.Add(itemID, count);
-
-        if (count < 0)
-        {
-            if (_myPlayerSaveData.GetItemCount(itemID) == 0)
-                _myPlayerSaveData.GetPlayerItemList.Remove(itemID);
-        }
-
-        _myPlayerSaveData.SaveGame();
+        _dataManager.AddItem(itemID, count);
 
         if (_userInterfaceSetting != null)
         {
-            _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
-            _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
+            _userInterfaceSetting.SetMyProfile(_dataManager.GetPlayerSaveData.GetPlayerName, _dataManager.GetPlayerSaveData.GetPlayerItemList);
+            _userInterfaceSetting.SetShop(_dataManager.GetItemList, _dataManager.GetPlayerSaveData.GetPlayerItemList);
         }
         if (_inGameBagContentsSetting != null)
         {
@@ -209,46 +171,42 @@ public class GameManager : MonoBehaviour
 
     public bool CanUseMoney(int payment)
     {
-        if (_myPlayerSaveData.PlayerMoney < payment)
-            return false;
-        return true;
+        return _dataManager.CanUseMoney(payment);
     }
 
     public void AddMoney(int amount)
     {
-        _myPlayerSaveData.PlayerMoney += amount;
-        _myPlayerSaveData.SaveGame();
+        _dataManager.AddMoney(amount, out int nowMoney);
 
         if (_userInterfaceSetting != null)
-            _userInterfaceSetting.SetTopUI(_myPlayerSaveData.PlayerMoney);
+            _userInterfaceSetting.SetTopUI(nowMoney);
     }
 
-    public void UseMoney(int payment)
+    public bool UseMoney(int payment)
     {
-        if (!CanUseMoney(payment)) return;
-        _myPlayerSaveData.PlayerMoney -= payment;
-        _myPlayerSaveData.SaveGame();
+        if (!CanUseMoney(payment)) return false;
+
+        _dataManager.UseMoney(payment, out int nowMoney);
 
         if (_userInterfaceSetting != null)
-            _userInterfaceSetting.SetTopUI(_myPlayerSaveData.PlayerMoney);
+            _userInterfaceSetting.SetTopUI(nowMoney);
+
+        return true;
     }
 
     public int GetItemCount(int itemID)
     {
-        if (_myPlayerSaveData.GetPlayerItemList.ContainsKey(itemID))
-            return _myPlayerSaveData.GetItemCount(itemID);
-
-        return 0;
+        return _dataManager.GetItemCount(itemID);
     }
 
-    private void SetUI()
+    private void SetLobbyWholeUI()
     {
-        if (_userInterfaceSetting == null)
-            return;
-        _userInterfaceSetting.SetTopUI(_myPlayerSaveData.PlayerMoney);
-        _userInterfaceSetting.SetMyProfile(_myPlayerSaveData.GetPlayerName, _myPlayerSaveData.GetPlayerItemList);
-        _userInterfaceSetting.SetMyCollection(_creatureList, _myPlayerSaveData.GetPlayerCreatureList);
-        _userInterfaceSetting.SetShop(_itemList, _myPlayerSaveData.GetPlayerItemList);
+        if (_userInterfaceSetting == null) return;
+
+        _userInterfaceSetting.SetTopUI(_dataManager.GetPlayerSaveData.PlayerMoney);
+        _userInterfaceSetting.SetMyProfile(_dataManager.GetPlayerSaveData.GetPlayerName, _dataManager.GetPlayerSaveData.GetPlayerItemList);
+        _userInterfaceSetting.SetMyCollection(_dataManager.GetCreatureList, _dataManager.GetPlayerSaveData.GetPlayerCreatureList);
+        _userInterfaceSetting.SetShop(_dataManager.GetItemList, _dataManager.GetPlayerSaveData.GetPlayerItemList);
 
         _uiUnderButton.CloseWhole();
         _uiUnderButton.ButtonProfile();
@@ -259,7 +217,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(_delaySpawnTime);
 
         Vector3 targetPosition = _currentItemObject.transform.position + _creatureSpawnRange;
-        GameObject gameObject = Instantiate(_creatureObjects[creatureID].CreatureModel, targetPosition, _currentItemObject.transform.rotation);
+        GameObject gameObject = Instantiate(_dataManager.GetCreatureModel(creatureID), targetPosition, _currentItemObject.transform.rotation);
         _currentCreatureObject = gameObject.GetComponent<CreatureController>();
         gameObject.transform.LookAt(_itemBoxTransform);
         Vector3 distance = _currentItemObject.transform.position - gameObject.transform.position;
@@ -281,19 +239,4 @@ public class GameManager : MonoBehaviour
         _currentCreatureObject.Runaway();
         Destroy(_currentItemObject);
     }
-}
-
-[System.Serializable]
-public struct ItemObject
-{
-    public string Name;
-    public Sprite Profile;
-    public GameObject ItemModel;
-}
-[System.Serializable]
-public struct CreatureObject
-{
-    public string Name;
-    public Sprite Profile;
-    public GameObject CreatureModel;
 }

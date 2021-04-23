@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6056328736842231001}
   - component: {fileID: 6056328736842231006}
+  - component: {fileID: 7041766398842305241}
   - component: {fileID: 6056328736842231007}
   - component: {fileID: 6056328736842231004}
   m_Layer: 0
@@ -45,12 +46,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca79a2def41254e8c844c8cec5481b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myPlayerSaveData: {fileID: 6056328736842231007}
-  _csvReader: {fileID: 6056328736842231004}
+  _dataManager: {fileID: 7041766398842305241}
   _userInterfaceSetting: {fileID: 0}
   _uiUnderButton: {fileID: 0}
   _uiBuySellButton: {fileID: 0}
   _inGameBagContentsSetting: {fileID: 0}
+  _creatureSpawnRange: {x: 0, y: 0.4, z: 0}
+  _walkSpeed: 1
+  _delayTimeForRunAway: 10
+  _delaySpawnTime: 3
+  _touchable:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &7041766398842305241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6056328736842231000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99d9ae0c19b24ffbac2b093b0661c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myPlayerSaveData: {fileID: 6056328736842231007}
+  _csvReader: {fileID: 6056328736842231004}
   _itemObjects:
   - Name: Golden Egg
     Profile: {fileID: 21300000, guid: 70c4c8a4c8591d5458be9c63634f22f6, type: 3}
@@ -95,13 +116,6 @@ MonoBehaviour:
   - Name: Fox
     Profile: {fileID: 21300000, guid: cae23e5333c483842955b43b6a4682d2, type: 3}
     CreatureModel: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
-  _creatureSpawnRange: {x: 0, y: 0.4, z: 0}
-  _walkSpeed: 1
-  _delayTimeForRunAway: 10
-  _delaySpawnTime: 3
-  _touchable:
-    serializedVersion: 2
-    m_Bits: 64
   _saveTimeDelay: 2
 --- !u!114 &6056328736842231007
 MonoBehaviour:
