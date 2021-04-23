@@ -4,6 +4,7 @@ using Items;
 public class InGameBagContentsSetting : MonoBehaviour
 {
     [SerializeField] private GameManager _gameManager = null;
+    [SerializeField] private DataManager _dataManager = null;
     [SerializeField] private MyBagManager _myBagManager = null;
     [SerializeField] private GameObject _bagContentsParent = null;
     private BagContent[] _bagContents = null;
@@ -17,9 +18,9 @@ public class InGameBagContentsSetting : MonoBehaviour
         {
             if (_gameManager.GetItemCount(i) > 0)
             {
-                if (_gameManager.GetItem(i).MyType.Equals(ItemType.Catch))
+                if (_dataManager.GetItem(i).MyType.Equals(ItemType.Catch))
                 {
-                    b.SetBagContent(i, _gameManager.GetItemImage(i), _gameManager.GetItem(i).Name, _gameManager.GetPlayerSaveData.GetItemCount(i));
+                    b.SetBagContent(i, _dataManager.GetItemImage(i), _dataManager.GetItem(i).Name, _dataManager.GetItemCount(i));
                     i++;
                     continue;
                 }
