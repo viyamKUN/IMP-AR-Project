@@ -225,6 +225,8 @@ GameObject:
   - component: {fileID: 4788319935855200}
   - component: {fileID: 111495423891279680}
   - component: {fileID: 507282093211959375}
+  - component: {fileID: 2728465520606110697}
+  - component: {fileID: 2955203879164056276}
   m_Layer: 0
   m_Name: StoneMonster
   m_TagString: Untagged
@@ -281,6 +283,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.1365147, z: 1}
   m_Center: {x: -0, y: 0.53121984, z: -0}
+--- !u!114 &2728465520606110697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713781036754730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc25333a0cca8410798583545423e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2955203879164056276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713781036754730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92b30bd7c55b462f96b87e20ece3ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: 3
 --- !u!1 &1753159918419610
 GameObject:
   m_ObjectHideFlags: 0
