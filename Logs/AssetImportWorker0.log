@@ -823,3 +823,137 @@ Total: 2.492068 ms (FindLiveObjects: 0.345083 ms CreateObjectMapping: 0.098144 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 400.202081 seconds.
+  path: Assets/Prefabs/Creature/Langsat_Idle.prefab
+  artifactKey: Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Langsat_Idle.prefab using Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42290a68a7e7e8ea2d39fc7f37f0a72c') in 0.107756 seconds
+  Import took 0.111895 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.593575 seconds.
+  path: Assets/Prefabs/Creature/Langsat_Idle.prefab
+  artifactKey: Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Langsat_Idle.prefab using Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7eefaab9b57356a782729470146889c') in 0.023693 seconds
+  Import took 0.027769 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000460 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.045 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1576 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 165.9 MB.
+System memory in use after: 166.0 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2141.
+Total: 2.307098 ms (FindLiveObjects: 0.315403 ms CreateObjectMapping: 0.070643 ms MarkObjects: 1.866112 ms  DeleteObjects: 0.053005 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 57.924079 seconds.
+  path: Assets/Prefabs/UI/CreatureContent.prefab
+  artifactKey: Guid(264e793c07ae04b15afe6ddadd48a14a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/CreatureContent.prefab using Guid(264e793c07ae04b15afe6ddadd48a14a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b59c0c16bf2b977a3a30ee0a0022d628') in 0.059983 seconds
+  Import took 0.063142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/Prefabs/UI/ShopContent.prefab
+  artifactKey: Guid(e7a7d883dedc5e44abfe1f71e9c5c0cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/ShopContent.prefab using Guid(e7a7d883dedc5e44abfe1f71e9c5c0cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0437b706eae216aa28d4cc2fd51fa03b') in 0.004917 seconds
+  Import took 0.008158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Prefabs/UI/ItemContent.prefab
+  artifactKey: Guid(a7018c37e565042f5a537c3a67bb3ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/ItemContent.prefab using Guid(a7018c37e565042f5a537c3a67bb3ddf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69bd352c731b13521f75ae27a0910ca8') in 0.005128 seconds
+  Import took 0.007706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.637612 seconds.
+  path: Assets/Prefabs/Creature/Fox.prefab
+  artifactKey: Guid(9fedecbd1aa68924b816f15cb97e611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Fox.prefab using Guid(9fedecbd1aa68924b816f15cb97e611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92d81373ac1f49df677158589d3a9b65') in 1.068305 seconds
+  Import took 1.074429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Prefabs/Creature/Langsat_Idle.prefab
+  artifactKey: Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Langsat_Idle.prefab using Guid(7b92bf9bd6ece1e49bd355c08ca502d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd07bdd96d65803e40c05df0bfc4b7f82') in 0.021046 seconds
+  Import took 0.024986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Prefabs/Creature/GreenSlimeRabbit_Prefab.prefab
+  artifactKey: Guid(57d78de69bcaf8a4e969c0c3350b859b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/GreenSlimeRabbit_Prefab.prefab using Guid(57d78de69bcaf8a4e969c0c3350b859b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ccbbb579334ec37351f8e1bb580ef78') in 0.084077 seconds
+  Import took 0.087598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.985103 seconds.
+  path: Assets/Prefabs/Creature/Fox.prefab
+  artifactKey: Guid(9fedecbd1aa68924b816f15cb97e611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Fox.prefab using Guid(9fedecbd1aa68924b816f15cb97e611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e94a0a92d96455a810c814abf6ff087') in 0.777119 seconds
+  Import took 0.783172 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.261032 seconds.
+  path: Assets/Prefabs/Creature/Fox.prefab
+  artifactKey: Guid(9fedecbd1aa68924b816f15cb97e611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Creature/Fox.prefab using Guid(9fedecbd1aa68924b816f15cb97e611a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec29e20b30395f241280d91c8849197') in 0.742713 seconds
+  Import took 0.748576 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000399 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.006 seconds
+Platform modules already initialized, skipping
+Switching build target platform(2) subTarget(0) extendedPlatform(0) -> platform(9) subTarget(16777218) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1576 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.3 MB.
+System memory in use after: 166.4 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2146.
+Total: 1.789075 ms (FindLiveObjects: 0.229317 ms CreateObjectMapping: 0.070056 ms MarkObjects: 1.451307 ms  DeleteObjects: 0.037585 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000

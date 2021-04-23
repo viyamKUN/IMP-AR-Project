@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CreatureCareController))]
 public class CreatureController : MonoBehaviour
 {
     [SerializeField] private int _id;
