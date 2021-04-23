@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "24c534807e0d7ece",
         "name": "com.DefaultCompany.IMPARProject",
-        "processId": 23622,
+        "processId": 5094,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -36,6 +36,18 @@
             "deviceId": "24c534807e0d7ece",
             "name": "com.DefaultCompany.IMPARProject",
             "processId": 23622,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 2661,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 5094,
             "exited": false
         }
     ],
