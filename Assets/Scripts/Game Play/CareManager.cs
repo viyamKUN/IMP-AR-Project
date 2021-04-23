@@ -29,20 +29,25 @@ public class CareManager : MonoBehaviour
             }
         }
     }
+
     ///<summary>Set creature, When you instantiate the creature.</summary>
     public void SetMyCreature(GameObject go)
     {
         _myCreatureController = go.GetComponent<CreatureCareController>();
+        _myCreatureController.CallInit(this);
     }
 
     public void UseItem(int ID, int usingAmount = 1)
     {
-
+        _dataManager.AddItem(ID, -1);
     }
 
-    public void FeedIt()
+    public void FeedIt(float friendshipAmount)
     {
-        // TODO 크리쳐에게 음식물을 먹인 후의 데이터 관리
-        // ex 호감도 증가
+        _dataManager.AddFriendship(_myCreatureController.GetCreatureID, friendshipAmount);
+    }
+    public void TouchIt(float friendshipAmount)
+    {
+        _dataManager.AddFriendship(_myCreatureController.GetCreatureID, friendshipAmount);
     }
 }

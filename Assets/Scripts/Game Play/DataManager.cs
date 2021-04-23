@@ -44,7 +44,7 @@ public class DataManager : MonoBehaviour
     }
 
     /// <summary>게임 세이브</summary>
-    public void CallGameSave()
+    private void callGameSave()
     {
         _myPlayerSaveData.SaveGame();
     }
@@ -62,14 +62,14 @@ public class DataManager : MonoBehaviour
     public void AddMoney(int amount, out int nowMoney)
     {
         _myPlayerSaveData.PlayerMoney += amount;
-        _myPlayerSaveData.SaveGame();
+        callGameSave();
         nowMoney = _myPlayerSaveData.PlayerMoney;
     }
 
     public void UseMoney(int payment, out int nowMoney)
     {
         _myPlayerSaveData.PlayerMoney -= payment;
-        _myPlayerSaveData.SaveGame();
+        callGameSave();
         nowMoney = _myPlayerSaveData.PlayerMoney;
     }
     public void AddItem(int itemID, int count = 1)
@@ -85,7 +85,7 @@ public class DataManager : MonoBehaviour
                 _myPlayerSaveData.GetPlayerItemList.Remove(itemID);
         }
 
-        CallGameSave();
+        callGameSave();
     }
     public int GetItemCount(int itemID)
     {
@@ -103,7 +103,15 @@ public class DataManager : MonoBehaviour
         else
             _myPlayerSaveData.GetPlayerCreatureList.Add(new MyCreature(creatureID, count, 0));
 
-        CallGameSave();
+        callGameSave();
+    }
+
+    ///<summary>Friendship's range is 0 ~ 1</summary>
+    public void AddFriendship(int creatureID, float amount)
+    {
+        int myCreatureIndex = GetMyCreatureIndex(creatureID);
+        _myPlayerSaveData.GetPlayerCreatureList[myCreatureIndex].Friendship += amount;
+        callGameSave();
     }
 }
 
