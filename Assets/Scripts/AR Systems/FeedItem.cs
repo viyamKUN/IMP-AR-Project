@@ -28,15 +28,19 @@ public class FeedItem : MonoBehaviour
             // create ray from the camera at the mouse position
             //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+            Debug.Log(ray);
             if(raycastManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
             {
                 Pose hitPose = hits[0].pose;
-                Instantiate(FoodItem, hitPose.position + new Vector3(0, 0.5f, 0), hitPose.rotation);
-                
+                Debug.Log("hitPose");
+                spawned = Instantiate(FoodItem, hitPose.position + new Vector3(0, 0.5f, 0), hitPose.rotation);
+                Debug.Log("test");
+                Debug.Log(spawned);
             }
             
-        }        
+        }    
+
+
     }
     
 }

@@ -14,6 +14,8 @@ public class CareCreatureIndicator : MonoBehaviour
     private GameObject spawned;
     public GameObject ObjectToSpawn;
     private Vector3 indicatorPosition;
+    public GameObject FoodItem;
+    private GameObject food;
     void Start()
     {
         rayManager = FindObjectOfType<ARRaycastManager>();
@@ -32,9 +34,29 @@ public class CareCreatureIndicator : MonoBehaviour
         return false;
     }
 
+    public void feedItem()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("touch");
+            // create ray from the camera at the mouse position
+            //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if(rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
+            {
+                Debug.Log("ray");
+                Pose hitPose = hits[0].pose;
+                food = Instantiate(FoodItem, hitPose.position + new Vector3(0, 0.5f, 0), hitPose.rotation);
+                Debug.Log("test");
+                Debug.Log(spawned);
+            }
+            
+        }  
+    }
+
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         rayManager.Raycast(new Vector2(Screen.width/2, Screen.height/2), hits, TrackableType.PlaneWithinPolygon);
         if(hits.Count > 0)
@@ -48,7 +70,11 @@ public class CareCreatureIndicator : MonoBehaviour
             transform.position = hits[0].pose.position;
             transform.rotation = hits[0].pose.rotation;
             
-            indicator.transform.Rotate(new Vector3(0, 20f, 0) * Time.deltaTime);
+            //indicator.transform.Rotate(new Vector3(0, 20f, 0) * Time.deltaTime);
+            if(!isSpawned){
+                spawned = Instantiate(ObjectToSpawn, transform.position, transform.rotation);
+                isSpawned = true;
+            }
 
             if(spawned != null)
             {
@@ -61,30 +87,22 @@ public class CareCreatureIndicator : MonoBehaviour
             indicator.SetActive(false);
         }
 
-        if(TryGetTouchPosition(out Vector2 touchPosition))
+        if(Input.GetMouseButtonDown(0))
         {
-            if(spawned != null)
-            {
-                spawned.transform.position = transform.position;
-            }
-            Ray ray = Camera.main.ScreenPointToRay(touchPosition);
+            Debug.Log("touch");
+            // create ray from the camera at the mouse position
+            //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if(rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
             {
+                Debug.Log("ray");
                 Pose hitPose = hits[0].pose;
-                if(!isSpawned)
-                {
-                    spawned = Instantiate(ObjectToSpawn, transform.position, transform.rotation);
-                    isSpawned = true;
-                }
-                else
-                {
-                    /*
-                    transform.position = hitPose.position;
-                    spawned.transform.position = transform.position;
-                    spawned.transform.rotation = transform.rotation;
-                    */
-                }
+                food = Instantiate(FoodItem, hitPose.position + new Vector3(0, 0.5f, 0), hitPose.rotation);
+                Debug.Log("test");
+                Debug.Log(spawned);
             }
+            
         }
+        
     }
 }
