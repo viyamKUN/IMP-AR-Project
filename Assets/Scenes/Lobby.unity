@@ -19322,7 +19322,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1936243916}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.61089486
+  m_Size: 0.610895
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -23112,7 +23112,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1494006035}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.61089486
+  m_Size: 0.610895
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -28034,7 +28034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &6056328736154388204 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7041766398842305241, guid: 209c27abfd15840f2b010e81526d02ca, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8483630026091200640, guid: 209c27abfd15840f2b010e81526d02ca, type: 3}
   m_PrefabInstance: {fileID: 6056328736154388202}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

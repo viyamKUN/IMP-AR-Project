@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6056328736842231000
+--- !u!1 &180802105931329889
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,63 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6056328736842231001}
-  - component: {fileID: 6056328736842231006}
-  - component: {fileID: 7041766398842305241}
-  - component: {fileID: 6056328736842231007}
-  - component: {fileID: 6056328736842231004}
+  - component: {fileID: 79992926956044088}
+  - component: {fileID: 8483630026091200640}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: DataManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6056328736842231001
+--- !u!4 &79992926956044088
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6056328736842231000}
+  m_GameObject: {fileID: 180802105931329889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 6056328736842231001}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6056328736842231006
+--- !u!114 &8483630026091200640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6056328736842231000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca79a2def41254e8c844c8cec5481b32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dataManager: {fileID: 7041766398842305241}
-  _userInterfaceSetting: {fileID: 0}
-  _uiUnderButton: {fileID: 0}
-  _uiBuySellButton: {fileID: 0}
-  _inGameBagContentsSetting: {fileID: 0}
-  _creatureSpawnRange: {x: 0, y: 0.4, z: 0}
-  _walkSpeed: 1
-  _delayTimeForRunAway: 10
-  _delaySpawnTime: 3
-  _touchable:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &7041766398842305241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6056328736842231000}
+  m_GameObject: {fileID: 180802105931329889}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f99d9ae0c19b24ffbac2b093b0661c65, type: 3}
@@ -106,6 +79,9 @@ MonoBehaviour:
   - Name: Yelloean
     Profile: {fileID: 21300000, guid: 71a0f7d405e325343a1fd2ef2133fa66, type: 3}
     ItemModel: {fileID: 3307672246799062946, guid: 1815f81793cf8a841a693762b2ecd098, type: 3}
+  - Name: Hay
+    Profile: {fileID: 21300000, guid: 71a0f7d405e325343a1fd2ef2133fa66, type: 3}
+    ItemModel: {fileID: 184510, guid: 99a88abdf3ad4d74790fdc2eb99677ee, type: 3}
   _creatureObjects:
   - Name: Rabbit
     Profile: {fileID: 21300000, guid: 9bd5093cc7fbb124588221c5a14ff8ee, type: 3}
@@ -116,7 +92,68 @@ MonoBehaviour:
   - Name: Fox
     Profile: {fileID: 21300000, guid: cae23e5333c483842955b43b6a4682d2, type: 3}
     CreatureModel: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
+  - Name: StoneMonster
+    Profile: {fileID: 21300000, guid: cae23e5333c483842955b43b6a4682d2, type: 3}
+    CreatureModel: {fileID: 1713781036754730, guid: 0f8a471e5537f864ebdb454fe82308eb, type: 3}
   _saveTimeDelay: 2
+--- !u!1 &6056328736842231000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6056328736842231001}
+  - component: {fileID: 6056328736842231006}
+  - component: {fileID: 6056328736842231007}
+  - component: {fileID: 6056328736842231004}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6056328736842231001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6056328736842231000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 79992926956044088}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6056328736842231006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6056328736842231000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca79a2def41254e8c844c8cec5481b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dataManager: {fileID: 8483630026091200640}
+  _userInterfaceSetting: {fileID: 0}
+  _uiUnderButton: {fileID: 0}
+  _uiBuySellButton: {fileID: 0}
+  _inGameBagContentsSetting: {fileID: 0}
+  _creatureSpawnRange: {x: 0, y: 0.4, z: 0}
+  _walkSpeed: 1
+  _delayTimeForRunAway: 10
+  _delaySpawnTime: 3
+  _touchable:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &6056328736842231007
 MonoBehaviour:
   m_ObjectHideFlags: 0
