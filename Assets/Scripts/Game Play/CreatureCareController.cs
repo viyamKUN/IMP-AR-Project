@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class CreatureCareController : MonoBehaviour
 {
-    [SerializeField] private CareManager _careManager = null;
-    [SerializeField] private DataManager _dataManager = null;
-
+    private CareManager _careManager = null;
+    public void CallInit(CareManager careManager)
+    {
+        if (_careManager != null) return;
+        this._careManager = careManager;
+    }
     public void TouchMe()
     {
         Debug.Log("She touched me.");
     }
-    public void FeedMe()
+    private void FeedMe()
     {
-        Debug.Log("She feed me");
+        Debug.Log("She feed me.");
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (!other.gameObject.CompareTag("Food")) return;
+        FeedMe();
+        _careManager.FeedIt();
     }
 }

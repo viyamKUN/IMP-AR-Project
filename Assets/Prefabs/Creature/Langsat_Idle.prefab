@@ -1659,6 +1659,7 @@ GameObject:
   - component: {fileID: 5703506908043305317}
   - component: {fileID: 5703506908043305318}
   - component: {fileID: 798883391111369911}
+  - component: {fileID: 6551602979740368687}
   - component: {fileID: 1893907175463847727}
   m_Layer: 6
   m_Name: Langsat_Idle
@@ -1715,6 +1716,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 1
+--- !u!114 &6551602979740368687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5703506908043305319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc25333a0cca8410798583545423e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1893907175463847727
 BoxCollider:
   m_ObjectHideFlags: 0
