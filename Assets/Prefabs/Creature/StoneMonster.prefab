@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 2728465520606110697}
   - component: {fileID: 2955203879164056276}
   - component: {fileID: 1206470493596940568}
+  - component: {fileID: 4655009644295296704}
   m_Layer: 6
   m_Name: StoneMonster
   m_TagString: Creature
@@ -332,6 +333,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!54 &4655009644295296704
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713781036754730}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1753159918419610
 GameObject:
   m_ObjectHideFlags: 0

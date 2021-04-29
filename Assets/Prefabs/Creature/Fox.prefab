@@ -783,6 +783,7 @@ GameObject:
   - component: {fileID: 2740845748049059001}
   - component: {fileID: 4233582267122767976}
   - component: {fileID: -554281205448786226}
+  - component: {fileID: 6671796058635307508}
   m_Layer: 6
   m_Name: Fox
   m_TagString: Creature
@@ -871,6 +872,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.6, z: 1}
   m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!54 &6671796058635307508
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020983980232809014}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4246927435662846628
 GameObject:
   m_ObjectHideFlags: 0
