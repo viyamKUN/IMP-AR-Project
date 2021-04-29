@@ -59,9 +59,10 @@ public class CareManager : MonoBehaviour
     {
         return _dataManager.GetItemModel(ID);
     }
-    public void UseItem(int ID, int usingAmount = 1)
+    public void UseItem(int ID, int usingAmount, out int remain)
     {
-        _dataManager.AddItem(ID, -1);
+        _dataManager.AddItem(ID, -usingAmount);
+        remain = _dataManager.GetItemCount(ID);
         _careUIManager.SetUI();
     }
 

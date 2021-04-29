@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "24c534807e0d7ece",
         "name": "com.DefaultCompany.IMPARProject",
-        "processId": 24558,
+        "processId": 18476,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,36 +54,6 @@
             "deviceId": "24c534807e0d7ece",
             "name": "com.DefaultCompany.IMPARProject",
             "processId": 18476,
-            "exited": false
-        },
-        {
-            "deviceId": "24c534807e0d7ece",
-            "name": "com.DefaultCompany.IMPARProject",
-            "processId": 20344,
-            "exited": false
-        },
-        {
-            "deviceId": "24c534807e0d7ece",
-            "name": "com.DefaultCompany.IMPARProject",
-            "processId": 22039,
-            "exited": false
-        },
-        {
-            "deviceId": "24c534807e0d7ece",
-            "name": "com.DefaultCompany.IMPARProject",
-            "processId": 22984,
-            "exited": false
-        },
-        {
-            "deviceId": "24c534807e0d7ece",
-            "name": "com.DefaultCompany.IMPARProject",
-            "processId": 23657,
-            "exited": false
-        },
-        {
-            "deviceId": "24c534807e0d7ece",
-            "name": "com.DefaultCompany.IMPARProject",
-            "processId": 24558,
             "exited": false
         }
     ],

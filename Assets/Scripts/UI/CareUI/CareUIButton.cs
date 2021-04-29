@@ -16,11 +16,6 @@ public class CareUIButton : MonoBehaviour
         newItem = careManager.GetItemObject(thisItemId);
         indicator.SetItem(newItem);
         feedMode = true;
-        indicator.SetIsFeedMode(feedMode);
-    }
-
-    public void useItem()
-    {
-        careManager.UseItem(_inventoryUnit.GetID, 1);
+        indicator.SetIsFeedMode(feedMode, thisItemId);
     }
 }

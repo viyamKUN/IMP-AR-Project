@@ -39,7 +39,8 @@ public class CreatureCareController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (!other.gameObject.CompareTag("Food")) return;
+        if (!other.gameObject.CompareTag("food")) return;
         FeedMe();
+        Destroy(other.gameObject);
     }
 }

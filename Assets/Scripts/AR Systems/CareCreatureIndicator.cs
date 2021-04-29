@@ -21,10 +21,9 @@ public class CareCreatureIndicator : MonoBehaviour
     private GameObject creature;
     private bool isCreature = false;
     private GameObject creatureSpawned;
-    [SerializeField]
-    private CareUIButton UIbutton;
     private bool isFeedMode = false;
-    
+    int selectedItemNumber = 0;
+
     void Start()
     {
         rayManager = FindObjectOfType<ARRaycastManager>();
@@ -35,7 +34,7 @@ public class CareCreatureIndicator : MonoBehaviour
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
     {
-        if(Input.touchCount > 0)
+        if (Input.touchCount > 0)
         {
             touchPosition = Input.GetTouch(0).position;
             return true;
@@ -44,43 +43,35 @@ public class CareCreatureIndicator : MonoBehaviour
         return false;
     }
 
-
-    private void OnCollisionEnter(Collision other) 
-    {
-        if(other.transform.tag == "food")
-        {
-            Destroy(other.gameObject);
-            careManager.FeedIt(10f);
-        }    
-    }
-
     public void SetItem(GameObject item)
     {
         this.Item = item;
     }
 
-    public void SetIsFeedMode(bool feedMode)
+    public void SetIsFeedMode(bool feedMode, int id)
     {
         this.isFeedMode = feedMode;
+        selectedItemNumber = id;
     }
 
     // Update is called once per frame
     public void Update()
     {
-        rayManager.Raycast(new Vector2(Screen.width/2, Screen.height/2), hits, TrackableType.PlaneWithinPolygon);
-        if(hits.Count > 0)
+        rayManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), hits, TrackableType.PlaneWithinPolygon);
+        if (hits.Count > 0)
         {
-            
-            if(!indicator.activeInHierarchy)
+
+            if (!indicator.activeInHierarchy)
             {
                 indicator.SetActive(true);
             }
 
             transform.position = hits[0].pose.position;
             transform.rotation = hits[0].pose.rotation;
-            
+
             //indicator.transform.Rotate(new Vector3(0, 20f, 0) * Time.deltaTime);
-            if(!isSpawned){
+            if (!isSpawned)
+            {
                 spawned = Instantiate(ObjectToSpawn, transform.position, transform.rotation);
                 isSpawned = true;
             }
@@ -91,13 +82,14 @@ public class CareCreatureIndicator : MonoBehaviour
                 spawned.transform.rotation = transform.rotation;
             }
             */
-            if(!isCreature){
+            if (!isCreature)
+            {
                 creatureSpawned = Instantiate(creature, transform.position, transform.rotation);
                 careManager.SetMyCreature(creatureSpawned);
                 isCreature = true;
             }
 
-            if(creatureSpawned != null)
+            if (creatureSpawned != null)
             {
                 creatureSpawned.transform.position = transform.position;
                 creatureSpawned.transform.rotation = transform.rotation;
@@ -109,20 +101,23 @@ public class CareCreatureIndicator : MonoBehaviour
             indicator.SetActive(false);
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            if(isFeedMode){
+            if (isFeedMode)
+            {
                 // create ray from the camera at the mouse position
                 //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if(rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
+                if (rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
                 {
                     Pose hitPose = hits[0].pose;
                     spawnedItem = Instantiate(Item, hitPose.position, hitPose.rotation);
-                    UIbutton.useItem();
-                }    
+                    careManager.UseItem(selectedItemNumber, 1, out int remain);
+                    if (remain == 0)
+                        SetIsFeedMode(false, -1);
+                }
             }
         }
-        
+
     }
 }
