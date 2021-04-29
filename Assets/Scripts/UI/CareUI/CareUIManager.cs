@@ -12,13 +12,17 @@ public class CareUIManager : MonoBehaviour
 
     public void SetUI()
     {
-        _careItemsUnits = _careItemsParent.GetComponentsInChildren<InventoryUnit>();
+        if (_careItemsUnits == null)
+            _careItemsUnits = _careItemsParent.GetComponentsInChildren<InventoryUnit>();
+
         List<Item> tempList = _dataManager.GetItemList;
         int unitPin = 0;
+
         foreach (InventoryUnit go in _careItemsUnits)
         {
             go.gameObject.SetActive(false);
         }
+
         for (int i = 0; i < tempList.Count; i++)
         {
             if (!_dataManager.IsContainItem(i))
