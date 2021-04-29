@@ -6,6 +6,8 @@ public class CreatureCareController : MonoBehaviour
 {
     [SerializeField] private CreatureController _creature = null;
     [SerializeField] private Animator _anim = null;
+    [SerializeField] private EffectManager _efManager = null;
+
     [Header("Care Values")]
     [SerializeField] private float _feedCareValue = 0.05f;
     [SerializeField] private float _touchCareValue = 0.01f;
@@ -24,6 +26,7 @@ public class CreatureCareController : MonoBehaviour
         Debug.Log("She touched me.");
         _careManager.TouchIt(_touchCareValue);
         _anim.SetTrigger("Jump");
+        _efManager.CallEffect(EffectName.HEART);
     }
 
     private void FeedMe()
@@ -31,6 +34,7 @@ public class CreatureCareController : MonoBehaviour
         Debug.Log("She feed me.");
         _careManager.FeedIt(_feedCareValue);
         _anim.SetTrigger("Jump");
+        _efManager.CallEffect(EffectName.FOOD);
     }
 
     private void OnCollisionEnter(Collision other)

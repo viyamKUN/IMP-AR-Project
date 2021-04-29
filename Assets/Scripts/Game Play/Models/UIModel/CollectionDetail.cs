@@ -23,7 +23,7 @@ public class CollectionDetail : MonoBehaviour
 
         _name.text = creature.Name;
         _profile.sprite = _dataManager.GetCreatureImage(creatureID);
-        _description.text = creature.Description;
+        _description.text = creature.Description.Replace('|', ',');
         _typeText.text = creature.Type;
         _tallText.text = creature.Tall;
         _weightText.text = creature.Weight;

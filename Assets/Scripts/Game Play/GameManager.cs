@@ -222,6 +222,7 @@ public class GameManager : MonoBehaviour
         gameObject.transform.LookAt(_itemBoxTransform);
         Vector3 distance = _currentItemObject.transform.position - gameObject.transform.position;
 
+        _currentCreatureObject.Walk();
         // 걸어오기
         while (true)
         {
@@ -234,6 +235,7 @@ public class GameManager : MonoBehaviour
             distance = _currentItemObject.transform.position - gameObject.transform.position;
         }
 
+        _currentCreatureObject.StopWalking();
         yield return new WaitForSeconds(_delayTimeForRunAway);
 
         _currentCreatureObject.Runaway();

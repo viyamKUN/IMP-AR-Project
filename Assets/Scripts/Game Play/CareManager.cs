@@ -62,6 +62,7 @@ public class CareManager : MonoBehaviour
     public void UseItem(int ID, int usingAmount = 1)
     {
         _dataManager.AddItem(ID, -1);
+        _careUIManager.SetUI();
     }
 
     public void FeedIt(float friendshipAmount)
