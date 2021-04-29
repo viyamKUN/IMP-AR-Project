@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Items;
 
 public class CareManager : MonoBehaviour
 {
@@ -36,7 +37,10 @@ public class CareManager : MonoBehaviour
         _myCreatureController = go.GetComponent<CreatureCareController>();
         _myCreatureController.CallInit(this);
     }
-
+    public List<Item> GetItemList()
+    {
+        return _dataManager.GetItemList;
+    }
     public void UseItem(int ID, int usingAmount = 1)
     {
         _dataManager.AddItem(ID, -1);
