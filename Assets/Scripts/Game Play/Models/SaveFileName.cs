@@ -8,4 +8,5 @@ public static class SavePrefName
 {
     public static string BGM = "SoundBGM";
     public static string SUI = "SoundUI";
+    public static string CareCreatureID = "CareCreatureID";
 }
