@@ -7,12 +7,14 @@ public class InteractUI : MonoBehaviour
     [SerializeField] private GameObject feedTab;
     [SerializeField] private GameObject buttons;
     [SerializeField] private GameObject background;
+    [SerializeField] private GameObject backButton;
     
     public void FeedMode()
     {
         buttons.SetActive(false);
         feedTab.SetActive(true);
         background.SetActive(true);
+        backButton.SetActive(true);
     }
 
     public void InteractMode()
@@ -20,5 +22,12 @@ public class InteractUI : MonoBehaviour
         buttons.SetActive(false);
         feedTab.SetActive(false);
         background.SetActive(true);
+        backButton.SetActive(true);
+    }
+
+    public void BackButton()
+    {
+        buttons.SetActive(true);
+        backButton.SetActive(false);
     }
 }
