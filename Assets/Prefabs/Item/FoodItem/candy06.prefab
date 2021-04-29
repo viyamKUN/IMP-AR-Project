@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2118319793882488483}
   - component: {fileID: 7175154037646727979}
   - component: {fileID: 1724012882891214649}
+  - component: {fileID: 5270424491309477273}
   m_Layer: 0
   m_Name: candy06
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5270424491309477273
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5345726144121743214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0014474475, y: 0.00062302727, z: 0.0011514844}
+  m_Center: {x: -0.00042283995, y: 1.4551919e-11, z: -0.00033393272}

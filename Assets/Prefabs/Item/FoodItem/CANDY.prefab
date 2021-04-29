@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 8524280031604716738}
   m_Layer: 0
   m_Name: CANDY
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
