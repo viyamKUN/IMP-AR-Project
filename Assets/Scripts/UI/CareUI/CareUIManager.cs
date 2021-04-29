@@ -6,21 +6,30 @@ using Items;
 
 public class CareUIManager : MonoBehaviour
 {
-    [SerializeField] private CareManager _careManager = null;
+    [SerializeField] private DataManager _dataManager = null;
     [SerializeField] private GameObject _careItemsParent = null;
     InventoryUnit[] _careItemsUnits;
 
-    void Start()
+    public void SetUI()
     {
         _careItemsUnits = _careItemsParent.GetComponentsInChildren<InventoryUnit>();
-        initUI();
-    }
-    private void initUI()
-    {
-        List<Item> tempList = _careManager.GetItemList();
+        List<Item> tempList = _dataManager.GetItemList;
+        int unitPin = 0;
+        foreach (InventoryUnit go in _careItemsUnits)
+        {
+            go.gameObject.SetActive(false);
+        }
         for (int i = 0; i < tempList.Count; i++)
         {
+            if (!_dataManager.IsContainItem(i))
+                continue;
 
+            _careItemsUnits[unitPin].gameObject.SetActive(true);
+            _careItemsUnits[unitPin++].SetInventoryUnit(
+                _dataManager.GetItemImage(i),
+                _dataManager.GetItem(i).Name,
+                _dataManager.GetItemCount(i)
+            );
         }
     }
     public void RefreshUI()

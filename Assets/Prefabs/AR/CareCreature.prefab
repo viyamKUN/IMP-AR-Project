@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 7659664590036754200}
   - component: {fileID: 5952762179660952068}
   - component: {fileID: 4689053990841513319}
-  - component: {fileID: 7015164353833808342}
   m_Layer: 5
   m_Name: ItemSelectButton
   m_TagString: Untagged
@@ -201,9 +200,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7015164353833808342}
-        m_TargetAssemblyTypeName: CareCreatureIndicator, Assembly-CSharp
-        m_MethodName: Update
+      - m_Target: {fileID: 4382161399704298694}
+        m_TargetAssemblyTypeName: CareUIButton, Assembly-CSharp
+        m_MethodName: ClickSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -213,20 +212,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7015164353833808342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4227749804056967197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c2e20cc99cc15547995449944e6db15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToSpawn: {fileID: 1370357002708338, guid: 9c47d3ce2208e9440ab03e7fe3e32bcf, type: 3}
-  FoodItem: {fileID: 4192711996667259635, guid: 21cb7115458e2414e8043325f587443c, type: 3}
 --- !u!1 &7042613751415107525
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +303,7 @@ GameObject:
   - component: {fileID: 9003780424864357787}
   - component: {fileID: 9003780424864357786}
   - component: {fileID: 9183615227220061755}
+  - component: {fileID: 4382161399704298694}
   m_Layer: 5
   m_Name: CareCreature
   m_TagString: Untagged
@@ -396,6 +382,18 @@ MonoBehaviour:
   _profileImage: {fileID: 9003780424893006293}
   _nameText: {fileID: 9003780425851203333}
   _countText: {fileID: 8223810459339802271}
+--- !u!114 &4382161399704298694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003780424864357766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae84104895c0c4fbaa3363a302fc1e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9003780424893006295
 GameObject:
   m_ObjectHideFlags: 0
