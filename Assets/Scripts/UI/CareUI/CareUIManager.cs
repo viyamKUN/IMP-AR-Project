@@ -27,6 +27,8 @@ public class CareUIManager : MonoBehaviour
         {
             if (!_dataManager.IsContainItem(i))
                 continue;
+            if (!_dataManager.GetItem(i).MyType.Equals(ItemType.Food))
+                continue;
 
             _careItemsUnits[unitPin].gameObject.SetActive(true);
             _careItemsUnits[unitPin++].SetInventoryUnit(

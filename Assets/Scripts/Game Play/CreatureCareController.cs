@@ -35,6 +35,7 @@ public class CreatureCareController : MonoBehaviour
         _careManager.FeedIt(_feedCareValue);
         _anim.SetTrigger("Jump");
         _efManager.CallEffect(EffectName.FOOD);
+        _efManager.CallEffect(EffectName.RUN);
     }
 
     private void OnCollisionEnter(Collision other)
