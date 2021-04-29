@@ -38,22 +38,37 @@ public class CareCreatureIndicator : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("touch");
             // create ray from the camera at the mouse position
             //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
+            /*
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if(rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
             {
-                Debug.Log("ray");
                 Pose hitPose = hits[0].pose;
-                food = Instantiate(FoodItem, hitPose.position + new Vector3(0, 0.5f, 0), hitPose.rotation);
-                Debug.Log("test");
-                Debug.Log(spawned);
+                food = Instantiate(FoodItem, hitPose.position, hitPose.rotation);
             }
+            */
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Vector2 touchPos = new Vector2(pos.x, pos.y);
+
+            food = Instantiate(FoodItem, touchPos, Quaternion.identity);
+            Debug.Log(touchPos);
+            Debug.Log(food.transform.position);
+
             
         }  
     }
 
+    private void OnCollisionEnter(Collision other) 
+    {
+        Debug.Log("collllllllllll");
+        if(other.transform.tag == "food")
+        {
+            Debug.Log("collide!");
+            Destroy(other.gameObject);
+        }    
+    }
 
     // Update is called once per frame
     public void Update()
@@ -95,11 +110,9 @@ public class CareCreatureIndicator : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if(rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
             {
-                Debug.Log("ray");
                 Pose hitPose = hits[0].pose;
-                food = Instantiate(FoodItem, hitPose.position + new Vector3(0, 0.5f, 0), hitPose.rotation);
-                Debug.Log("test");
-                Debug.Log(spawned);
+                food = Instantiate(FoodItem, hitPose.position, hitPose.rotation);
+                
             }
             
         }

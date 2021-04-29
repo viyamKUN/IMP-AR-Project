@@ -3,10 +3,10 @@
     "m_SelectedPackage": {
         "deviceId": "24c534807e0d7ece",
         "name": "com.DefaultCompany.IMPARProject",
-        "processId": 18476,
+        "processId": 3562,
         "exited": false
     },
-    "m_SelectedPriority": 0,
+    "m_SelectedPriority": 2,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "24c534807e0d7ece",
@@ -54,6 +54,120 @@
             "deviceId": "24c534807e0d7ece",
             "name": "com.DefaultCompany.IMPARProject",
             "processId": 18476,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 9490,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 11426,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 12516,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 13660,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 23632,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 24949,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 25737,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 26647,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 27309,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 28431,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 29093,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 29890,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 30479,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 31082,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 31922,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 32709,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 941,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 2572,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 3562,
             "exited": false
         }
     ],
@@ -107,7 +221,7 @@
         "MemoryGroup": 2,
         "Behavior": 0
     },
-    "m_Filter": "",
+    "m_Filter": "touch",
     "m_FilterIsRegularExpression": false,
     "m_SymbolPaths": []
 }
