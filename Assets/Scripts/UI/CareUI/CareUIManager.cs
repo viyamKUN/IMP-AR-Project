@@ -33,9 +33,4 @@ public class CareUIManager : MonoBehaviour
             );
         }
     }
-    public void RefreshUI()
-    {
-        // 카운트 바꾸기
-        // 사용한 것 없애기
-    }
 }
