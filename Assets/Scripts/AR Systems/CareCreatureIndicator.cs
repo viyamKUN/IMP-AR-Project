@@ -16,11 +16,17 @@ public class CareCreatureIndicator : MonoBehaviour
     private Vector3 indicatorPosition;
     public GameObject FoodItem;
     private GameObject food;
+    [SerializeField]
+    private CareManager careManager;
+    private GameObject creature;
+    private bool isCreature = false;
+    private GameObject creatureSpawned;
     void Start()
     {
         rayManager = FindObjectOfType<ARRaycastManager>();
         indicator = transform.GetChild(0).gameObject; //첫번째 자식
         indicator.SetActive(false);
+        creature = careManager.GetCreatureObject();
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -53,8 +59,6 @@ public class CareCreatureIndicator : MonoBehaviour
             Vector2 touchPos = new Vector2(pos.x, pos.y);
 
             food = Instantiate(FoodItem, touchPos, Quaternion.identity);
-            Debug.Log(touchPos);
-            Debug.Log(food.transform.position);
 
             
         }  
@@ -62,10 +66,8 @@ public class CareCreatureIndicator : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) 
     {
-        Debug.Log("collllllllllll");
         if(other.transform.tag == "food")
         {
-            Debug.Log("collide!");
             Destroy(other.gameObject);
         }    
     }
@@ -96,6 +98,19 @@ public class CareCreatureIndicator : MonoBehaviour
                 spawned.transform.position = transform.position;
                 spawned.transform.rotation = transform.rotation;
             }
+
+            if(!isCreature){
+                creatureSpawned = Instantiate(creature, transform.position, transform.rotation);
+                careManager.SetMyCreature(creatureSpawned);
+                isCreature = true;
+            }
+
+            if(creatureSpawned != null)
+            {
+                creatureSpawned.transform.position = transform.position;
+                creatureSpawned.transform.rotation = transform.rotation;
+            }
+
         }
         else
         {
@@ -104,7 +119,6 @@ public class CareCreatureIndicator : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("touch");
             // create ray from the camera at the mouse position
             //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

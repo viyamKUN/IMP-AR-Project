@@ -3,10 +3,10 @@
     "m_SelectedPackage": {
         "deviceId": "24c534807e0d7ece",
         "name": "com.DefaultCompany.IMPARProject",
-        "processId": 18476,
+        "processId": 13002,
         "exited": false
     },
-    "m_SelectedPriority": 0,
+    "m_SelectedPriority": 2,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "24c534807e0d7ece",
@@ -54,6 +54,24 @@
             "deviceId": "24c534807e0d7ece",
             "name": "com.DefaultCompany.IMPARProject",
             "processId": 18476,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 10468,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 11725,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 13002,
             "exited": false
         }
     ],
