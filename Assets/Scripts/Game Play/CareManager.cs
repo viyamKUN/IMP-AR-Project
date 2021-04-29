@@ -9,7 +9,7 @@ public class CareManager : MonoBehaviour
     [SerializeField] private LayerMask _touchable;
 
     CreatureCareController _myCreatureController = null;
-
+    int _thisCreatureID = -1;
 
     private void Update()
     {
@@ -31,12 +31,21 @@ public class CareManager : MonoBehaviour
         }
     }
 
+    ///<summary>Get creature model for care</summary>
+    public GameObject GetCreatureObject()
+    {
+        if (_thisCreatureID < 0)
+            _thisCreatureID = PlayerPrefs.GetInt(SavePrefName.CareCreatureID, 0);
+        return _dataManager.GetCreatureModel(_thisCreatureID);
+    }
+
     ///<summary>Set creature, When you instantiate the creature.</summary>
     public void SetMyCreature(GameObject go)
     {
         _myCreatureController = go.GetComponent<CreatureCareController>();
         _myCreatureController.CallInit(this);
     }
+
     public List<Item> GetItemList()
     {
         return _dataManager.GetItemList;

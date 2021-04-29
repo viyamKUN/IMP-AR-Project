@@ -31,6 +31,8 @@ public class CollectionUnit : MonoBehaviour
 
     public void InteractScene()
     {
+        PlayerPrefs.SetInt(SavePrefName.CareCreatureID, _id);
+        PlayerPrefs.Save();
         SceneManager.LoadScene(SceneName);
     }
 }
