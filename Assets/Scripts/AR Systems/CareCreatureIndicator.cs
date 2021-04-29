@@ -14,13 +14,17 @@ public class CareCreatureIndicator : MonoBehaviour
     private GameObject spawned;
     public GameObject ObjectToSpawn;
     private Vector3 indicatorPosition;
-    public GameObject FoodItem;
-    private GameObject food;
+    public GameObject Item;
+    private GameObject spawnedItem;
     [SerializeField]
     private CareManager careManager;
     private GameObject creature;
     private bool isCreature = false;
     private GameObject creatureSpawned;
+    [SerializeField]
+    private CareUIButton UIbutton;
+    private bool isFeedMode = false;
+    
     void Start()
     {
         rayManager = FindObjectOfType<ARRaycastManager>();
@@ -40,36 +44,24 @@ public class CareCreatureIndicator : MonoBehaviour
         return false;
     }
 
-    public void feedItem()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            // create ray from the camera at the mouse position
-            //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
-            /*
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
-            {
-                Pose hitPose = hits[0].pose;
-                food = Instantiate(FoodItem, hitPose.position, hitPose.rotation);
-            }
-            */
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            Vector2 touchPos = new Vector2(pos.x, pos.y);
-
-            food = Instantiate(FoodItem, touchPos, Quaternion.identity);
-
-            
-        }  
-    }
 
     private void OnCollisionEnter(Collision other) 
     {
         if(other.transform.tag == "food")
         {
             Destroy(other.gameObject);
+            careManager.FeedIt(10f);
         }    
+    }
+
+    public void SetItem(GameObject item)
+    {
+        this.Item = item;
+    }
+
+    public void SetIsFeedMode(bool feedMode)
+    {
+        this.isFeedMode = feedMode;
     }
 
     // Update is called once per frame
@@ -92,13 +84,13 @@ public class CareCreatureIndicator : MonoBehaviour
                 spawned = Instantiate(ObjectToSpawn, transform.position, transform.rotation);
                 isSpawned = true;
             }
-
+            /*
             if(spawned != null)
             {
                 spawned.transform.position = transform.position;
                 spawned.transform.rotation = transform.rotation;
             }
-
+            */
             if(!isCreature){
                 creatureSpawned = Instantiate(creature, transform.position, transform.rotation);
                 careManager.SetMyCreature(creatureSpawned);
@@ -119,16 +111,17 @@ public class CareCreatureIndicator : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            // create ray from the camera at the mouse position
-            //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if(rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
-            {
-                Pose hitPose = hits[0].pose;
-                food = Instantiate(FoodItem, hitPose.position, hitPose.rotation);
-                
+            if(isFeedMode){
+                // create ray from the camera at the mouse position
+                //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if(rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
+                {
+                    Pose hitPose = hits[0].pose;
+                    spawnedItem = Instantiate(Item, hitPose.position, hitPose.rotation);
+                    UIbutton.useItem();
+                }    
             }
-            
         }
         
     }

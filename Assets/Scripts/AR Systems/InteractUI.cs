@@ -12,7 +12,7 @@ public class InteractUI : MonoBehaviour
     {
         buttons.SetActive(false);
         feedTab.SetActive(true);
-        background.SetActive(false);
+        background.SetActive(true);
     }
 
     public void InteractMode()
