@@ -49,7 +49,7 @@ MonoBehaviour:
   _dataManager: {fileID: 4766023925262790964}
   _touchable:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
 --- !u!114 &2114084602083369860
 MonoBehaviour:
   m_ObjectHideFlags: 0

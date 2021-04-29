@@ -98,7 +98,7 @@ public class DataManager : MonoBehaviour
     {
         int myCreatureIndex = GetMyCreatureIndex(creatureID);
 
-        if (myCreatureIndex > 0)
+        if (myCreatureIndex >= 0)
             _myPlayerSaveData.GetPlayerCreatureList[myCreatureIndex].Count += count;
         else
             _myPlayerSaveData.GetPlayerCreatureList.Add(new MyCreature(creatureID, count, 0));

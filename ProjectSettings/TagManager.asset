@@ -8,6 +8,8 @@ TagManager:
   - Item
   - Creature
   - food
+  - FxTemporaire
+  - Egg
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Creature
-  - 
+  - Egg
   - 
   - 
   - 

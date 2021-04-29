@@ -28,6 +28,12 @@ public class CareManager : MonoBehaviour
             RaycastHit h;
             if (Physics.Raycast(touchRay, out h, Mathf.Infinity, _touchable))
             {
+                if (h.transform.gameObject.CompareTag("Egg"))
+                {
+                    _dataManager.AddItem(0, 1);
+                    Destroy(h.transform.gameObject);
+                    return;
+                }
                 if (!h.transform.gameObject.CompareTag("Creature")) return;
 
                 if (_myCreatureController == null)
@@ -69,6 +75,7 @@ public class CareManager : MonoBehaviour
     public void FeedIt(float friendshipAmount)
     {
         _dataManager.AddFriendship(_myCreatureController.GetCreatureID, friendshipAmount);
+        Instantiate(_dataManager.GetItemModel(0), _myCreatureController.gameObject.transform.position, Quaternion.identity);
     }
     public void TouchIt(float friendshipAmount)
     {
