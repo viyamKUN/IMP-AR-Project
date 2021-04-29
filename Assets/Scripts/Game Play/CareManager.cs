@@ -53,6 +53,12 @@ public class CareManager : MonoBehaviour
         _myCreatureController = go.GetComponent<CreatureCareController>();
         _myCreatureController.CallInit(this);
     }
+
+    ///<summary>Get item model by using id</summary>
+    public GameObject GetItemObject(int ID)
+    {
+        return _dataManager.GetItemModel(ID);
+    }
     public void UseItem(int ID, int usingAmount = 1)
     {
         _dataManager.AddItem(ID, -1);
