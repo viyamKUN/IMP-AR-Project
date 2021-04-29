@@ -12,6 +12,14 @@ public class CareManager : MonoBehaviour
     CreatureCareController _myCreatureController = null;
     int _thisCreatureID = -1;
 
+    private void init()
+    {
+        _dataManager.SetData(out bool isGameExist);
+        _careUIManager.SetUI();
+
+        if (_thisCreatureID < 0)
+            _thisCreatureID = PlayerPrefs.GetInt(SavePrefName.CareCreatureID, 0);
+    }
     private void Update()
     {
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -35,8 +43,7 @@ public class CareManager : MonoBehaviour
     ///<summary>Get creature model for care</summary>
     public GameObject GetCreatureObject()
     {
-        if (_thisCreatureID < 0)
-            _thisCreatureID = PlayerPrefs.GetInt(SavePrefName.CareCreatureID, 0);
+        init();
         return _dataManager.GetCreatureModel(_thisCreatureID);
     }
 
@@ -45,11 +52,6 @@ public class CareManager : MonoBehaviour
     {
         _myCreatureController = go.GetComponent<CreatureCareController>();
         _myCreatureController.CallInit(this);
-    }
-
-    public List<Item> GetItemList()
-    {
-        return _dataManager.GetItemList;
     }
     public void UseItem(int ID, int usingAmount = 1)
     {
