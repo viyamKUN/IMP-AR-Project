@@ -26,6 +26,7 @@ public class CareUIManager : MonoBehaviour
 
             _careItemsUnits[unitPin].gameObject.SetActive(true);
             _careItemsUnits[unitPin++].SetInventoryUnit(
+                i,
                 _dataManager.GetItemImage(i),
                 _dataManager.GetItem(i).Name,
                 _dataManager.GetItemCount(i)

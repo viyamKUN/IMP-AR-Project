@@ -87,13 +87,13 @@ public class UserInterfaceSetting : MonoBehaviour
             if (current.MyType.Equals(ItemType.Food))
             {
                 _foodItems[foodPointer].gameObject.SetActive(true);
-                _foodItems[foodPointer].SetInventoryUnit(_dataManager.GetItemImage(item.Key), current.Name, item.Value);
+                _foodItems[foodPointer].SetInventoryUnit(current.ID, _dataManager.GetItemImage(item.Key), current.Name, item.Value);
                 foodPointer++;
             }
             else if (current.MyType.Equals(ItemType.Catch))
             {
                 _catchItems[catchPointer].gameObject.SetActive(true);
-                _catchItems[catchPointer].SetInventoryUnit(_dataManager.GetItemImage(item.Key), current.Name, item.Value);
+                _catchItems[catchPointer].SetInventoryUnit(current.ID, _dataManager.GetItemImage(item.Key), current.Name, item.Value);
                 catchPointer++;
             }
         }
