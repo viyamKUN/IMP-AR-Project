@@ -82,8 +82,20 @@ MonoBehaviour:
     Profile: {fileID: 21300000, guid: 71a0f7d405e325343a1fd2ef2133fa66, type: 3}
     ItemModel: {fileID: 3307672246799062946, guid: 1815f81793cf8a841a693762b2ecd098, type: 3}
   - Name: Hay
-    Profile: {fileID: 21300000, guid: 71a0f7d405e325343a1fd2ef2133fa66, type: 3}
+    Profile: {fileID: 21300000, guid: ef4bc8ce05be67f4c90ca402a604a378, type: 3}
     ItemModel: {fileID: 184510, guid: 99a88abdf3ad4d74790fdc2eb99677ee, type: 3}
+  - Name: Ball
+    Profile: {fileID: 21300000, guid: 9508720302d334f47abe22d876dd38f5, type: 3}
+    ItemModel: {fileID: 5039578098895933347, guid: 3d8911bb13dac274fa36b5f6304e60bf, type: 3}
+  - Name: Clover
+    Profile: {fileID: 21300000, guid: 5f7cef68ca1b01f459c2f8e990c53c4a, type: 3}
+    ItemModel: {fileID: 968796797284871270, guid: b438a9b92482fee429c8a71a9025bb74, type: 3}
+  - Name: Firewood
+    Profile: {fileID: 21300000, guid: 23dd626ea973795449cc3c401802a826, type: 3}
+    ItemModel: {fileID: 5598434578314489655, guid: 77b8ab8efcc56494098e1574f5cbae99, type: 3}
+  - Name: Pot
+    Profile: {fileID: 21300000, guid: d77ac0a68c9b6e949a0a35ad722be863, type: 3}
+    ItemModel: {fileID: 8569944578837752197, guid: 9e21d881ac0fd9e45888b1e1ae2f00c1, type: 3}
   _creatureObjects:
   - Name: Rabbit
     Profile: {fileID: 21300000, guid: 9bd5093cc7fbb124588221c5a14ff8ee, type: 3}
@@ -95,7 +107,7 @@ MonoBehaviour:
     Profile: {fileID: 21300000, guid: cae23e5333c483842955b43b6a4682d2, type: 3}
     CreatureModel: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
   - Name: StoneMonster
-    Profile: {fileID: 21300000, guid: cae23e5333c483842955b43b6a4682d2, type: 3}
+    Profile: {fileID: 21300000, guid: ea3a4cfd7ab36394f97c5c541e9ff405, type: 3}
     CreatureModel: {fileID: 1713781036754730, guid: 0f8a471e5537f864ebdb454fe82308eb, type: 3}
   _saveTimeDelay: 2
 --- !u!114 &4637662079556287794

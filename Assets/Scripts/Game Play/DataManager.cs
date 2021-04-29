@@ -38,6 +38,7 @@ public class DataManager : MonoBehaviour
     public void SetData(out bool isGameDataExist)
     {
         _csvReader.Read(out _creatureList, out _itemList);
+        Debug.Log(_itemList.Count);
         _timeBucket = Time.time;
 
         isGameDataExist = _myPlayerSaveData.LoadGame();
