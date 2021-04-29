@@ -219,7 +219,7 @@ public class GameManager : MonoBehaviour
         Vector3 targetPosition = _currentItemObject.transform.position + _creatureSpawnRange;
         GameObject gameObject = Instantiate(_dataManager.GetCreatureModel(creatureID), targetPosition, _currentItemObject.transform.rotation);
         _currentCreatureObject = gameObject.GetComponent<CreatureController>();
-        gameObject.transform.LookAt(_itemBoxTransform);
+        gameObject.transform.LookAt(_itemBoxTransform, Camera.main.transform.position - gameObject.transform.position);
         Vector3 distance = _currentItemObject.transform.position - gameObject.transform.position;
 
         _currentCreatureObject.Walk();
