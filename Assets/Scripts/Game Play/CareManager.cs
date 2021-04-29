@@ -5,6 +5,7 @@ using Items;
 
 public class CareManager : MonoBehaviour
 {
+    [SerializeField] private CareUIManager _careUIManager = null;
     [SerializeField] private DataManager _dataManager = null;
     [SerializeField] private LayerMask _touchable;
 
