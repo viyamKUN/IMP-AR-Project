@@ -838,6 +838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 2
+  _anim: {fileID: 7666986768240843510}
 --- !u!114 &4233582267122767976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,6 +851,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc25333a0cca8410798583545423e64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _creature: {fileID: 2740845748049059001}
+  _anim: {fileID: 7666986768240843510}
+  _feedCareValue: 0.05
+  _touchCareValue: 0.01
 --- !u!65 &-554281205448786226
 BoxCollider:
   m_ObjectHideFlags: 0

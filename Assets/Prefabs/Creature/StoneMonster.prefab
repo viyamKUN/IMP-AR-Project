@@ -223,13 +223,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4788319935855200}
-  - component: {fileID: 111495423891279680}
+  - component: {fileID: 2235512514499040532}
   - component: {fileID: 507282093211959375}
   - component: {fileID: 2728465520606110697}
   - component: {fileID: 2955203879164056276}
-  m_Layer: 0
+  - component: {fileID: 1206470493596940568}
+  m_Layer: 6
   m_Name: StoneMonster
-  m_TagString: Untagged
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,33 +244,32 @@ Transform:
   m_GameObject: {fileID: 1713781036754730}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 4966007699546920}
   - {fileID: 4244191954350522}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!111 &111495423891279680
-Animation:
+--- !u!95 &2235512514499040532
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713781036754730}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 6098175c4d4a46343be4d6857847330b, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 6098175c4d4a46343be4d6857847330b, type: 3}
-  - {fileID: 7400000, guid: 87aca181203408543942305a65e47c0b, type: 3}
-  - {fileID: 7400000, guid: 3cab52bd39b9a5f4fb028f9ae0ecbc91, type: 3}
-  - {fileID: 7400000, guid: 8af2259933ccf2e47b0a9493f3516fc4, type: 3}
-  - {fileID: 7400000, guid: 3e63abeab47efea44a9868d7d769abcf, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f5fbe50b2ed934819a5dcafe7cc756d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!65 &507282093211959375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -295,6 +295,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc25333a0cca8410798583545423e64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _creature: {fileID: 2955203879164056276}
+  _anim: {fileID: 2235512514499040532}
+  _feedCareValue: 0.05
+  _touchCareValue: 0.01
 --- !u!114 &2955203879164056276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +312,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 3
+  _anim: {fileID: 2235512514499040532}
+--- !u!111 &1206470493596940568
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713781036754730}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6098175c4d4a46343be4d6857847330b, type: 3}
+  m_Animations:
+  - {fileID: 7400000, guid: 6098175c4d4a46343be4d6857847330b, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1753159918419610
 GameObject:
   m_ObjectHideFlags: 0

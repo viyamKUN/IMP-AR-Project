@@ -444,6 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 0
+  _anim: {fileID: 95131097399638280}
 --- !u!114 &4308508850136268057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,6 +457,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc25333a0cca8410798583545423e64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _creature: {fileID: -4954561154879999693}
+  _anim: {fileID: 95131097399638280}
+  _feedCareValue: 0.05
+  _touchCareValue: 0.01
 --- !u!65 &3157545950818806867
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1716,6 +1716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 1
+  _anim: {fileID: 5703506908043305318}
 --- !u!114 &6551602979740368687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1728,6 +1729,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc25333a0cca8410798583545423e64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _creature: {fileID: 798883391111369911}
+  _anim: {fileID: 5703506908043305318}
+  _feedCareValue: 0.05
+  _touchCareValue: 0.01
 --- !u!65 &1893907175463847727
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1940,6 +1940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectToSpawn: {fileID: 1370357002708338, guid: 9c47d3ce2208e9440ab03e7fe3e32bcf, type: 3}
   FoodItem: {fileID: 4192711996667259635, guid: 21cb7115458e2414e8043325f587443c, type: 3}
+  careManager: {fileID: 1843419337}
 --- !u!4 &867751980
 Transform:
   m_ObjectHideFlags: 0
@@ -4012,6 +4013,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9003780424864357765, guid: c6d7704ed352cf949b244ec08284e954, type: 3}
   m_PrefabInstance: {fileID: 1758934039}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1843419337 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7392694325184017860, guid: 26d3744d6e9ec49d9a8d9c6bc16bf711, type: 3}
+  m_PrefabInstance: {fileID: 7392694326810568814}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f84444c95a24f80bc9785ab44ce7b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1867683552
 PrefabInstance:
   m_ObjectHideFlags: 0
