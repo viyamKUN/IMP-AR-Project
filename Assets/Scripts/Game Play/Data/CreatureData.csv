@@ -2,4 +2,44 @@ ID,Name,Description,Type,Tall,Weight,FavoriteItemIDs,DroppedItemID
 0,Rabbit,Green slime rabbit lives in forest. People often pick this rabbit because they misunderstand them as radish. You have to be careful because they gets very angry. It is important to move quietly when catching this rabbit. They like hay and carrots and clover.,Grass,1.2,10,1&11&13,0
 1,Langsat,Langsat usually enjoys taking a bath wherever there is water. They likes water very much. Sometimes they are in people's pot. Langsat is often a target of other creatures because it is easily misunderstood as a fruit. Protection group to protect Langsat has been created and active. They like pot and barrel.,Grass,1.6,5,3&15,0
 2,Fox,Foxes eat everything well. They sometimes steal the food that people eat. They are good at acting cute and talented. Many people like them because of this. But some people didn't like them because they are so playful that they mess things up. If they live nearby| be careful not to lose your stuff! They like apple and ball and box.,Fire,1,30,2&4&12,0
-3,Stone,Fire Stone usually lives in volcanic areas. They can burn things around them and control their own temperatures. So| people use them instead of stoves. Therefore| they are common in people's homes. It is also used to melt minerals such as gold. If you ask them for work| you will certainly have to pay them a price. If they're angry| your house will burn! They like box and wood and hay.,Fire,0.8,20,4&11&14,0
+3,Stire,Stire(Fire Stone) usually lives in volcanic areas. They can burn things around them and control their own temperatures. So| people use them instead of stoves. Therefore| they are common in people's homes. It is also used to melt minerals such as gold. If you ask them for work| you will certainly have to pay them a price. If they're angry| your house will burn! They like box and wood and hay.,Fire,0.8,20,4&11&14,0
+4,Folye,"Folye(Yellow Fox) loves shiny things like a gold. So| they are shine too and steal people¡¯s wallets.
+They like to tap the ball with both feet and roll it. They play soccer hard when they get the ball.
+Because they are shiny| people often misunderstand it as gold. Be careful of your wallet when you meet them.
+They love gold coins and balls and bottle caps.",Gold,1.1,26,12&16&17,0
+5,Fobli,"Fobli(Blue Fox) is timid and hates the outside. They like to be hidden somewhere.
+If you want to find them| you have to find shade or dark places.
+They like fluffy| comfortable places| and they like to live in people's homes.
+If you want to live with them| prepare a cozy cushion or blanket.
+They like cushion and box and blueberry.",Water,0.7,18,4&18&19,0
+6,Stice,"Stice(Ice Stone) usually lives in ice age. 
+They can freeze things around them and control their own temperatures. So| people cool off near them in summer.
+Therefore| they are common in people's homes. They are used to keep meat frozen.
+If you ask them for work| you will certainly have to pay them a price. If they're angry| your house will freeze!
+They like ice monument and cooler and ice gem box.",Ice,0.8,24,20&21&32,0
+7,Cabbit,"Cabbit(Blue slime rabbit) lives in ice age. 
+They produces ice. People use it as an ice vending machine.
+They drink clean water and make their body bigger. Where they passed by| it smokes like dry ice. 
+When they go to hot places| they only sleep.
+They like water and ice cream and clover.",Ice,1.4,8,13&22&23,0
+8,Fabbit,"Fabbit(Red slime rabbit) lives in ice age. 
+They can burn all around. But they are gentle and people use them in many places. Because they're self-illuminated| they are used as torches on dark nights.
+They are also used instead of lighters because they can spit out fire.
+They jump up and down in high temperatures. Conversely| when temperatures are low| they will be cool and harden.
+They like dry leaf and matchstick and clover.",Fire,0.9,4,13&24&25,0
+9,Radi,"Red Dragon(Radi) lives in a deep cave in the volcano.
+They can breathe fire. They are often angry because they have fiery personalities.
+Most people are afraid of them| but there are people who fall in love with them because they are the strongest of the dragons.
+There are things that fascinated people raise them at home and burn their homes because they are upset.
+They are so active that they like to chase and bite the disc thrown by people.
+They like rubies and meat and disks.",Fire,1.5,30,26&27&28,0
+10,Bledi,"Blue Dragon(Blendi) lives in a deep cave in the glacier.
+They can breathe ice. They are gentle and have broad understanding.
+Because of their calm and relaxed personalities| they also appear a little lazy. But they are the smartest dragons and love to read books.
+People with calm personalities like them and often live together in their own homes.
+They like sapphires and meat and books.",Ice,1.5,30,27&29&30,0
+11,Goldi,"Gold Dragon lives in a deep cave in the obscure mountain.
+They can breathe lightning. They are known to be mischievous. But if you give them yellow jewels| they follow well.
+They are cute and talented. So many people want to live with them. They play tricks with people| but they always don¡¯t go far.
+Due to their curious and friendly personalities| they are the most popular dragons among people.
+They like topazs and meat and gold coins.",Gold,1.5,30,16&27&31,0
