@@ -1676,11 +1676,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400102}
-  - component: {fileID: 11100000}
   - component: {fileID: -3272464172695853369}
   - component: {fileID: 5835231338228011704}
   - component: {fileID: 8933967036893486866}
   - component: {fileID: -2993714686902337600}
+  - component: {fileID: 6461000084816273818}
   m_Layer: 0
   m_Name: Dragon_B
   m_TagString: Untagged
@@ -1705,27 +1705,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &11100000
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100102}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 4f40c3038f784c54fb31f0dee2a84bf9, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 200a1f3ddb78cec42b20bd33ec781777, type: 2}
-  - {fileID: 7400000, guid: 4f40c3038f784c54fb31f0dee2a84bf9, type: 2}
-  - {fileID: 7400000, guid: 632fadb8876dd6442ba5564eba992765, type: 2}
-  - {fileID: 7400000, guid: 793b276440fa9d34f98fb58b4867eb6d, type: 2}
-  - {fileID: 7400000, guid: ad353623c0c90424ea56cef1a4afcc53, type: 2}
-  - {fileID: 7400000, guid: db834b4988164f04bb3dd45f145ffb03, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 1
 --- !u!114 &-3272464172695853369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1738,9 +1717,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc25333a0cca8410798583545423e64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _creature: {fileID: 0}
-  _anim: {fileID: 0}
-  _efManager: {fileID: 0}
+  _creature: {fileID: 5835231338228011704}
+  _anim: {fileID: 6461000084816273818}
+  _efManager: {fileID: 3050023905117288352}
   _feedCareValue: 0.05
   _touchCareValue: 0.01
 --- !u!114 &5835231338228011704
@@ -1782,11 +1761,30 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &6461000084816273818
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100102}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d58054308483c412fb81ab271d1042df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4545558501246892451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1849,3 +1847,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3659083130153169131, guid: 23ed39bae4bc94848a2ceb8adab50c3b, type: 3}
   m_PrefabInstance: {fileID: 4545558501246892451}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3050023905117288352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1533138996545506819, guid: 23ed39bae4bc94848a2ceb8adab50c3b, type: 3}
+  m_PrefabInstance: {fileID: 4545558501246892451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3c47bcfaa4c4618b1cc014b547e612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
