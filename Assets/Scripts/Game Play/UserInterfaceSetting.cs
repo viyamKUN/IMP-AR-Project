@@ -127,14 +127,15 @@ public class UserInterfaceSetting : MonoBehaviour
                     _dataManager.GetCreatureImage(item.ID),
                     item.Name,
                     myCollections[myCreatureIndex].Count,
-                    myCollections[myCreatureIndex].Friendship
+                    myCollections[myCreatureIndex].Friendship,
+                    true
                 );
                 catchPointer++;
             }
             else
             {
                 _nonCatch[nonCatchPointer].gameObject.SetActive(true);
-                _nonCatch[nonCatchPointer].SetCollectionUnit(item.ID, _dataManager.GetCreatureImage(item.ID), item.Name, 0, 0);
+                _nonCatch[nonCatchPointer].SetCollectionUnit(item.ID, _dataManager.GetCreatureImage(item.ID), item.Name, 0, 0, false);
                 nonCatchPointer++;
             }
         }

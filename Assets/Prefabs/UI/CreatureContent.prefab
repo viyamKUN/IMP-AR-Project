@@ -841,6 +841,9 @@ MonoBehaviour:
   _countText: {fileID: 1520883588334332635}
   _friendshipSlider: {fileID: 7872228051062822924}
   _friendshipText: {fileID: 412018233156568599}
+  _bagImage: {fileID: 2522498259021061638}
+  _friendshipGage: {fileID: 6669010449725683167}
+  _joinButton: {fileID: 412018233307193955}
   SceneName: CareCreature
 --- !u!1 &6802033680763105184
 GameObject:
@@ -989,7 +992,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 5
+    m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0

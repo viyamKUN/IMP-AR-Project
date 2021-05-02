@@ -11,10 +11,13 @@ public class CollectionUnit : MonoBehaviour
     [SerializeField] private Text _countText = null;
     [SerializeField] private Slider _friendshipSlider = null;
     [SerializeField] private Text _friendshipText = null;
+    [SerializeField] private GameObject _bagImage = null;
+    [SerializeField] private GameObject _friendshipGage = null;
+    [SerializeField] private GameObject _joinButton = null;
     private int _id = 0;
     public string SceneName;
 
-    public void SetCollectionUnit(int id, Sprite sprite, string name, int count, float friendship)
+    public void SetCollectionUnit(int id, Sprite sprite, string name, int count, float friendship, bool isJoin)
     {
         _id = id;
         _profileImage.sprite = sprite;
@@ -22,6 +25,11 @@ public class CollectionUnit : MonoBehaviour
         _countText.text = count.ToString();
         _friendshipSlider.value = friendship;
         _friendshipText.text = friendship.ToString() + "%";
+
+        _countText.gameObject.SetActive(isJoin);
+        _bagImage.SetActive(isJoin);
+        _friendshipGage.SetActive(isJoin);
+        _joinButton.SetActive(isJoin);
     }
     public void ClickMe()
     {
