@@ -96,6 +96,57 @@ MonoBehaviour:
   - Name: Pot
     Profile: {fileID: 21300000, guid: d77ac0a68c9b6e949a0a35ad722be863, type: 3}
     ItemModel: {fileID: 8569944578837752197, guid: 9e21d881ac0fd9e45888b1e1ae2f00c1, type: 3}
+  - Name: Gold Coin
+    Profile: {fileID: 21300000, guid: e49344cd67cc19b4a90eb720e093fed8, type: 3}
+    ItemModel: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+  - Name: Bottle Cap
+    Profile: {fileID: 21300000, guid: 83b3802cd33c12d46a5a0057b8468c9f, type: 3}
+    ItemModel: {fileID: 2426112292898635022, guid: 1f2e3506c23353e4d9f874aca8b5877a, type: 3}
+  - Name: Cushion
+    Profile: {fileID: 21300000, guid: 6f1c32962d664ce4a823ea6217397a44, type: 3}
+    ItemModel: {fileID: 2576520744857063931, guid: 359939533f83fb34eb7d6076f72d81e1, type: 3}
+  - Name: Blueberry
+    Profile: {fileID: 21300000, guid: d266b9408b60e3141a35fb805ad3325b, type: 3}
+    ItemModel: {fileID: 2591785684800696244, guid: e312eb036341b8e46bbc62805267cef4, type: 3}
+  - Name: Ice Monument
+    Profile: {fileID: 21300000, guid: d235653c51aab2b4085466b89605765c, type: 3}
+    ItemModel: {fileID: 5921452570763094100, guid: f6a8376a7bd3f4945a6ec6058face76f, type: 3}
+  - Name: Cooler
+    Profile: {fileID: 21300000, guid: 822e866ba57d7dd4d98ed7951da2487c, type: 3}
+    ItemModel: {fileID: 3713225399005124406, guid: 898d2804121650d4085c36f31f973ccb, type: 3}
+  - Name: Water
+    Profile: {fileID: 21300000, guid: c1ba1dc37842d5e40988cd4dd19a5c40, type: 3}
+    ItemModel: {fileID: 8569944578837752197, guid: 9e21d881ac0fd9e45888b1e1ae2f00c1, type: 3}
+  - Name: Ice Cream
+    Profile: {fileID: 21300000, guid: 888d41c0b86520540b10384c9e57ca24, type: 3}
+    ItemModel: {fileID: 4839321517081671830, guid: de4652864da64be4992c038703bea60d, type: 3}
+  - Name: Leaves
+    Profile: {fileID: 21300000, guid: 9f7c211b317faef4a9da2f12bb4c687f, type: 3}
+    ItemModel: {fileID: 2820218230786216384, guid: a88c7d6403633244494f3c9c1eabc1ee, type: 3}
+  - Name: Matchstick
+    Profile: {fileID: 21300000, guid: 172071601477cec469d27396f2eed5d7, type: 3}
+    ItemModel: {fileID: 1710119598263256782, guid: 33f16fc0aed53c14a903aba8a08aae64, type: 3}
+  - Name: Ruby
+    Profile: {fileID: 21300000, guid: 9d14db2f5bbc46543b8d74e49d55ef65, type: 3}
+    ItemModel: {fileID: 8143943867460746938, guid: 579a40b5340ebee469807de86876baa8, type: 3}
+  - Name: Meat
+    Profile: {fileID: 21300000, guid: 54fc69cab3e346841b2d4f538a52fe96, type: 3}
+    ItemModel: {fileID: 7112927277323438616, guid: d620bbd8d84cb4b479f2f659695bc486, type: 3}
+  - Name: Frisbee
+    Profile: {fileID: 21300000, guid: 5c389721201ea394c950aed0ef5360e8, type: 3}
+    ItemModel: {fileID: 956860584660999465, guid: 25475683c03cc964b8c12762cae15235, type: 3}
+  - Name: Sapphire
+    Profile: {fileID: 21300000, guid: 6b86d790a53e91142be8130a9fb2e5e0, type: 3}
+    ItemModel: {fileID: 2807053856401992699, guid: 13c905f214043e145a7e304d476be7e3, type: 3}
+  - Name: Book
+    Profile: {fileID: 21300000, guid: ccbb5eadd18821b478014f102e1de5b8, type: 3}
+    ItemModel: {fileID: 6127749146428436173, guid: df81e3f3fb516b0418088ab7cb59d351, type: 3}
+  - Name: Topaz
+    Profile: {fileID: 21300000, guid: 64fef4711678edd4293a60903e5f40b9, type: 3}
+    ItemModel: {fileID: 6801908583027380009, guid: 0a89c53c8c5a2ff44acbed93ef4aeda2, type: 3}
+  - Name: Ice Gem Box
+    Profile: {fileID: 21300000, guid: e784940d6dbe79d48908a0ec7bc82849, type: 3}
+    ItemModel: {fileID: 7083661547200545487, guid: bdfa6d273bbc84f46b80660c1e9425b6, type: 3}
   _creatureObjects:
   - Name: Rabbit
     Profile: {fileID: 21300000, guid: 9bd5093cc7fbb124588221c5a14ff8ee, type: 3}
@@ -106,9 +157,33 @@ MonoBehaviour:
   - Name: Fox
     Profile: {fileID: 21300000, guid: cae23e5333c483842955b43b6a4682d2, type: 3}
     CreatureModel: {fileID: 4020983980232809014, guid: 9fedecbd1aa68924b816f15cb97e611a, type: 3}
-  - Name: StoneMonster
+  - Name: Stire
     Profile: {fileID: 21300000, guid: ea3a4cfd7ab36394f97c5c541e9ff405, type: 3}
     CreatureModel: {fileID: 1713781036754730, guid: 0f8a471e5537f864ebdb454fe82308eb, type: 3}
+  - Name: Folye
+    Profile: {fileID: 21300000, guid: 63686193448a50e4eb34fbe1a5ffad2d, type: 3}
+    CreatureModel: {fileID: 4020983980232809014, guid: b887158e9fbe1b24bbe1ec8854d26573, type: 3}
+  - Name: Fobli
+    Profile: {fileID: 21300000, guid: a1d27bbed3cb36c4d987269d453ebd02, type: 3}
+    CreatureModel: {fileID: 4020983980232809014, guid: 30d572a099afeee42a3867f391c6d928, type: 3}
+  - Name: Stice
+    Profile: {fileID: 21300000, guid: 711f25c30574da349a544836eef69a64, type: 3}
+    CreatureModel: {fileID: 1713781036754730, guid: dc2abdcb0bd847c488ea0c4273c1b1e8, type: 3}
+  - Name: Cabbit
+    Profile: {fileID: 21300000, guid: cfeb8e22f1136444293361afe26f3654, type: 3}
+    CreatureModel: {fileID: 1773656247975474, guid: ebba9b1572009e341a8b46a10f5aaf61, type: 3}
+  - Name: Fabbit
+    Profile: {fileID: 21300000, guid: 1a8569d699b9d434089a002855ab8b48, type: 3}
+    CreatureModel: {fileID: 1773656247975474, guid: 7761407313d7904468367cc945ef6199, type: 3}
+  - Name: Radi
+    Profile: {fileID: 21300000, guid: 728ea32ab17a80e42b4d15351da326b6, type: 3}
+    CreatureModel: {fileID: 100102, guid: ff3dd417bb566b849b752ce57810bbf5, type: 3}
+  - Name: Bledi
+    Profile: {fileID: 21300000, guid: ccc1ff5579733de42ac4e8970ea0d3b7, type: 3}
+    CreatureModel: {fileID: 100102, guid: 262d9d8347160aa4aa22b67b3afdb6df, type: 3}
+  - Name: Goldi
+    Profile: {fileID: 21300000, guid: f97c3438606a69a4f9bff56a92d0090b, type: 3}
+    CreatureModel: {fileID: 100102, guid: 0dd9957311af8af49a1fe491acd7ed6b, type: 3}
   _saveTimeDelay: 2
 --- !u!114 &4637662079556287794
 MonoBehaviour:
