@@ -4,6 +4,7 @@ using UnityEngine;
 
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.XR.Interaction.Toolkit.AR;
 
 public class CareCreatureIndicator : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class CareCreatureIndicator : MonoBehaviour
         indicator = transform.GetChild(0).gameObject; //첫번째 자식
         indicator.SetActive(false);
         creature = careManager.GetCreatureObject();
+
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -86,6 +88,10 @@ public class CareCreatureIndicator : MonoBehaviour
             {
                 creatureSpawned = Instantiate(creature, transform.position, transform.rotation);
                 careManager.SetMyCreature(creatureSpawned);
+                careManager.GetComponent<ARAnnotationInteractable>().enabled = true;
+                careManager.GetComponent<ARScaleInteractable>().enabled = true;
+                careManager.GetComponent<ARRotationInteractable>().enabled = true;
+                careManager.GetComponent<ARSelectionInteractable>().enabled = true;
                 isCreature = true;
             }
 
