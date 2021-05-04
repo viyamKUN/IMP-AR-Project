@@ -9,24 +9,27 @@ public class UIUnderButton : MonoBehaviour
     public GameObject shop;
     public void CloseWhole()
     {
-        profile.SetActive(false);
+        profile.SetActive(true);
         book.SetActive(false);
         shop.SetActive(false);
     }
     public void ButtonProfile()
     {
+        SoundManager.SM.PlaySound(SoundName.BtnGo);
         profile.SetActive(true);
         book.SetActive(false);
         shop.SetActive(false);
     }
     public void ButtonBook()
     {
+        SoundManager.SM.PlaySound(SoundName.BtnGo);
         profile.SetActive(false);
         book.SetActive(true);
         shop.SetActive(false);
     }
     public void ButtonShop()
     {
+        SoundManager.SM.PlaySound(SoundName.BtnGo);
         profile.SetActive(false);
         book.SetActive(false);
         shop.SetActive(true);

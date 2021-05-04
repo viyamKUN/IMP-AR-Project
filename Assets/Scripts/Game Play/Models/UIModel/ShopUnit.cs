@@ -24,6 +24,7 @@ public class ShopUnit : MonoBehaviour
     }
     public void ClickMe()
     {
+        SoundManager.SM.PlaySound(SoundName.BtnPopUp);
         _uiBuyView.ButtonContent(_id, _thisShopType);
     }
 }

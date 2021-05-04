@@ -94,10 +94,13 @@ public class UIBuyView : MonoBehaviour
             _gameManager.AddItem(_itemID, -_count);
             _gameManager.AddMoney(pay);
         }
+
+        SoundManager.SM.PlaySound(SoundName.ShopCoin);
         _buyMessage.SetActive(false);
     }
     public void ButtonNo()
     {
+        SoundManager.SM.PlaySound(SoundName.BtnExit);
         _buyMessage.SetActive(false);
     }
 

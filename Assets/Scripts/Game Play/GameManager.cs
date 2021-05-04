@@ -209,8 +209,7 @@ public class GameManager : MonoBehaviour
         _userInterfaceSetting.SetShop(_dataManager.GetItemList, _dataManager.GetPlayerSaveData.GetPlayerItemList);
 
         _uiUnderButton.CloseWhole();
-        _uiUnderButton.ButtonProfile();
-        _uiBuySellButton.ButtonBuy();
+        _uiBuySellButton.ButtonBuy(false);
     }
     private IEnumerator GenerateCreature(int creatureID)
     {

@@ -35,6 +35,7 @@ public class CollectionUnit : MonoBehaviour
     {
         _collectionDetail.gameObject.SetActive(true);
         _collectionDetail.SetDetailPage(_id);
+        SoundManager.SM.PlaySound(SoundName.BtnPopUp);
     }
 
     public void InteractScene()
