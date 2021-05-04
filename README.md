@@ -7,7 +7,7 @@
  참고: 신빕한 동물사전, 드래곤 길들이기, 포켓몬스터 GO
 
 ### Team
- * Hayeon Yoon
+ * Hayeon Yoon (https://viyamkun.github.io/)
      * Directing development.
      * Making game play.
         * Making creature object’s system.
