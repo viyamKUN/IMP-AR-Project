@@ -88,10 +88,10 @@ public class CareCreatureIndicator : MonoBehaviour
             {
                 creatureSpawned = Instantiate(creature, transform.position, transform.rotation);
                 careManager.SetMyCreature(creatureSpawned);
-                careManager.GetComponent<ARAnnotationInteractable>().enabled = true;
-                careManager.GetComponent<ARScaleInteractable>().enabled = true;
-                careManager.GetComponent<ARRotationInteractable>().enabled = true;
-                careManager.GetComponent<ARSelectionInteractable>().enabled = true;
+                creatureSpawned.GetComponent<ARAnnotationInteractable>().enabled = true;
+                creatureSpawned.GetComponent<ARScaleInteractable>().enabled = true;
+                creatureSpawned.GetComponent<ARRotationInteractable>().enabled = true;
+                creatureSpawned.GetComponent<ARSelectionInteractable>().enabled = true;
                 isCreature = true;
             }
 
