@@ -21,6 +21,7 @@ public class BagContent : MonoBehaviour
     }
     public void SelectButton()
     {
+        SoundManager.SM.PlaySound(SoundName.SelectItem);
         Debug.Log("ID: " + _id + " 를 클릭함");
         if (gameManager.PutItemInBox(_id))
         {

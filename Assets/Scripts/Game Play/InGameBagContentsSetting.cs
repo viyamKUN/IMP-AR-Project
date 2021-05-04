@@ -31,6 +31,6 @@ public class InGameBagContentsSetting : MonoBehaviour
     }
     public void CompleteSetting()
     {
-        _myBagManager.ExitMyBag();
+        _myBagManager.ExitMyBag(false);
     }
 }
