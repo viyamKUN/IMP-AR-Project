@@ -8,8 +8,24 @@
 
 ### Team
  * Hayeon Yoon
- * Sumin Lee
+     * Directing development.
+     * Making game play.
+        * Making creature object’s system.
+        * Making game models.
+        * Making systems of effect, sound and animation.
+     * Making data managing systems.
+     * Showing data on ui and make scripts for UI controll.
  * Suyeon Yim
+     * Making image tracking system.
+     * Making plane detecting system.
+        * Making Indicator.
+     * Making Interactable system.
+ * Sumin Lee
+     * Finding Reference
+        * Finding whole 3D models and image reference.
+        * Finding effects and sounds.
+        * Making option and volume management.
+     * Setting UI colors.
  
 ### Use
 Marker-based AR system
