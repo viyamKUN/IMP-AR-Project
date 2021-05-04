@@ -12,6 +12,7 @@ public class CreatureController : MonoBehaviour
     public void Walk()
     {
         _anim.SetBool("isWalk", true);
+        SoundManager.SM.PlaySound(SoundName.ShockWave);
         _efManager.CallEffect(EffectName.SPAWN);
     }
     public void StopWalking()
@@ -28,6 +29,7 @@ public class CreatureController : MonoBehaviour
     }
     IEnumerator catchCoroutine()
     {
+        SoundManager.SM.PlaySound(SoundName.Catch);
         _efManager.CallEffect(EffectName.CATCH);
         Debug.Log("크리쳐를 잡았습니다!");
         yield return new WaitForSeconds(0.5f);
@@ -35,6 +37,7 @@ public class CreatureController : MonoBehaviour
     }
     IEnumerator runawayCoroutine()
     {
+        SoundManager.SM.PlaySound(SoundName.Run);
         _efManager.CallEffect(EffectName.RUN);
         Debug.Log("크리쳐를 놓쳤습니다.");
         yield return new WaitForSeconds(0.5f);

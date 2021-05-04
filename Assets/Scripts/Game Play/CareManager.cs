@@ -31,6 +31,7 @@ public class CareManager : MonoBehaviour
                 if (h.transform.gameObject.CompareTag("Egg"))
                 {
                     _dataManager.AddItem(0, 1);
+                    SoundManager.SM.PlaySound(SoundName.GetEgg);
                     Destroy(h.transform.gameObject);
                     return;
                 }
@@ -67,6 +68,7 @@ public class CareManager : MonoBehaviour
     }
     public void UseItem(int ID, int usingAmount, out int remain)
     {
+        SoundManager.SM.PlaySound(SoundName.InstallCandy);
         _dataManager.AddItem(ID, -usingAmount);
         remain = _dataManager.GetItemCount(ID);
         _careUIManager.SetUI();

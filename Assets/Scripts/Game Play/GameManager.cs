@@ -102,6 +102,7 @@ public class GameManager : MonoBehaviour
 
         AddItem(itemID, -1);
         _currentItemObject = Instantiate(_dataManager.GetItemModel(itemID), _itemBoxTransform, Quaternion.identity);
+        SoundManager.SM.PlaySound(SoundName.InstallItem);
         return true;
     }
 
