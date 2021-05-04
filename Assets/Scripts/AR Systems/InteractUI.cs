@@ -8,6 +8,7 @@ public class InteractUI : MonoBehaviour
     [SerializeField] private GameObject buttons;
     [SerializeField] private GameObject background;
     [SerializeField] private GameObject backButton;
+    [SerializeField] private CareManager careManager;
     
     public void FeedMode()
     {

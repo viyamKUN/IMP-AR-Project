@@ -11,6 +11,7 @@ public class CareManager : MonoBehaviour
 
     CreatureCareController _myCreatureController = null;
     int _thisCreatureID = -1;
+    public bool isInteractMode = false; 
 
     private void init()
     {
@@ -42,7 +43,10 @@ public class CareManager : MonoBehaviour
                     Debug.Log("크리쳐가 세팅되지 않았습니다.");
                     return;
                 }
-                _myCreatureController.TouchMe();
+                if(isInteractMode)
+                {
+                    _myCreatureController.TouchMe();
+                }
             }
         }
     }
