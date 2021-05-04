@@ -68,6 +68,7 @@ public class PlayerSaveData : MonoBehaviour
     {
         var filename = SaveFileName.PlayerDataFileName;
         File.Delete(filename);
+        SoundManager.SM.PlaySound(SoundName.BtnGo);
     }
     public int FindMyCreature(int ID)
     {

@@ -14,10 +14,12 @@ public class UIOptionButton : MonoBehaviour
 
     public void ButtonOption()
     {
+        SoundManager.SM.PlaySound(SoundName.BtnGo);
         OptionView.SetActive(true);
     }
     public void ButtonOptionOk()
     {
+        SoundManager.SM.PlaySound(SoundName.BtnGo);
         OptionView.SetActive(false);
     }
 }
