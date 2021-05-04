@@ -26,6 +26,7 @@ public class CreatureCareController : MonoBehaviour
         Debug.Log("She touched me.");
         SoundManager.SM.PlaySound(SoundName.Heart);
         _careManager.TouchIt(_touchCareValue);
+        _creature.PlayVoice();
         _anim.SetTrigger("Jump");
         _efManager.CallEffect(EffectName.HEART);
     }
@@ -35,6 +36,7 @@ public class CreatureCareController : MonoBehaviour
         Debug.Log("She feed me.");
         _careManager.FeedIt(_feedCareValue);
         SoundManager.SM.PlaySound(SoundName.Eat);
+        _creature.PlayVoice();
         _anim.SetTrigger("Jump");
         _efManager.CallEffect(EffectName.FOOD);
         _efManager.CallEffect(EffectName.RUN);

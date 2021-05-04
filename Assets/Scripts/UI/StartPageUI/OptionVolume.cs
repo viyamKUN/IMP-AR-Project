@@ -18,7 +18,7 @@ public class OptionVolume : MonoBehaviour
 
     void Awake()
     {
-        GameObject go = GameObject.Find("SoundManager");
+        GameObject go = GameObject.Find("BGMManager");
 
         if (instance != null && instance != this)
             Destroy(this.gameObject);

@@ -8,9 +8,11 @@ public class CreatureController : MonoBehaviour
     [SerializeField] private int _id;
     [SerializeField] private Animator _anim = null;
     [SerializeField] private EffectManager _efManager = null;
+    [SerializeField] private AudioClip _voice = null;
     public int ID => _id;
     public void Walk()
     {
+        PlayVoice();
         _anim.SetBool("isWalk", true);
         SoundManager.SM.PlaySound(SoundName.ShockWave);
         _efManager.CallEffect(EffectName.SPAWN);
@@ -21,11 +23,17 @@ public class CreatureController : MonoBehaviour
     }
     public void Catched()
     {
+        PlayVoice();
         StartCoroutine(catchCoroutine());
     }
     public void Runaway()
     {
+        PlayVoice();
         StartCoroutine(runawayCoroutine());
+    }
+    public void PlayVoice()
+    {
+        SoundManager.SM.PlayClip(_voice);
     }
     IEnumerator catchCoroutine()
     {

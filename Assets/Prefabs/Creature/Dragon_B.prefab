@@ -1735,8 +1735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 10
-  _anim: {fileID: 0}
-  _efManager: {fileID: 0}
+  _anim: {fileID: 6461000084816273818}
+  _efManager: {fileID: 3050023905117288352}
+  _voice: {fileID: 8300000, guid: 9448d58010e3cf741a9ec2958e0efee7, type: 3}
 --- !u!65 &8933967036893486866
 BoxCollider:
   m_ObjectHideFlags: 0

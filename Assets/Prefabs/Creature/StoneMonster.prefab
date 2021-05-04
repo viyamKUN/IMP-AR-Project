@@ -319,6 +319,7 @@ MonoBehaviour:
   _id: 3
   _anim: {fileID: 2235512514499040532}
   _efManager: {fileID: 7533452455597611688}
+  _voice: {fileID: 8300000, guid: 836fb7632e866a845a67d75170191b31, type: 3}
 --- !u!111 &1206470493596940568
 Animation:
   m_ObjectHideFlags: 0
