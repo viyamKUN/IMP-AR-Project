@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 3157545950818806867}
   - component: {fileID: 1014984472821831715}
   m_Layer: 6
-  m_Name: R_GreenSlimeRabbit_Prefab 2
+  m_Name: GreenSlimeRabbit_Prefab_R
   m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,6 +448,7 @@ MonoBehaviour:
   _id: 8
   _anim: {fileID: 95131097399638280}
   _efManager: {fileID: 4825797322727901604}
+  _voice: {fileID: 8300000, guid: 8826728168440644493401da0132b29d, type: 3}
 --- !u!114 &4308508850136268057
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1722,6 +1722,7 @@ MonoBehaviour:
   _id: 1
   _anim: {fileID: 5703506908043305318}
   _efManager: {fileID: 4887724851593942061}
+  _voice: {fileID: 8300000, guid: 9448d58010e3cf741a9ec2958e0efee7, type: 3}
 --- !u!114 &6551602979740368687
 MonoBehaviour:
   m_ObjectHideFlags: 0
