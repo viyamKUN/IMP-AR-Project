@@ -92,7 +92,7 @@ public class CareCreatureIndicator : MonoBehaviour
             if (creatureSpawned != null)
             {
                 creatureSpawned.SetActive(true);
-                careManager.SetActivateInteractable(true);
+                careManager.IsOnMode = careManager.IsOnMode;
                 creatureSpawned.transform.position = transform.position;
             }
 
@@ -100,7 +100,6 @@ public class CareCreatureIndicator : MonoBehaviour
         else
         {
             indicator.SetActive(false);
-            careManager.SetActivateInteractable(false);
             creatureSpawned.SetActive(false);
             careManager.SetActivateInteractable(false);
         }

@@ -25,7 +25,7 @@ public class CollectionUnit : MonoBehaviour
         _nameText.text = name;
         _countText.text = count.ToString();
         _friendshipSlider.value = friendship;
-        _friendshipText.text = System.String.Format("{0:0.00}", friendship * 100) + "%";
+        _friendshipText.text = System.String.Format("{0:0.00}", (friendship * 100)) + "%";
 
         _countText.gameObject.SetActive(isJoin);
         _bagImage.SetActive(isJoin);
@@ -34,9 +34,9 @@ public class CollectionUnit : MonoBehaviour
     }
     public void ClickMe()
     {
+        SoundManager.SM.PlaySound(SoundName.BtnPopUp);
         _collectionDetail.gameObject.SetActive(true);
         _collectionDetail.SetDetailPage(_id);
-        SoundManager.SM.PlaySound(SoundName.BtnPopUp);
     }
 
     public void InteractScene()

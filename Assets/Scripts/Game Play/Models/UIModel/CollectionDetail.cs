@@ -34,12 +34,13 @@ public class CollectionDetail : MonoBehaviour
         }
         _likesText.text = favorites.Remove(0, 2);
 
-        if (_dataManager.GetMyCreatureIndex(creatureID) < 0)
+        int myCreatureID = _dataManager.GetMyCreatureIndex(creatureID);
+        if (myCreatureID < 0)
             return;
 
-        float friendship = _dataManager.GetMyCreature(creatureID).Friendship;
+        float friendship = _dataManager.GetMyCreature(myCreatureID).Friendship;
         _friendshipSlider.value = friendship;
-        _friendshipText.text = System.String.Format("{0:0.00}", friendship * 100) + "%";
-        _countText.text = _dataManager.GetMyCreature(creatureID).Count.ToString();
+        _friendshipText.text = System.String.Format("{0:0.00}", (friendship * 100)) + "%";
+        _countText.text = _dataManager.GetMyCreature(myCreatureID).Count.ToString();
     }
 }
