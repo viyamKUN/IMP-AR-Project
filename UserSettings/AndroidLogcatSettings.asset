@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "24c534807e0d7ece",
         "name": "com.DefaultCompany.IMPARProject",
-        "processId": 8038,
+        "processId": 13041,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -198,6 +198,12 @@
             "deviceId": "24c534807e0d7ece",
             "name": "com.DefaultCompany.IMPARProject",
             "processId": 8038,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 13041,
             "exited": false
         }
     ],
