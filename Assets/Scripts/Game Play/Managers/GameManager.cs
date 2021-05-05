@@ -129,10 +129,11 @@ public class GameManager : MonoBehaviour
             tempCreatureList.Clear();
 
             foreach (var c in _dataManager.GetCreatureList)
-                if (_dataManager.GetCreature(c.ID).FavoriteItemIDs.Contains(itemID))
+            {
+                if (c.FavoriteItemIDs.Contains(itemID))
                     tempCreatureList.Add(c.ID);
-
-            callCreatureID = Random.Range(0, tempCreatureList.Count);
+            }
+            callCreatureID = tempCreatureList[Random.Range(0, tempCreatureList.Count)];
         }
 
         Debug.Log(_dataManager.GetCreature(callCreatureID).Name + "이 나타났다!");
