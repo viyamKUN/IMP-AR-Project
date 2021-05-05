@@ -116,7 +116,7 @@ MonoBehaviour:
     ItemModel: {fileID: 3713225399005124406, guid: 898d2804121650d4085c36f31f973ccb, type: 3}
   - Name: Water
     Profile: {fileID: 21300000, guid: c1ba1dc37842d5e40988cd4dd19a5c40, type: 3}
-    ItemModel: {fileID: 8569944578837752197, guid: 9e21d881ac0fd9e45888b1e1ae2f00c1, type: 3}
+    ItemModel: {fileID: 6808682883205041639, guid: 8024286321b5b8242be160698b3154d4, type: 3}
   - Name: Ice Cream
     Profile: {fileID: 21300000, guid: 888d41c0b86520540b10384c9e57ca24, type: 3}
     ItemModel: {fileID: 4839321517081671830, guid: de4652864da64be4992c038703bea60d, type: 3}
@@ -184,7 +184,6 @@ MonoBehaviour:
   - Name: Goldi
     Profile: {fileID: 21300000, guid: f97c3438606a69a4f9bff56a92d0090b, type: 3}
     CreatureModel: {fileID: 100102, guid: 0dd9957311af8af49a1fe491acd7ed6b, type: 3}
-  _saveTimeDelay: 2
 --- !u!114 &4637662079556287794
 MonoBehaviour:
   m_ObjectHideFlags: 0
