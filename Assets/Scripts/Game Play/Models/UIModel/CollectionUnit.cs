@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.ARFoundation;
 public class CollectionUnit : MonoBehaviour
 {
     [SerializeField] private CollectionDetail _collectionDetail = null;
@@ -42,6 +43,7 @@ public class CollectionUnit : MonoBehaviour
     {
         PlayerPrefs.SetInt(SavePrefName.CareCreatureID, _id);
         PlayerPrefs.Save();
+        LoaderUtility.Initialize();
         SceneManager.LoadScene(SceneName);
     }
 }
