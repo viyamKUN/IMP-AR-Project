@@ -128,9 +128,9 @@ public class GameManager : MonoBehaviour
         {
             tempCreatureList.Clear();
 
-            foreach (var my in myCreatureList)
-                if (_dataManager.GetCreature(my.ID).FavoriteItemIDs.Contains(itemID))
-                    tempCreatureList.Add(my.ID);
+            foreach (var c in _dataManager.GetCreatureList)
+                if (_dataManager.GetCreature(c.ID).FavoriteItemIDs.Contains(itemID))
+                    tempCreatureList.Add(c.ID);
 
             callCreatureID = Random.Range(0, tempCreatureList.Count);
         }
