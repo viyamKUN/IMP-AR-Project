@@ -24,7 +24,7 @@ public class CollectionUnit : MonoBehaviour
         _nameText.text = name;
         _countText.text = count.ToString();
         _friendshipSlider.value = friendship;
-        _friendshipText.text = friendship.ToString() + "%";
+        _friendshipText.text = System.String.Format("{0:0.00}", friendship * 100) + "%";
 
         _countText.gameObject.SetActive(isJoin);
         _bagImage.SetActive(isJoin);
