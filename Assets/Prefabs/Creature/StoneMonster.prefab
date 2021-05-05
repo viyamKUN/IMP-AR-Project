@@ -502,8 +502,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ARSessionOrigin: {fileID: 0}
-  m_MinScale: 0.75
-  m_MaxScale: 1.75
+  m_MinScale: 0.2
+  m_MaxScale: 1
   m_ElasticRatioLimit: 0
   m_Sensitivity: 0.75
   m_Elasticity: 0.15
@@ -922,14 +922,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
---- !u!4 &6112777298877970639 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9055314666812552097, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
-  m_PrefabInstance: {fileID: 2989829570725563246}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7949197959128189733 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5129383689697280075, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
+  m_PrefabInstance: {fileID: 2989829570725563246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6112777298877970639 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9055314666812552097, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
   m_PrefabInstance: {fileID: 2989829570725563246}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9064337383508694187

@@ -112,7 +112,8 @@ public class CareCreatureIndicator : MonoBehaviour
                 if (rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
                 {
                     Pose hitPose = hits[0].pose;
-                    spawnedItem = Instantiate(Item, hitPose.position, hitPose.rotation);
+                    Vector3 spawnPosition = hitPose.position + new Vector3(0, 0.1f, 0);
+                    spawnedItem = Instantiate(Item, spawnPosition, hitPose.rotation);
                     careManager.UseItem(selectedItemNumber, 1, out int remain);
                     if (remain == 0)
                         SetIsFeedMode(false, -1);
