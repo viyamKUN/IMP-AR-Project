@@ -110,6 +110,8 @@ public class DataManager : MonoBehaviour
     {
         int myCreatureIndex = GetMyCreatureIndex(creatureID);
         _myPlayerSaveData.GetPlayerCreatureList[myCreatureIndex].Friendship += amount;
+        if (_myPlayerSaveData.GetPlayerCreatureList[myCreatureIndex].Friendship > 1)
+            _myPlayerSaveData.GetPlayerCreatureList[myCreatureIndex].Friendship = 1;
         callGameSave();
     }
 }

@@ -39,7 +39,7 @@ public class CollectionDetail : MonoBehaviour
 
         float friendship = _dataManager.GetMyCreature(creatureID).Friendship;
         _friendshipSlider.value = friendship;
-        _friendshipText.text = (friendship * 100).ToString() + "%";
+        _friendshipText.text = System.String.Format("{0:0.00}", friendship * 100) + "%";
         _countText.text = _dataManager.GetMyCreature(creatureID).Count.ToString();
     }
 }
