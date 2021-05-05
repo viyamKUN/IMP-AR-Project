@@ -81,7 +81,8 @@ public class CareCreatureIndicator : MonoBehaviour
 
             if (!isCreature)
             {
-                creatureSpawned = Instantiate(creature, transform.position, transform.rotation);
+                creatureSpawned = Instantiate(creature, transform.position, Quaternion.identity);
+                creatureSpawned.SetActive(true);
                 creatureSpawned.transform.parent = arSessionOrigin.trackablesParent;
                 careManager.SetMyCreature(creatureSpawned);
                 careManager.SetActivateInteractable(true);
@@ -90,6 +91,7 @@ public class CareCreatureIndicator : MonoBehaviour
 
             if (creatureSpawned != null)
             {
+                creatureSpawned.SetActive(true);
                 creatureSpawned.transform.position = transform.position;
             }
 
@@ -97,6 +99,7 @@ public class CareCreatureIndicator : MonoBehaviour
         else
         {
             indicator.SetActive(false);
+            creatureSpawned.SetActive(false);
             careManager.SetActivateInteractable(false);
         }
 

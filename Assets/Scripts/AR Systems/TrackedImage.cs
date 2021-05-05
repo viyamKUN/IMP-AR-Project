@@ -25,7 +25,7 @@ public class TrackedImage : MonoBehaviour
 
     public void OnDisable()
     {
-        trackedManager.trackedImagesChanged += OnImageChanged;
+        trackedManager.trackedImagesChanged -= OnImageChanged;
     }
 
     private void OnImageChanged(ARTrackedImagesChangedEventArgs args)
