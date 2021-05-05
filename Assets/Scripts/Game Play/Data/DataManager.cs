@@ -12,7 +12,6 @@ public class DataManager : MonoBehaviour
     [Header("Objects")]
     [SerializeField] private ItemObject[] _itemObjects = null;
     [SerializeField] private CreatureObject[] _creatureObjects = null;
-    [SerializeField] private float _saveTimeDelay = 2;
 
     public PlayerSaveData GetPlayerSaveData => _myPlayerSaveData;
 

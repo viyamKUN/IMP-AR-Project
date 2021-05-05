@@ -8,7 +8,6 @@ public class BagContent : MonoBehaviour
     [SerializeField] private Image _profileImage = null;
     [SerializeField] private Text _itemName = null;
     [SerializeField] private Text _itemCount = null;
-    [SerializeField] private Button _itemSelectButton = null;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private InGameBagContentsSetting _inGameContentSetting = null;
     int _id = 0;

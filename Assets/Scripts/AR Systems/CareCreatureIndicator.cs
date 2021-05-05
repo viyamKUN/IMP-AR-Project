@@ -29,7 +29,7 @@ public class CareCreatureIndicator : MonoBehaviour
     void Start()
     {
         rayManager = FindObjectOfType<ARRaycastManager>();
-        indicator = transform.GetChild(0).gameObject; 
+        indicator = transform.GetChild(0).gameObject;
         indicator.SetActive(false);
         creature = careManager.GetCreatureObject();
         placementInteractable = GetComponent<ARPlacementInteractable>();
@@ -78,29 +78,26 @@ public class CareCreatureIndicator : MonoBehaviour
                 spawned = Instantiate(ObjectToSpawn, transform.position, transform.rotation);
                 isSpawned = true;
             }
-            
+
             if (!isCreature)
             {
                 creatureSpawned = Instantiate(creature, transform.position, transform.rotation);
                 creatureSpawned.transform.parent = arSessionOrigin.trackablesParent;
                 careManager.SetMyCreature(creatureSpawned);
-                creatureSpawned.GetComponent<ARAnnotationInteractable>().enabled = true;             
-                creatureSpawned.GetComponent<ARScaleInteractable>().enabled = true;
-                creatureSpawned.GetComponent<ARRotationInteractable>().enabled = true;
-                creatureSpawned.GetComponent<ARSelectionInteractable>().enabled = true;
+                careManager.SetActivateInteractable(true);
                 isCreature = true;
             }
 
             if (creatureSpawned != null)
             {
                 creatureSpawned.transform.position = transform.position;
-                creatureSpawned.transform.rotation = transform.rotation;
             }
 
         }
         else
         {
             indicator.SetActive(false);
+            careManager.SetActivateInteractable(false);
         }
 
         if (Input.GetMouseButtonDown(0))

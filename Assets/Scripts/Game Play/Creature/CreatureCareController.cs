@@ -5,6 +5,7 @@ using UnityEngine;
 public class CreatureCareController : MonoBehaviour
 {
     [SerializeField] private CreatureController _creature = null;
+    [SerializeField] private CreatureAnnotation _annotation = null;
     [SerializeField] private Animator _anim = null;
     [SerializeField] private EffectManager _efManager = null;
 
@@ -15,10 +16,11 @@ public class CreatureCareController : MonoBehaviour
 
     public int GetCreatureID => _creature.ID;
 
-    public void CallInit(CareManager careManager)
+    public void CallInit(CareManager careManager, string name, string description)
     {
         if (_careManager != null) return;
         this._careManager = careManager;
+        this._annotation.SetAnnotation(name, description);
     }
 
     public void TouchMe()

@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Items;
+using UnityEngine.XR.Interaction.Toolkit.AR;
 
+public enum InteractableMode
+{
+    Off, Feed, Touch
+}
 public class CareManager : MonoBehaviour
 {
     [SerializeField] private CareUIManager _careUIManager = null;
@@ -11,10 +15,19 @@ public class CareManager : MonoBehaviour
 
     CreatureCareController _myCreatureController = null;
     int _thisCreatureID = -1;
-    public bool isInteractMode = false; 
-
+    private InteractableMode _isOnMode = InteractableMode.Off;
+    public InteractableMode IsOnMode
+    {
+        get => _isOnMode;
+        set
+        {
+            _isOnMode = value;
+            SetActivateInteractable(value.Equals(InteractableMode.Off));
+        }
+    }
     private void init()
     {
+        _isOnMode = InteractableMode.Off;
         _dataManager.SetData(out bool isGameExist);
         _careUIManager.SetUI();
 
@@ -43,7 +56,7 @@ public class CareManager : MonoBehaviour
                     Debug.Log("크리쳐가 세팅되지 않았습니다.");
                     return;
                 }
-                if(isInteractMode)
+                if (_isOnMode.Equals(InteractableMode.Touch))
                 {
                     _myCreatureController.TouchMe();
                 }
@@ -62,7 +75,7 @@ public class CareManager : MonoBehaviour
     public void SetMyCreature(GameObject go)
     {
         _myCreatureController = go.GetComponent<CreatureCareController>();
-        _myCreatureController.CallInit(this);
+        _myCreatureController.CallInit(this, _dataManager.GetCreature(_thisCreatureID).Name, _dataManager.GetCreature(_thisCreatureID).Description);
     }
 
     ///<summary>Get item model by using id</summary>
@@ -86,5 +99,12 @@ public class CareManager : MonoBehaviour
     public void TouchIt(float friendshipAmount)
     {
         _dataManager.AddFriendship(_myCreatureController.GetCreatureID, friendshipAmount);
+    }
+    public void SetActivateInteractable(bool isActive)
+    {
+        _myCreatureController.gameObject.GetComponent<ARSelectionInteractable>().enabled = isActive;
+        _myCreatureController.gameObject.GetComponent<ARAnnotationInteractable>().enabled = isActive;
+        _myCreatureController.gameObject.GetComponent<ARScaleInteractable>().enabled = isActive;
+        _myCreatureController.gameObject.GetComponent<ARRotationInteractable>().enabled = isActive;
     }
 }

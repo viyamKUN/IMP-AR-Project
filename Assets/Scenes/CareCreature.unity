@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3513,6 +3513,7 @@ GameObject:
   - component: {fileID: 1333670623}
   - component: {fileID: 1333670622}
   - component: {fileID: 1333670621}
+  - component: {fileID: 1333670625}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -3620,6 +3621,49 @@ Transform:
   m_Father: {fileID: 540305415}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333670625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333670619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a076e7dedf4411b96ca259dc65ce59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 544312950}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_AttachTransform: {fileID: 0}
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ARSessionOrigin: {fileID: 540305414}
 --- !u!1 &1466399428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4160,7 +4204,7 @@ GameObject:
   - component: {fileID: 1642182641}
   - component: {fileID: 1642182640}
   - component: {fileID: 1642182639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AR Default Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5309,8 +5353,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 927428105}
   m_HandleRect: {fileID: 927428104}
   m_Direction: 0
-  m_Value: -0.000000083041044
-  m_Size: 0.42352945
+  m_Value: 0
+  m_Size: 0.42352942
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

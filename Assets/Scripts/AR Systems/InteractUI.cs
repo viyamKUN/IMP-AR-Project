@@ -10,16 +10,17 @@ public class InteractUI : MonoBehaviour
     [SerializeField] private GameObject backButton;
     [SerializeField] private CareManager careManager;
 
-    private void Start() 
+    private void Start()
     {
         buttons.SetActive(true);
         feedTab.SetActive(false);
         background.SetActive(true);
         backButton.SetActive(false);
     }
-    
+
     public void FeedMode()
     {
+        careManager.IsOnMode = InteractableMode.Feed;
         buttons.SetActive(false);
         feedTab.SetActive(true);
         background.SetActive(true);
@@ -28,16 +29,16 @@ public class InteractUI : MonoBehaviour
 
     public void InteractMode()
     {
+        careManager.IsOnMode = InteractableMode.Touch;
         buttons.SetActive(false);
         feedTab.SetActive(false);
         background.SetActive(true);
         backButton.SetActive(true);
-        careManager.isInteractMode = true;
     }
 
     public void BackButton()
     {
-        careManager.isInteractMode = false;
+        careManager.IsOnMode = InteractableMode.Off;
         buttons.SetActive(true);
         backButton.SetActive(false);
         feedTab.SetActive(false);
