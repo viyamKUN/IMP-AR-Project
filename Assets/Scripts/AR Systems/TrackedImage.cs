@@ -4,6 +4,7 @@ using UnityEngine;
 
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.SceneManagement;
 
 public class TrackedImage : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class TrackedImage : MonoBehaviour
     {
         trackedManager = FindObjectOfType<ARTrackedImageManager>();
     }
-
     public void OnEnable()
     {
         //subscribing to the trackedImageChange event
