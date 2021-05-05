@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "24c534807e0d7ece",
         "name": "com.DefaultCompany.IMPARProject",
-        "processId": 31980,
+        "processId": 6264,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -79,6 +79,90 @@
             "name": "com.DefaultCompany.IMPARProject",
             "processId": 31980,
             "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 7773,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 9411,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 11491,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 12500,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 16784,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 28561,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 30270,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 31339,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 657,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 1896,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 2746,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 3133,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 3944,
+            "exited": false
+        },
+        {
+            "deviceId": "24c534807e0d7ece",
+            "name": "com.DefaultCompany.IMPARProject",
+            "processId": 6264,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -131,7 +215,7 @@
         "MemoryGroup": 2,
         "Behavior": 0
     },
-    "m_Filter": "",
+    "m_Filter": "debugging",
     "m_FilterIsRegularExpression": false,
     "m_SymbolPaths": []
 }

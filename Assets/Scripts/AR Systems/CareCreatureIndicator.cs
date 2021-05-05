@@ -24,14 +24,16 @@ public class CareCreatureIndicator : MonoBehaviour
     private GameObject creatureSpawned;
     private bool isFeedMode = false;
     int selectedItemNumber = 0;
-
+    private ARPlacementInteractable placementInteractable;
+    private ARSessionOrigin arSessionOrigin;
     void Start()
     {
         rayManager = FindObjectOfType<ARRaycastManager>();
-        indicator = transform.GetChild(0).gameObject; //첫번째 자식
+        indicator = transform.GetChild(0).gameObject; 
         indicator.SetActive(false);
         creature = careManager.GetCreatureObject();
-
+        placementInteractable = GetComponent<ARPlacementInteractable>();
+        arSessionOrigin = FindObjectOfType<ARSessionOrigin>();
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -71,24 +73,18 @@ public class CareCreatureIndicator : MonoBehaviour
             transform.position = hits[0].pose.position;
             transform.rotation = hits[0].pose.rotation;
 
-            //indicator.transform.Rotate(new Vector3(0, 20f, 0) * Time.deltaTime);
             if (!isSpawned)
             {
                 spawned = Instantiate(ObjectToSpawn, transform.position, transform.rotation);
                 isSpawned = true;
             }
-            /*
-            if(spawned != null)
-            {
-                spawned.transform.position = transform.position;
-                spawned.transform.rotation = transform.rotation;
-            }
-            */
+            
             if (!isCreature)
             {
                 creatureSpawned = Instantiate(creature, transform.position, transform.rotation);
+                creatureSpawned.transform.parent = arSessionOrigin.trackablesParent;
                 careManager.SetMyCreature(creatureSpawned);
-                creatureSpawned.GetComponent<ARAnnotationInteractable>().enabled = true;
+                creatureSpawned.GetComponent<ARAnnotationInteractable>().enabled = true;             
                 creatureSpawned.GetComponent<ARScaleInteractable>().enabled = true;
                 creatureSpawned.GetComponent<ARRotationInteractable>().enabled = true;
                 creatureSpawned.GetComponent<ARSelectionInteractable>().enabled = true;
@@ -112,7 +108,6 @@ public class CareCreatureIndicator : MonoBehaviour
             if (isFeedMode)
             {
                 // create ray from the camera at the mouse position
-                //Ray ray = Camera.main.ScreenPointToRay(touchPosition);
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (rayManager.Raycast(ray, hits, TrackableType.PlaneWithinPolygon))
                 {

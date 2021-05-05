@@ -395,6 +395,7 @@ MonoBehaviour:
   buttons: {fileID: 234937511}
   background: {fileID: 446459253}
   backButton: {fileID: 714026130}
+  careManager: {fileID: 1843419337}
 --- !u!114 &234937514
 MonoBehaviour:
   m_ObjectHideFlags: 0
