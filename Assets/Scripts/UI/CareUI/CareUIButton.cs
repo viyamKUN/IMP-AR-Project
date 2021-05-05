@@ -12,6 +12,7 @@ public class CareUIButton : MonoBehaviour
     public void ClickSelect()
     {
         // 아이템 선택 버튼 클릭
+        SoundManager.SM.PlaySound(SoundName.SelectItem);
         int thisItemId = _inventoryUnit.GetID;
         newItem = careManager.GetItemObject(thisItemId);
         indicator.SetItem(newItem);

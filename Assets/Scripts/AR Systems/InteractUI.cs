@@ -21,6 +21,7 @@ public class InteractUI : MonoBehaviour
     public void FeedMode()
     {
         careManager.IsOnMode = InteractableMode.Feed;
+        SoundManager.SM.PlaySound(SoundName.BtnGo);
         buttons.SetActive(false);
         feedTab.SetActive(true);
         background.SetActive(true);
@@ -30,6 +31,7 @@ public class InteractUI : MonoBehaviour
     public void InteractMode()
     {
         careManager.IsOnMode = InteractableMode.Touch;
+        SoundManager.SM.PlaySound(SoundName.BtnGo);
         buttons.SetActive(false);
         feedTab.SetActive(false);
         background.SetActive(true);
@@ -39,6 +41,7 @@ public class InteractUI : MonoBehaviour
     public void BackButton()
     {
         careManager.IsOnMode = InteractableMode.Off;
+        SoundManager.SM.PlaySound(SoundName.BtnExit);
         buttons.SetActive(true);
         backButton.SetActive(false);
         feedTab.SetActive(false);
