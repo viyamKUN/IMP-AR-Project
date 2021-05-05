@@ -1019,6 +1019,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4892504893775866}
     m_Modifications:
+    - target: {fileID: 333011447447888496, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 333011447447888496, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 333011447447888496, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 333011447447888496, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.217
+      objectReference: {fileID: 0}
+    - target: {fileID: 2738212358329769674, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5129383689697280075, guid: c9255771f9bdcdf48aaec3977d85eed2, type: 3}
       propertyPath: m_Name
       value: SelectionVisualization
